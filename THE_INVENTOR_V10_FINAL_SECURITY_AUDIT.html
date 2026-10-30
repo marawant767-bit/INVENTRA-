@@ -1,0 +1,1195 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#081426">
+<title>THE INVENTOR V10 | Ultimate Innovation Studio</title>
+<style>
+:root{--bg:#071321;--panel:#101f33;--panel2:#142740;--text:#edf5ff;--muted:#9db0c8;--line:#263d59;--blue:#39a8ff;--cyan:#42e0d0;--gold:#ffc857;--danger:#ff6b78;--shadow:0 18px 50px #0005}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 85% 0%,#12345a 0,transparent 32%),var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Tahoma,sans-serif;min-height:100vh}
+body.light{--bg:#eef4fb;--panel:#fff;--panel2:#f2f7fc;--text:#13243a;--muted:#61758e;--line:#d6e1ee;--shadow:0 14px 35px #17324a18;background:radial-gradient(circle at 85% 0%,#d8edff 0,transparent 32%),var(--bg)}
+button,input,textarea,select{font:inherit}button{cursor:pointer;border:0;color:inherit}.app{display:grid;grid-template-columns:260px 1fr;min-height:100vh}.sidebar{background:#081827d9;border-left:1px solid #ffffff12;padding:22px 16px;position:sticky;top:0;height:100vh;overflow:auto;backdrop-filter:blur(16px)}body.light .sidebar{background:#fff;border-color:var(--line)}
+.brand{display:flex;align-items:center;gap:12px;padding:8px 10px 24px}.logo{width:43px;height:43px;border-radius:14px;background:linear-gradient(135deg,var(--blue),var(--cyan));display:grid;place-items:center;color:#041425;font-size:23px;font-weight:900;box-shadow:0 8px 25px #39a8ff55}.brand b{letter-spacing:1.5px;font-size:17px}.brand small{display:block;color:var(--muted);font-size:10px;letter-spacing:2px;margin-top:3px}
+.nav-label{color:var(--muted);font-size:11px;padding:12px 12px 7px}.nav{display:flex;flex-direction:column;gap:5px}.nav button{background:transparent;text-align:right;padding:12px;border-radius:12px;color:var(--muted);display:flex;align-items:center;gap:12px;transition:.2s}.nav button:hover,.nav button.active{background:linear-gradient(90deg,#39a8ff22,#42e0d011);color:var(--text)}.nav button.active{outline:1px solid #39a8ff55}.nav .ico{width:22px;text-align:center;font-size:17px}.side-bottom{position:absolute;bottom:20px;right:16px;left:16px;border-top:1px solid var(--line);padding-top:14px}.profile{display:flex;align-items:center;gap:10px}.avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--gold),#ff8e53);display:grid;place-items:center;color:#251a04;font-weight:900}.profile small{display:block;color:var(--muted)}
+main{padding:28px clamp(16px,4vw,48px) 60px;max-width:1500px;width:100%;margin:auto}.topbar{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:26px}.eyebrow{color:var(--cyan);font-size:12px;letter-spacing:2px;font-weight:700}.topbar h1{margin:5px 0 0;font-size:clamp(23px,3vw,34px)}.top-actions{display:flex;gap:9px;align-items:center}.icon-btn,.secondary{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:10px 13px}.primary{background:linear-gradient(135deg,#168de7,#21c7c0);color:#041523;font-weight:800;border-radius:12px;padding:12px 17px;box-shadow:0 8px 22px #168de733}.primary:hover{filter:brightness(1.08);transform:translateY(-1px)}.secondary:hover,.icon-btn:hover{border-color:var(--blue)}
+.page{display:none}.page.active{display:block;animation:fade .25s ease}@keyframes fade{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
+.hero{position:relative;overflow:hidden;border:1px solid #3ba9ff44;border-radius:24px;padding:30px;background:linear-gradient(115deg,#102c49,#10243a 58%,#123c4a);box-shadow:var(--shadow);margin-bottom:20px}.hero:after{content:"✧";position:absolute;font-size:210px;left:8%;top:-70px;color:#42e0d018}.hero h2{font-size:clamp(24px,4vw,38px);margin:8px 0}.hero p{color:#bdd1e6;max-width:650px;line-height:1.8;margin:8px 0 20px}.hero .eyebrow{color:#66e8db}.hero-buttons{display:flex;gap:10px;flex-wrap:wrap}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin:18px 0 24px}.stat,.card{background:var(--panel);border:1px solid var(--line);border-radius:17px;padding:17px;box-shadow:var(--shadow)}.stat{display:flex;align-items:center;gap:13px}.stat-icon{width:42px;height:42px;border-radius:13px;background:#39a8ff1c;display:grid;place-items:center;font-size:21px}.stat strong{font-size:23px;display:block}.stat small{color:var(--muted)}
+.section-head{display:flex;justify-content:space-between;align-items:center;margin:25px 0 13px;gap:12px}.section-head h2{font-size:19px;margin:0}.section-head span{color:var(--muted);font-size:12px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.feature{background:var(--panel);border:1px solid var(--line);border-radius:17px;padding:18px;text-align:right;transition:.2s;min-height:145px}.feature:hover{transform:translateY(-3px);border-color:#39a8ff88}.feature .big{font-size:27px}.feature h3{margin:10px 0 5px;font-size:16px}.feature p{color:var(--muted);font-size:13px;line-height:1.6;margin:0}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:20px;margin-bottom:16px}.panel h2,.panel h3{margin-top:0}.muted{color:var(--muted)}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}.field{display:flex;flex-direction:column;gap:7px}.field.full{grid-column:1/-1}label{font-size:13px;color:var(--muted)}input,textarea,select{width:100%;background:var(--panel2);border:1px solid var(--line);border-radius:11px;padding:12px;color:var(--text);outline:none}input:focus,textarea:focus,select:focus{border-color:var(--blue);box-shadow:0 0 0 3px #39a8ff18}textarea{min-height:105px;resize:vertical}.actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:15px}.result{border:1px solid #42e0d055;background:linear-gradient(135deg,#42e0d00d,#39a8ff0b);border-radius:16px;padding:18px;margin-top:17px;display:none}.result.show{display:block}.result h3{margin:0 0 8px;color:var(--cyan)}.result ul{padding-right:20px;line-height:1.9}.tag{display:inline-block;border:1px solid var(--line);border-radius:30px;padding:5px 10px;color:var(--muted);font-size:11px;margin:3px}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:13px}.project{background:var(--panel);border:1px solid var(--line);border-radius:15px;padding:16px}.project h3{margin:0 0 7px}.project p{color:var(--muted);font-size:13px;line-height:1.6}.project-foot{display:flex;justify-content:space-between;align-items:center;margin-top:12px;gap:8px}.tiny{font-size:11px;color:var(--muted)}.lab-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.lab{padding:17px;border-radius:16px;border:1px solid var(--line);background:var(--panel);text-align:right}.lab:hover{border-color:var(--cyan)}.lab b{display:block;margin:8px 0 4px}.lab small{color:var(--muted);line-height:1.5}.empty{text-align:center;padding:35px;color:var(--muted);border:1px dashed var(--line);border-radius:15px}
+.progress{height:8px;border-radius:20px;background:var(--panel2);overflow:hidden;margin:9px 0}.progress span{display:block;height:100%;background:linear-gradient(90deg,var(--blue),var(--cyan));border-radius:20px}.toast{position:fixed;bottom:20px;left:20px;background:#102a42;color:white;padding:13px 18px;border:1px solid #39a8ff66;border-radius:12px;box-shadow:var(--shadow);opacity:0;transform:translateY(15px);transition:.25s;pointer-events:none;z-index:10}.toast.show{opacity:1;transform:none}
+footer{text-align:center;color:var(--muted);font-size:11px;margin-top:35px}
+@media(max-width:900px){.app{grid-template-columns:1fr}.sidebar{height:auto;position:sticky;z-index:5;padding:9px 12px;border-left:0;border-bottom:1px solid var(--line)}.brand{padding:2px 6px 9px}.brand .logo{width:34px;height:34px}.nav-label,.side-bottom{display:none}.nav{flex-direction:row;overflow:auto;padding-bottom:2px}.nav button{white-space:nowrap;padding:9px 11px;font-size:12px}.nav .ico{font-size:15px}.nav button span:last-child{display:inline}main{padding-top:20px}.stats{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.grid,.lab-grid{grid-template-columns:repeat(2,1fr)}.cards{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.hero{padding:22px}.topbar{align-items:flex-start}.topbar h1{font-size:23px}.top-actions .secondary{display:none}}
+</style>
+<style id="redesign-v3">
+:root{--bg:#101114;--panel:#191b20;--panel2:#22252c;--text:#f2f0e9;--muted:#a5a39b;--line:#343740;--blue:#a6f05b;--cyan:#63d7c4;--gold:#ffbd59;--shadow:0 18px 45px #0005}
+*{scrollbar-color:#454a54 #17191e}
+body{background:#101114;color:#f2f0e9;font-family:Inter,system-ui,-apple-system,"Segoe UI",Tahoma,sans-serif}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background:linear-gradient(115deg,#a6f05b08 0 1px,transparent 1px 100%);background-size:42px 42px;opacity:.32}
+body.light{--bg:#101114;--panel:#191b20;--panel2:#22252c;--text:#f2f0e9;--muted:#a5a39b;--line:#343740;background:#101114}
+.app{grid-template-columns:250px 1fr}
+.sidebar{background:#15171b;border:0;border-left:1px solid #ffffff10;padding:24px 15px;box-shadow:12px 0 40px #0002}
+body.light .sidebar{background:#15171b;color:#f2f0e9}
+.brand{padding:7px 10px 29px}.logo{background:#a6f05b;color:#171b12;border-radius:9px;box-shadow:0 0 24px #a6f05b25}
+.brand b{color:#f7f5ef;letter-spacing:2px;font-size:15px}.brand small{color:#82847f}
+.nav-label{color:#777b82;letter-spacing:1.8px;text-transform:uppercase;font-size:9px}
+.nav button{border-radius:8px;color:#a2a4a5;padding:11px 12px;font-size:13px}
+.nav button:hover,.nav button.active{background:#262a2f;color:#fff;outline:0;box-shadow:inset -3px 0 #a6f05b}
+.nav button.active .ico{color:#a6f05b}
+.side-bottom{border-color:#343740}.profile b{color:#f5f2e9}.profile small{color:#8f9499}
+main{max-width:1680px;padding:28px clamp(16px,3.6vw,54px) 70px}
+.topbar{border-bottom:1px solid #ffffff13;padding-bottom:20px;margin-bottom:25px}
+.eyebrow{color:#a6f05b;letter-spacing:2.4px;font-size:10px}
+.topbar h1{font-size:29px;letter-spacing:-.8px;color:#f4f1e8}
+.icon-btn,.secondary{background:#202329;border:1px solid #3a3e46;color:#e7e7e0;border-radius:8px}
+.secondary:hover,.icon-btn:hover{border-color:#a6f05b}
+.primary{background:#a6f05b;color:#171b12;border-radius:8px;box-shadow:0 7px 22px #a6f05b18;font-weight:850}
+.hero{background:linear-gradient(115deg,#252b2b,#1a2020 58%,#27251d);border:1px solid #a6f05b3b;border-radius:13px;padding:34px;box-shadow:var(--shadow)}
+.hero:after{content:"✳";font-size:245px;left:6%;top:-68px;color:#a6f05b0d}
+.hero .eyebrow{color:#a6f05b}.hero h2{color:#f7f4eb;font-size:clamp(26px,4vw,42px)}.hero p{color:#b8bbb4}
+.hero .secondary{background:#ffffff0b;border-color:#ffffff2b;color:#fff}
+.stats{gap:11px}.stat,.card,.panel,.feature,.project,.lab{background:#191b20;border:1px solid #343740;border-radius:11px;box-shadow:0 10px 30px #0002}
+.stat{padding:15px}.stat-icon{background:#a6f05b16;color:#a6f05b;border-radius:9px}.stat strong{color:#f4f1e8}.stat small{color:#92958f}
+.section-head h2{color:#f4f1e8;font-size:18px}.section-head span{color:#858a8b}
+.feature{min-height:153px;padding:19px}.feature:hover,.lab:hover{transform:translateY(-3px);border-color:#a6f05b;box-shadow:0 16px 35px #0004}
+.feature .big{display:inline-grid;place-items:center;width:42px;height:42px;border-radius:10px;background:#a6f05b12}
+.feature h3,.project h3,.lab b,.panel h2,.panel h3{color:#f1eee5}.feature p,.project p{color:#a4a69f}
+.panel{padding:23px}.muted{color:#a4a69f}
+input,textarea,select{background:#22252c;border:1px solid #3b3f48;color:#f2f0e9;border-radius:8px}
+input:focus,textarea:focus,select:focus{border-color:#a6f05b;box-shadow:0 0 0 3px #a6f05b16}
+.result{background:#1a2823;border:1px solid #456b4b;border-radius:11px}.result h3{color:#a6f05b}
+.tag{background:#222a26;border-color:#435347;color:#b8d5ad}
+.project-foot .secondary{padding:7px 10px}
+.lab{padding:18px}.progress{background:#343840}.progress span{background:linear-gradient(90deg,#a6f05b,#63d7c4)}
+.avatar{background:#a6f05b;color:#172013}
+.empty{border-color:#454a51;color:#9b9e98}
+.toast{background:#202a24;border-color:#a6f05b;color:#f5f5ee}
+footer{color:#777d7d}
+.knowledge-toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:15px 0}.knowledge-toolbar input{flex:1;min-width:190px}.filter-chip{padding:9px 13px;border:1px solid #3b3f48;border-radius:30px;background:#202329;color:#b9bcb5}.filter-chip.active{background:#a6f05b;color:#172013;border-color:#a6f05b}
+.info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.info-card{padding:17px;border:1px solid #343740;background:#191b20;border-radius:11px}.info-card h3{margin:8px 0;color:#f2f0e9;font-size:15px}.info-card p{font-size:13px;color:#a7aaa3;line-height:1.75;margin:6px 0}.info-card .kind{font-size:10px;color:#a6f05b;letter-spacing:1px}
+.tool-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.tool-tile{background:#202329;border:1px solid #3a3e46;border-radius:9px;padding:14px}.tool-tile b{display:block;margin:7px 0;color:#f4f1e8}.tool-tile small{color:#a4a69f;line-height:1.6}
+@media(max-width:900px){.app{grid-template-columns:1fr}.sidebar{padding:10px 12px;border:0;border-bottom:1px solid #ffffff12}.brand{padding:2px 6px 9px}.nav{flex-direction:row;overflow:auto}.nav button{white-space:nowrap}.nav button.active{box-shadow:inset 0 -3px #a6f05b}.side-bottom{display:none}}
+@media(max-width:620px){main{padding:17px 13px 45px}.hero{padding:24px 19px}.topbar h1{font-size:23px}.info-grid{grid-template-columns:1fr}.tool-row{grid-template-columns:repeat(2,1fr)}}
+</style>
+<style id="ai-premium-v4">
+:root{--ai:#b8ff62;--violet:#9b8cff;--electric:#52e4d2}
+body{background:radial-gradient(ellipse at 75% -10%,#263b2b 0,transparent 35%),radial-gradient(ellipse at 8% 35%,#202044 0,transparent 32%),#0c0e12}
+body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;opacity:.18;background-image:radial-gradient(#c9ff8b 0.7px,transparent .7px);background-size:25px 25px}
+.sidebar{background:linear-gradient(180deg,#171c20,#111318 75%);border-left:1px solid #b8ff621c}
+.logo{background:linear-gradient(135deg,#c5ff79,#58d7c5);box-shadow:0 0 34px #a9ff5b35}
+.hero{background:linear-gradient(120deg,#1d3028,#1c2530 58%,#28233c);border-color:#b8ff624d;box-shadow:0 24px 70px #0007}
+.primary{background:linear-gradient(110deg,#c5ff79,#6ee5c9);box-shadow:0 9px 30px #9eff5b20}
+.ai-hero{position:relative;overflow:hidden;border:1px solid #9b8cff55;border-radius:18px;padding:clamp(22px,4vw,42px);background:radial-gradient(circle at 10% 10%,#9b8cff28,transparent 34%),linear-gradient(125deg,#202238,#172a2b 60%,#222d25);box-shadow:0 25px 75px #0007;margin-bottom:18px}
+.ai-hero:after{content:"✳";position:absolute;left:4%;top:-55px;font-size:220px;color:#b8ff6210;pointer-events:none}
+.ai-orb{width:58px;height:58px;display:grid;place-items:center;border-radius:17px;background:linear-gradient(135deg,#b8ff62,#6de5d0);color:#142015;font-size:28px;box-shadow:0 0 40px #b8ff6230;margin-bottom:15px}
+.ai-hero h2{font-size:clamp(27px,4vw,43px);margin:8px 0;color:#f6f4eb}
+.ai-hero p{max-width:780px;line-height:1.9;color:#c0c4c4}
+.ai-badges{display:flex;gap:8px;flex-wrap:wrap;margin:15px 0}
+.ai-badge{border:1px solid #a6a0ff55;background:#a69aff12;border-radius:30px;padding:7px 11px;font-size:11px;color:#d7d2ff}
+.ai-layout{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(270px,.8fr);gap:14px}
+.ai-card{background:linear-gradient(145deg,#1d2028,#171a20);border:1px solid #45404f;border-radius:14px;padding:19px;box-shadow:0 12px 35px #0003}
+.ai-card h3{margin:0 0 10px;color:#f4f0e7}
+.ai-card p,.ai-card li{color:#b2b4b1;line-height:1.8;font-size:13px}
+.ai-card .ai-icon{font-size:24px;margin-bottom:8px}
+.ai-topic-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:11px}
+.ai-topic{background:#191c23;border:1px solid #383d48;border-radius:12px;padding:16px;min-height:170px}
+.ai-topic:hover{border-color:#9b8cff;transform:translateY(-2px)}
+.ai-topic small{color:#b6aaff;font-size:10px}
+.ai-topic h4{margin:8px 0;color:#f1eee7;font-size:15px}
+.ai-topic p{margin:0;color:#aeb1b1;font-size:12px;line-height:1.75}
+.ai-toolbar{display:flex;gap:9px;flex-wrap:wrap;margin:13px 0}
+.ai-toolbar input{flex:1;min-width:180px}
+.ai-chat{display:flex;flex-direction:column;gap:10px;max-height:370px;overflow:auto;padding:10px 2px}
+.ai-msg{max-width:92%;padding:12px 14px;border-radius:12px;font-size:13px;line-height:1.8}
+.ai-msg.bot{background:#25283a;border:1px solid #555078;align-self:flex-start;color:#e4e0ff}
+.ai-msg.user{background:#29372a;border:1px solid #526c44;align-self:flex-end;color:#edffe2}
+.ai-prompts{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}
+.ai-prompts button{font-size:11px;padding:8px 10px;border-radius:30px;background:#28283a;border:1px solid #514b70;color:#d8d2ff}
+.ai-callout{padding:13px 15px;border-right:3px solid #b8ff62;background:#b8ff620d;border-radius:8px;color:#c6c9c0;font-size:12px;line-height:1.8;margin-top:13px}
+.ai-roadmap{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.ai-step{padding:14px;border:1px solid #3a4142;border-radius:11px;background:#1b2022}
+.ai-step b{display:block;color:#c5ff79;margin:5px 0}
+@media(max-width:900px){.ai-layout{grid-template-columns:1fr}.ai-topic-grid{grid-template-columns:repeat(2,1fr)}.ai-roadmap{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.ai-topic-grid{grid-template-columns:1fr}.ai-hero{padding:22px 18px}.ai-step{padding:11px}}
+</style>
+<style id="cinematic-v5">
+:root{--bg:#080b12;--panel:#121824;--panel2:#192333;--text:#f4f6fb;--muted:#a1adbf;--line:#2b3749;--blue:#75a7ff;--cyan:#63f0df;--gold:#e8c77b}
+body{background:radial-gradient(ellipse at 80% 0%,#273c62 0,transparent 34%),radial-gradient(ellipse at 0% 70%,#1b3440 0,transparent 35%),#080b12;color:var(--text)}
+.sidebar{background:linear-gradient(180deg,#111927f5,#090e17f5);border-left:1px solid #b9d4ff20;box-shadow:-20px 0 70px #0004}
+.logo{background:linear-gradient(135deg,#e9d39a,#75b6ff 55%,#72efdc);box-shadow:0 0 34px #7bbcff40}
+.hero{background:linear-gradient(115deg,#182c48,#172a3b 55%,#173b3e);border:1px solid #8ccaff55;box-shadow:0 25px 75px #0007}
+.card,.stat,.feature,.project,.panel,.ai-card{background:linear-gradient(145deg,#172131,#101722);border-color:#34445a;box-shadow:0 14px 38px #0004}
+.primary{background:linear-gradient(110deg,#e7cb8e,#8dbbff 55%,#68e5d4);color:#08111d;box-shadow:0 10px 32px #8dbbff28}
+.page.active{animation:pageReveal .45s ease both}
+@keyframes pageReveal{from{opacity:0;transform:translateY(12px);filter:blur(3px)}to{opacity:1;transform:none;filter:none}}
+
+#cinematicIntro{position:fixed;inset:0;z-index:99999;display:grid;place-items:center;overflow:hidden;background:#050810;color:#f5f7ff;transition:opacity 1s ease,visibility 1s ease}
+#cinematicIntro.hide{opacity:0;visibility:hidden;pointer-events:none}
+#cinematicIntro .film-bg{position:absolute;inset:-15%;background:radial-gradient(ellipse at 50% 48%,#183d56 0,#10182a 24%,#080b15 56%,#03050a 80%);animation:filmPulse 7s ease-in-out infinite alternate}
+#cinematicIntro .film-grid{position:absolute;inset:0;opacity:.23;background-image:linear-gradient(#8dd9ff15 1px,transparent 1px),linear-gradient(90deg,#8dd9ff15 1px,transparent 1px);background-size:54px 54px;transform:perspective(500px) rotateX(62deg) scale(1.7);transform-origin:50% 100%;mask-image:linear-gradient(transparent,#000 35%,#000)}
+#cinematicIntro .film-scan{position:absolute;inset:0;background:linear-gradient(transparent 48%,#a9eaff0b 50%,transparent 52%);background-size:100% 9px;opacity:.25;pointer-events:none}
+#cinematicIntro .film-orbit{position:absolute;width:min(72vw,650px);aspect-ratio:1;border:1px solid #a3d9ff30;border-radius:50%;box-shadow:0 0 70px #3a9eff14,inset 0 0 70px #3a9eff0c;animation:orbit 24s linear infinite}
+#cinematicIntro .film-orbit:before,#cinematicIntro .film-orbit:after{content:"";position:absolute;inset:9%;border:1px solid #78f0e533;border-radius:50%;transform:rotateX(65deg) rotate(35deg)}
+#cinematicIntro .film-orbit:after{inset:20%;border-color:#e8ce8a44;transform:rotateY(68deg) rotate(-30deg)}
+#cinematicIntro .film-core{position:absolute;width:130px;height:130px;border-radius:35px;display:grid;place-items:center;font-size:57px;color:#09111b;background:linear-gradient(145deg,#f0d99f,#8bbdff 60%,#6be9d8);box-shadow:0 0 35px #8ccaff70,0 0 130px #54d9dc38;animation:coreFloat 4s ease-in-out infinite}
+#cinematicIntro .film-content{position:relative;z-index:2;text-align:center;width:min(90%,850px);padding:30px 15px}
+#cinematicIntro .film-kicker{font-size:11px;letter-spacing:5px;color:#9bdff4;text-transform:uppercase;animation:rise .9s .2s both}
+#cinematicIntro h1{font-size:clamp(37px,8vw,86px);letter-spacing:clamp(2px,1vw,10px);margin:175px 0 4px;font-weight:900;background:linear-gradient(100deg,#fff 5%,#b7d7ff 42%,#f2dca7 68%,#7df0dc);-webkit-background-clip:text;background-clip:text;color:transparent;animation:rise 1s .55s both;text-shadow:0 12px 60px #7bcfff15}
+#cinematicIntro .film-sub{font-size:clamp(12px,2vw,16px);letter-spacing:3px;color:#c0cddd;margin:10px 0 18px;animation:rise 1s .8s both}
+#cinematicIntro .film-line{height:1px;width:min(330px,65vw);margin:20px auto;background:linear-gradient(90deg,transparent,#8edfff,#e6cd91,transparent);transform-origin:center;animation:lineIn 1.2s 1s both}
+#cinematicIntro .film-copy{color:#aab8ca;font-size:13px;line-height:1.9;animation:rise 1s 1.1s both}
+#cinematicIntro .film-actions{margin-top:25px;display:flex;justify-content:center;gap:10px;animation:rise 1s 1.3s both}
+#cinematicIntro .enter-btn{border:1px solid #c2e2ff88;border-radius:40px;padding:13px 27px;background:linear-gradient(100deg,#e8d29b,#a4caff,#75e9d8);color:#09121c;font-weight:900;letter-spacing:1px;box-shadow:0 0 35px #81d7ff30}
+#cinematicIntro .skip-btn{border:1px solid #ffffff35;border-radius:40px;padding:12px 20px;background:#ffffff0a;color:#dbe5f2}
+#cinematicIntro .film-foot{position:absolute;bottom:25px;left:0;right:0;text-align:center;color:#66788e;font-size:9px;letter-spacing:4px}
+#cinematicIntro .light-streak{position:absolute;width:65vw;height:1px;top:25%;left:-70%;background:linear-gradient(90deg,transparent,#8deeff,transparent);box-shadow:0 0 22px #8deeff;transform:rotate(-18deg);animation:streak 4s 1s ease-in-out infinite}
+@keyframes filmPulse{to{transform:scale(1.13);filter:hue-rotate(16deg)}}
+@keyframes orbit{to{transform:rotate(360deg)}}
+@keyframes coreFloat{50%{transform:translateY(-10px) rotateY(12deg);box-shadow:0 0 60px #8ccaff90,0 0 150px #54d9dc48}}
+@keyframes rise{from{opacity:0;transform:translateY(22px);filter:blur(5px)}to{opacity:1;transform:none;filter:none}}
+@keyframes lineIn{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes streak{0%,100%{left:-70%;opacity:0}35%{opacity:.8}70%{left:110%;opacity:0}}
+@media(max-width:600px){#cinematicIntro .film-orbit{width:88vw}#cinematicIntro .film-core{width:100px;height:100px;font-size:45px}#cinematicIntro h1{margin-top:145px}#cinematicIntro .film-foot{letter-spacing:2px}}
+@media(prefers-reduced-motion:reduce){#cinematicIntro *,#cinematicIntro *:before{animation-duration:.01ms!important;animation-iteration-count:1!important}}
+</style>
+<style id="cinematic-v6-redesign">
+:root{
+ --bg:#070910;--panel:#101725;--panel2:#151f30;--text:#f5f7ff;--muted:#a5b2c7;
+ --line:#2a3850;--blue:#83aaff;--cyan:#68f0df;--gold:#f0d39a;
+ --shadow:0 24px 70px #0008;
+}
+body{
+ background:
+  radial-gradient(ellipse at 12% 8%,#182a4b 0,transparent 33%),
+  radial-gradient(ellipse at 90% 78%,#123b3b 0,transparent 28%),
+  linear-gradient(145deg,#070910,#0a101c 55%,#080d14);
+ background-attachment:fixed;
+}
+.sidebar{
+ background:linear-gradient(180deg,#111a2af5 0%,#0a101bf7 100%);
+ border-left:1px solid #9bc7ff24;
+ box-shadow:-18px 0 55px #0005;
+}
+.sidebar button,.nav button{transition:transform .22s ease,background .22s ease,border-color .22s ease}
+.sidebar button:hover,.nav button:hover{transform:translateX(-3px)}
+.logo{
+ border:1px solid #e5d09a55;
+ box-shadow:0 0 28px #80b9ff24, inset 0 1px #ffffff77;
+}
+main,.main{background:transparent}
+.page{padding-bottom:45px}
+.hero{
+ position:relative;overflow:hidden;
+ background:
+  radial-gradient(circle at 12% 20%,#77d8df20,transparent 30%),
+  linear-gradient(115deg,#172642 0%,#182b3c 52%,#153a3b 100%);
+ border:1px solid #8dcaff50;border-radius:24px;
+ box-shadow:0 28px 75px #0006;
+}
+.hero:before{
+ content:"";position:absolute;width:340px;height:340px;border-radius:50%;
+ left:-100px;top:-180px;border:1px solid #b3d9ff28;
+ box-shadow:0 0 0 28px #b3d9ff08,0 0 0 58px #b3d9ff06;
+}
+.card,.stat,.feature,.project,.panel,.ai-card,.ai-topic{
+ background:linear-gradient(145deg,#172233f2,#101824f5);
+ border:1px solid #34465f;
+ box-shadow:0 15px 42px #0004;
+ border-radius:17px;
+ transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease;
+}
+.card:hover,.feature:hover,.project:hover,.ai-topic:hover{
+ transform:translateY(-4px);border-color:#8ebdff80;box-shadow:0 20px 48px #0006;
+}
+input,textarea,select{
+ background:#0b1320!important;color:#f3f6ff!important;
+ border:1px solid #3b4d67!important;border-radius:11px!important;
+}
+input:focus,textarea:focus,select:focus{outline:2px solid #83aaff88!important;border-color:#83aaff!important}
+button.primary,.primary{
+ background:linear-gradient(110deg,#f0d39a 0%,#a9c9ff 52%,#69e8d9 100%)!important;
+ color:#09111d!important;font-weight:800;box-shadow:0 10px 32px #79c8e92b;
+ border:0!important;
+}
+button.secondary,.secondary{background:#1a2940!important;border:1px solid #506685!important;color:#eaf2ff!important}
+.section-head{border-bottom:1px solid #34445a;padding-bottom:12px}
+.ai-hero{
+ background:
+  radial-gradient(circle at 85% 10%,#66dcd626,transparent 30%),
+  radial-gradient(circle at 8% 90%,#9d9cff20,transparent 34%),
+  linear-gradient(125deg,#192642,#142b3c 58%,#123532);
+ border:1px solid #8abfff55;box-shadow:0 25px 70px #0007;
+}
+.ai-orb{box-shadow:0 0 45px #83cfff50,inset 0 1px #fff9}
+.ai-topic{background:linear-gradient(145deg,#172338,#101824);border:1px solid #34465f}
+#cinematicIntro{
+ background:#03050b;
+ isolation:isolate;
+ transition:opacity 1.15s cubic-bezier(.2,.7,.2,1),visibility 1.15s;
+}
+#cinematicIntro .film-bg{
+ inset:-25%;
+ background:
+  radial-gradient(ellipse at 50% 43%,#264a6b 0,#172b48 19%,transparent 42%),
+  radial-gradient(ellipse at 22% 65%,#174b50 0,transparent 31%),
+  radial-gradient(ellipse at 78% 24%,#44305b 0,transparent 30%),
+  radial-gradient(ellipse at 50% 50%,#0d1424 0,#03050b 70%);
+ animation:nebulaDrift 13s ease-in-out infinite alternate;
+}
+#cinematicIntro .film-grid{
+ opacity:.2;background-size:68px 68px;
+ transform:perspective(650px) rotateX(68deg) scale(2);
+ filter:drop-shadow(0 0 8px #65d9ff35);
+}
+#cinematicIntro:before{
+ content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+ background:linear-gradient(90deg,transparent 0%,#9adfff08 48%,transparent 100%),
+ radial-gradient(ellipse at center,transparent 30%,#000b 100%);
+}
+#cinematicIntro .film-orbit{
+ width:min(76vw,720px);border:1px solid #a5d9ff3a;
+ box-shadow:0 0 90px #4ba9ff18,inset 0 0 90px #4ba9ff10;
+ animation:orbitV6 34s linear infinite;
+}
+#cinematicIntro .film-orbit:before{
+ border-color:#73f0df55;transform:rotateX(66deg) rotate(45deg);
+ box-shadow:0 0 35px #68e8df1c;
+}
+#cinematicIntro .film-orbit:after{
+ border-color:#efd49a66;transform:rotateY(68deg) rotate(-35deg);
+}
+#cinematicIntro .film-core{
+ width:clamp(94px,13vw,142px);height:clamp(94px,13vw,142px);
+ border-radius:34px;font-size:clamp(43px,6vw,65px);
+ background:linear-gradient(145deg,#f4dfae 0%,#a9caff 55%,#6bf0df 100%);
+ box-shadow:0 0 45px #8fcfff90,0 0 150px #53d8df55,0 0 0 12px #c8eaff0a;
+ animation:coreReveal 1.8s .35s cubic-bezier(.16,1,.3,1) both,coreHover 5s 2.2s ease-in-out infinite;
+ z-index:2;
+}
+#cinematicIntro .film-content{
+ width:min(94%,900px);padding:24px 15px;z-index:3;
+}
+#cinematicIntro .film-kicker{
+ letter-spacing:6px;color:#a8e8f4;font-size:10px;
+ text-shadow:0 0 18px #6fdfff88;
+ animation:cinemaRise 1s .2s both;
+}
+#cinematicIntro h1{
+ font-size:clamp(39px,9vw,100px);letter-spacing:clamp(2px,1.1vw,12px);
+ margin:clamp(150px,22vh,205px) 0 0;
+ line-height:1.04;font-weight:950;
+ background:linear-gradient(100deg,#fff 5%,#c5e2ff 34%,#f2dba9 61%,#81f1e1 90%);
+ -webkit-background-clip:text;background-clip:text;color:transparent;
+ filter:drop-shadow(0 12px 35px #82bfff20);
+ animation:cinemaTitle 1.35s .65s cubic-bezier(.16,1,.3,1) both;
+}
+#cinematicIntro .film-sub{
+ font-size:clamp(10px,1.8vw,15px);letter-spacing:clamp(1px,.45vw,4px);
+ color:#c3d4e9;margin:16px 0 20px;animation:cinemaRise 1s 1s both;
+}
+#cinematicIntro .film-line{
+ width:min(390px,70vw);height:1px;margin:20px auto;
+ background:linear-gradient(90deg,transparent,#9ceaff,#f1d49b,#7ceede,transparent);
+ box-shadow:0 0 20px #8eeaff8a;animation:lineBloom 1.5s 1.2s both;
+}
+#cinematicIntro .film-copy{
+ color:#d0d9e8;font-size:clamp(13px,2vw,16px);line-height:2;
+ animation:cinemaRise 1s 1.35s both;
+}
+#cinematicIntro .film-actions{margin-top:28px;animation:cinemaRise 1s 1.6s both}
+#cinematicIntro .enter-btn{
+ padding:15px 34px;border-radius:50px;letter-spacing:1px;
+ background:linear-gradient(110deg,#f0d59e,#a9caff 55%,#70ebdc);
+ color:#07111b;font-weight:900;border:1px solid #ffffffa8;
+ box-shadow:0 0 0 6px #b9e3ff0a,0 12px 45px #7ecfff45;
+ transition:transform .25s,box-shadow .25s;
+}
+#cinematicIntro .enter-btn:hover{transform:translateY(-4px) scale(1.035);box-shadow:0 0 0 9px #b9e3ff0d,0 18px 60px #7ecfff60}
+#cinematicIntro .skip-btn{border-radius:50px;background:#ffffff0b;border:1px solid #ffffff35;color:#d9e6f5;padding:13px 22px}
+#cinematicIntro .film-foot{
+ color:#8296b0;letter-spacing:clamp(1px,.35vw,4px);font-size:9px;
+ text-shadow:0 0 12px #83caff66;
+}
+#cinematicIntro .light-streak{
+ top:20%;height:2px;opacity:0;
+ background:linear-gradient(90deg,transparent,#b7efff,transparent);
+ box-shadow:0 0 30px #83dcff;
+ animation:streakV6 6s 1.8s ease-in-out infinite;
+}
+@keyframes nebulaDrift{0%{transform:scale(1) translate3d(-1%,0,0);filter:hue-rotate(0)}100%{transform:scale(1.12) translate3d(1%,1%,0);filter:hue-rotate(22deg)}}
+@keyframes orbitV6{to{transform:rotate(360deg)}}
+@keyframes coreReveal{0%{opacity:0;transform:scale(.25) rotate(-35deg);filter:blur(18px)}70%{opacity:1;transform:scale(1.08) rotate(5deg);filter:blur(0)}100%{transform:scale(1) rotate(0)}}
+@keyframes coreHover{0%,100%{translate:0 0}50%{translate:0 -12px}}
+@keyframes cinemaRise{from{opacity:0;transform:translateY(24px);filter:blur(6px)}to{opacity:1;transform:none;filter:none}}
+@keyframes cinemaTitle{from{opacity:0;letter-spacing:22px;transform:scale(.88);filter:blur(12px)}to{opacity:1;letter-spacing:clamp(2px,1.1vw,12px);transform:scale(1);filter:blur(0)}}
+@keyframes lineBloom{from{transform:scaleX(0);opacity:0}to{transform:scaleX(1);opacity:1}}
+@keyframes streakV6{0%,100%{left:-80%;opacity:0}22%{opacity:.9}58%{left:120%;opacity:0}}
+@media(max-width:600px){
+ #cinematicIntro .film-orbit{width:94vw}
+ #cinematicIntro h1{margin-top:clamp(135px,20vh,175px);letter-spacing:1px}
+ #cinematicIntro .film-actions{gap:8px;flex-wrap:wrap}
+ #cinematicIntro .enter-btn{padding:13px 24px}
+}
+@media(prefers-reduced-motion:reduce){
+ #cinematicIntro *,#cinematicIntro *:before{animation:none!important;transition:none!important}
+ .page.active{animation:none}
+}
+</style>
+<style id="cinematic-v7-premium">
+#cinematicIntro{position:fixed;inset:0;z-index:99999;display:grid;place-items:center;overflow:hidden;color:#f5f7ff;background:#040711;isolation:isolate;transition:opacity .95s ease,visibility .95s ease}
+#cinematicIntro.hide{opacity:0;visibility:hidden;pointer-events:none}
+#cinematicIntro:before{content:"";position:absolute;inset:0;z-index:-2;background:radial-gradient(ellipse at 50% 48%,#172e4b 0%,#0b1425 32%,#060a15 67%,#02040a 100%)}
+#cinematicIntro:after{content:"";position:absolute;inset:0;z-index:3;pointer-events:none;background:linear-gradient(90deg,#030610aa,transparent 22%,transparent 78%,#030610aa),linear-gradient(0deg,#02040bd9,transparent 22%,transparent 78%,#02040b88)}
+.cinema-noise{position:absolute;inset:-50%;opacity:.12;z-index:-1;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.24'/%3E%3C/svg%3E");animation:noiseDrift 1.8s steps(3) infinite}
+.cinema-stars{position:absolute;inset:0;opacity:.65;background-image:radial-gradient(1px 1px at 12% 20%,#fff 98%,transparent),radial-gradient(1px 1px at 81% 18%,#b6e7ff 98%,transparent),radial-gradient(2px 2px at 68% 73%,#fff 98%,transparent),radial-gradient(1px 1px at 26% 82%,#e6d4a9 98%,transparent),radial-gradient(1px 1px at 91% 57%,#fff 98%,transparent),radial-gradient(1px 1px at 43% 12%,#b7d9ff 98%,transparent);background-size:370px 290px;animation:starDrift 35s linear infinite}
+.cinema-horizon{position:absolute;left:-20%;right:-20%;bottom:-43%;height:75%;border-radius:50%;border:1px solid #78bfff2b;box-shadow:0 -20px 100px #398ddc12,0 -2px 40px #74d9f01b;transform:perspective(500px) rotateX(67deg);background:repeating-linear-gradient(0deg,transparent 0 44px,#79caff13 45px 46px),repeating-linear-gradient(90deg,transparent 0 70px,#79caff10 71px 72px);mask-image:linear-gradient(transparent,#000 25%,#000)}
+.cinema-ring{position:absolute;left:50%;top:48%;width:min(76vw,760px);aspect-ratio:1;border:1px solid #85cfff25;border-radius:50%;transform:translate(-50%,-50%) rotateX(68deg) rotate(-18deg);box-shadow:0 0 70px #4c9fe91a,inset 0 0 70px #4c9fe910}
+.ring-a{animation:cinemaSpin 38s linear infinite}.ring-b{width:min(62vw,610px);border-color:#d6bd8030;transform:translate(-50%,-50%) rotateX(73deg) rotate(52deg);animation:cinemaSpinReverse 31s linear infinite}.ring-c{width:min(48vw,470px);border-style:dashed;border-color:#6fe8df27;transform:translate(-50%,-50%) rotateY(65deg);animation:cinemaSpin 48s linear infinite}
+.cinema-particle{position:absolute;width:7px;height:7px;border-radius:50%;background:#a7e9ff;box-shadow:0 0 18px 5px #65cfff88;left:calc(50% + 27vw);top:27%;animation:particleFloat 6s ease-in-out infinite}
+.p-b{left:calc(50% - 31vw);top:69%;width:4px;height:4px;background:#f2d9a0;box-shadow:0 0 18px 5px #e7c77a88;animation-delay:-2s}.p-c{left:74%;top:62%;width:3px;height:3px;animation-delay:-4s}
+.cinema-top,.cinema-bottom{position:absolute;z-index:4;left:clamp(18px,5vw,68px);right:clamp(18px,5vw,68px);display:flex;justify-content:space-between;align-items:center;color:#8194ad;font-size:9px;letter-spacing:3px}
+.cinema-top{top:clamp(22px,4vh,42px)}.cinema-bottom{bottom:clamp(23px,4vh,42px);font-size:8px;letter-spacing:2.5px}
+.live-dot{color:#8be9d8}.live-dot:before{content:"";display:inline-block;width:6px;height:6px;margin-right:9px;border-radius:50%;background:#76e6c8;box-shadow:0 0 12px #76e6c8;vertical-align:middle}
+.cinema-center{position:relative;z-index:5;width:min(92%,900px);text-align:center;padding:20px 12px 30px;animation:cinemaReveal 1.1s .1s both}
+.cinema-emblem{width:clamp(100px,14vw,145px);height:clamp(100px,14vw,145px);margin:0 auto 23px;position:relative;display:grid;place-items:center}
+.emblem-core{width:48%;height:48%;display:grid;place-items:center;border-radius:29%;font-size:clamp(30px,5vw,48px);color:#101522;background:linear-gradient(140deg,#fff1c9 0%,#a9d4ff 54%,#7df1dc 100%);box-shadow:0 0 35px #8ccfff88,0 0 110px #52bde94d;animation:emblemPulse 4s ease-in-out infinite}
+.emblem-orbit{position:absolute;inset:0;border:1px solid #9bdcff70;border-radius:50%;transform:rotateX(65deg) rotate(25deg);animation:cinemaSpin 12s linear infinite}
+.emblem-orbit:after{content:"";position:absolute;width:8px;height:8px;border-radius:50%;background:#f6d99c;top:9%;left:17%;box-shadow:0 0 15px #f6d99c}
+.orbit-two{inset:10%;border-color:#6fe7d866;transform:rotateY(65deg) rotate(-30deg);animation:cinemaSpinReverse 16s linear infinite}
+.cinema-kicker{color:#9fe5f5;font-size:clamp(9px,1.2vw,12px);letter-spacing:clamp(3px,.7vw,7px);font-weight:700;margin-bottom:11px}
+#cinematicIntro h1{margin:0;font-size:clamp(43px,9vw,100px);line-height:1.05;letter-spacing:clamp(2px,1.1vw,12px);font-weight:950;color:#fff;text-shadow:0 8px 50px #7dbfff30;animation:titleFocus 1.2s .3s both}
+#cinematicIntro h1 span{background:linear-gradient(100deg,#fff 4%,#b8d8ff 35%,#f0d59c 65%,#79ebdf 95%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.cinema-subtitle{font-size:clamp(8px,1.25vw,12px);letter-spacing:clamp(2px,.65vw,6px);color:#b3c2d7;margin-top:15px}
+.cinema-divider{height:1px;width:min(330px,62vw);margin:25px auto 21px;background:linear-gradient(90deg,transparent,#79cfff,#f1d49b,#70e8dc,transparent);position:relative}
+.cinema-divider i{position:absolute;width:7px;height:7px;left:50%;top:50%;border-radius:50%;background:#fff;box-shadow:0 0 18px #a6e8ff;transform:translate(-50%,-50%)}
+.cinema-ar{font-size:clamp(13px,1.7vw,17px);line-height:2;color:#aabbd0;margin:0}.cinema-ar b{color:#f0e4c8;font-weight:700}
+.cinema-metrics{display:flex;justify-content:center;gap:clamp(22px,5vw,65px);margin:24px 0 27px}
+.cinema-metrics div{display:flex;flex-direction:column;gap:5px}.cinema-metrics b{font-size:18px;color:#d9e9fb;font-weight:500;letter-spacing:2px}.cinema-metrics small{font-size:8px;letter-spacing:3px;color:#6f8ba8}
+.cinema-actions{display:flex;justify-content:center;align-items:center;gap:13px;flex-wrap:wrap}
+#cinematicIntro .enter-btn{border:1px solid #d7eaff99;border-radius:50px;padding:15px 31px;min-width:190px;background:linear-gradient(105deg,#f1d9a5,#b6d8ff 55%,#85eddf);color:#09121e;font-weight:900;letter-spacing:.7px;box-shadow:0 10px 40px #7bcfff30,0 0 0 1px #fff2 inset;transition:transform .25s,box-shadow .25s}
+#cinematicIntro .enter-btn span{font-size:18px;margin-right:10px}#cinematicIntro .enter-btn:hover{transform:translateY(-4px);box-shadow:0 18px 55px #7bcfff66,0 0 0 7px #b6e6ff0d}
+#cinematicIntro .skip-btn{border:1px solid #ffffff35;border-radius:50px;padding:14px 22px;background:#ffffff08;color:#c5d2e2;transition:.25s}#cinematicIntro .skip-btn:hover{background:#ffffff16;border-color:#ffffff75}
+.cinema-index{color:#52667e}.cinema-progress{position:absolute;bottom:0;left:0;right:0;height:2px;background:#ffffff10;z-index:5}.cinema-progress i{display:block;height:100%;width:100%;transform-origin:left;background:linear-gradient(90deg,#73caff,#e9d29a,#6de6d7);animation:introProgress 14s linear forwards}
+@keyframes cinemaReveal{from{opacity:0;transform:translateY(22px);filter:blur(8px)}to{opacity:1;transform:none;filter:none}}
+@keyframes titleFocus{from{opacity:0;letter-spacing:20px;filter:blur(12px)}to{opacity:1;letter-spacing:clamp(2px,1.1vw,12px);filter:none}}
+@keyframes emblemPulse{50%{transform:translateY(-5px) rotateY(12deg);box-shadow:0 0 55px #8ccfffbb,0 0 130px #52bde966}}
+@keyframes cinemaSpin{to{transform:translate(-50%,-50%) rotateX(68deg) rotate(342deg)}}
+@keyframes cinemaSpinReverse{to{transform:translate(-50%,-50%) rotateX(73deg) rotate(-308deg)}}
+@keyframes particleFloat{50%{transform:translate3d(13px,-18px,0);opacity:.45}}
+@keyframes starDrift{to{background-position:370px 290px}}
+@keyframes noiseDrift{0%{transform:translate(0,0)}25%{transform:translate(2%,-1%)}50%{transform:translate(-1%,2%)}75%{transform:translate(1%,1%)}100%{transform:translate(-2%,-1%)}}
+@keyframes introProgress{to{transform:scaleX(0)}}
+@media(max-width:650px){
+ .cinema-top,.cinema-bottom{font-size:7px;letter-spacing:1.5px}
+ .cinema-center{padding:8px 10px 24px}
+ .cinema-emblem{margin-bottom:17px}
+ #cinematicIntro h1{font-size:clamp(39px,12vw,66px);letter-spacing:1px}
+ .cinema-subtitle{letter-spacing:2px;font-size:8px}
+ .cinema-divider{margin:18px auto 15px}
+ .cinema-ar{font-size:13px}
+ .cinema-metrics{margin:18px 0 21px;gap:28px}
+ #cinematicIntro .enter-btn{min-width:165px;padding:13px 22px}
+ .cinema-ring{width:110vw}.ring-b{width:90vw}.ring-c{width:70vw}
+}
+@media(max-height:700px){.cinema-emblem{width:82px;height:82px;margin-bottom:12px}.cinema-metrics{margin:13px 0 17px}.cinema-divider{margin:15px auto 12px}.cinema-ar{line-height:1.7}}
+@media(prefers-reduced-motion:reduce){#cinematicIntro *,#cinematicIntro *:before,#cinematicIntro *:after{animation:none!important;transition:none!important}}
+</style>
+<style id="library-v8-system">
+.knowledge-control-panel{padding:14px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(145deg,#172438cc,#0c1522cc);margin:12px 0}
+.knowledge-toolbar,.ai-toolbar{display:grid;grid-template-columns:minmax(180px,1fr) minmax(145px,210px) minmax(145px,190px) auto;gap:9px;align-items:center}
+.knowledge-toolbar input,.knowledge-toolbar select,.ai-toolbar input,.ai-toolbar select{width:100%;min-width:0}
+.library-status{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:10px;color:var(--muted);font-size:11px}
+.library-status span:first-child{color:#9bdfff;font-weight:800}
+.library-add{border:1px solid #75cfff55;border-radius:16px;background:linear-gradient(135deg,#13243a,#101925);margin:12px 0 18px;overflow:hidden}
+.library-add summary{cursor:pointer;list-style:none;padding:15px 17px;color:#bdeaff;font-weight:800}
+.library-add summary::-webkit-details-marker{display:none}
+.library-add summary:after{content:"＋";float:left;color:#f0d69f;font-size:18px}
+.library-add[open] summary{border-bottom:1px solid #ffffff16}
+.library-add-grid{padding:14px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.library-add-grid textarea{grid-column:1/-1;resize:vertical}
+.library-add-grid button{justify-self:start}
+.library-more{display:block;margin:18px auto;min-width:180px}
+.info-card,.ai-topic{position:relative;transition:transform .2s,border-color .2s,box-shadow .2s}
+.info-card:hover,.ai-topic:hover{transform:translateY(-3px);border-color:#7bcfff88;box-shadow:0 14px 35px #0003}
+.library-tag{display:inline-flex;align-items:center;gap:5px;padding:4px 9px;border-radius:30px;background:#77cfff15;border:1px solid #77cfff35;color:#a9ddff;font-size:10px}
+.library-empty{grid-column:1/-1;padding:24px;text-align:center;border:1px dashed var(--line);border-radius:16px;color:var(--muted)}
+@media(max-width:700px){.knowledge-toolbar,.ai-toolbar{grid-template-columns:1fr 1fr}.knowledge-toolbar input,.ai-toolbar input{grid-column:1/-1}.library-add-grid{grid-template-columns:1fr}.library-add-grid textarea{grid-column:auto}}
+</style>
+</head>
+<body>
+<div id="cinematicIntro" aria-label="مقدمة THE INVENTOR السينمائية">
+ <div class="cinema-noise"></div><div class="cinema-stars"></div><div class="cinema-horizon"></div>
+ <div class="cinema-ring ring-a"></div><div class="cinema-ring ring-b"></div><div class="cinema-ring ring-c"></div>
+ <div class="cinema-particle p-a"></div><div class="cinema-particle p-b"></div><div class="cinema-particle p-c"></div>
+ <div class="cinema-top"><span>INDEPENDENT THINKING LAB</span><span class="live-dot">SYSTEM ONLINE</span></div>
+ <div class="cinema-center">
+  <div class="cinema-emblem"><div class="emblem-core">✦</div><div class="emblem-orbit"></div><div class="emblem-orbit orbit-two"></div></div>
+  <div class="cinema-kicker">A NEW WORLD OF POSSIBILITIES</div>
+  <h1>THE <span>INVENTOR</span></h1>
+  <div class="cinema-subtitle">IMAGINE · EXPLORE · ENGINEER · CREATE</div>
+  <div class="cinema-divider"><i></i></div>
+  <p class="cinema-ar">كل اختراع عظيم بدأ بسؤال مختلف.<br><b>هنا… خلّي فضولك يتحول لفكرة، وفكرتك لخطة.</b></p>
+  <div class="cinema-metrics"><div><b>01</b><small>THINK</small></div><div><b>02</b><small>DISCOVER</small></div><div><b>03</b><small>INVENT</small></div></div>
+  <div class="cinema-actions"><button class="enter-btn" id="enterInventor">ابدأ الاستكشاف <span>↗</span></button><button class="skip-btn" id="skipIntro">تخطي المقدمة</button></div>
+ </div>
+ <div class="cinema-bottom"><span>THE FUTURE IS BUILT BY CURIOUS MINDS</span><span class="cinema-index">INTRO / 001</span></div>
+ <div class="cinema-progress"><i></i></div>
+</div>
+<div class="app">
+<aside class="sidebar">
+ <div class="brand"><div class="logo">✦</div><div><b>THE INVENTOR</b><small>THINK · CREATE · DISCOVER</small></div></div>
+ <div class="nav-label">مساحة العمل</div>
+ <nav class="nav" id="nav">
+  <button class="active" data-page="home"><span class="ico">⌂</span> الرئيسية</button>
+  <button data-page="create"><span class="ico">✧</span> مختبر الابتكار</button>
+  <button data-page="labs"><span class="ico">⚗</span> المختبرات</button>
+  <button data-page="mixer"><span class="ico">⧉</span> دمج الأفكار</button>
+  <button data-page="archive"><span class="ico">▤</span> أرشيفي</button>
+  <button data-page="knowledge"><span class="ico">▦</span> موسوعة الابتكار</button>
+  <button data-page="aihub"><span class="ico">✺</span> عالم الذكاء الاصطناعي</button>
+  <button data-page="evaluate"><span class="ico">◎</span> تقييم الفكرة</button>
+  <button data-page="challenges"><span class="ico">♜</span> التحديات</button>
+  <button data-page="profile"><span class="ico">◈</span> إنجازاتي</button>
+  <button data-page="settings"><span class="ico">⚙</span> الضبط</button>
+ </nav>
+ <div class="side-bottom"><div class="profile"><div class="avatar">م</div><div><b>المخترع</b><small id="sideLevel">المستوى 1 · مبتدئ</small></div></div></div>
+</aside>
+<main>
+ <header class="topbar"><div><div class="eyebrow">INNOVATION STUDIO / 01</div><h1 id="pageTitle">أهلاً بيك في معملك</h1></div><div class="top-actions"><button class="secondary" id="langBtn">EN / AR</button><button class="icon-btn" id="themeBtn" title="تغيير المظهر">☼</button></div></header>
+ <section class="page active" id="home">
+  <div class="hero"><div class="eyebrow">YOUR IDEAS. YOUR UNIVERSE.</div><h2>كل اختراع جامد بدأ بسؤال.</h2><p>حوّل مشاكل يومك لأفكار تستاهل التجربة. جرّب الأدوات، طوّر أفكارك، وخلي كل مشاريعك في مكان واحد.</p><div class="hero-buttons"><button class="primary" onclick="go('create')">＋ يلا نبدأ اختراع جديد</button><button class="secondary" onclick="go('labs')">لف على المختبرات</button></div></div>
+  <div class="stats">
+   <div class="stat"><div class="stat-icon">💡</div><div><strong id="statProjects">0</strong><small>اختراعات متسجلة</small></div></div>
+   <div class="stat"><div class="stat-icon">⚡</div><div><strong id="statXP">0</strong><small>نقط الخبرة XP</small></div></div>
+   <div class="stat"><div class="stat-icon">🪙</div><div><strong id="statCoins">100</strong><small>كوينز المخترع</small></div></div>
+   <div class="stat"><div class="stat-icon">🏅</div><div><strong id="statLevel">1</strong><small>مستواك دلوقتي</small></div></div>
+  </div>
+  <div class="section-head"><h2>الأدوات اللي هتساعدك</h2><span>اختار وابدأ من أي حتة</span></div>
+  <div class="grid">
+   <button class="feature" onclick="go('create')"><div class="big">🧠</div><h3>مولّد الاختراعات</h3><p>حوّل مشكلة أو فكرة بسيطة إلى تصور اختراع متكامل.</p></button>
+   <button class="feature" onclick="go('mixer')"><div class="big">🧬</div><h3>INVENTION DNA</h3><p>ادمج فكرتين واكتشف استخدامات جديدة.</p></button>
+   <button class="feature" onclick="go('create','whatif')"><div class="big">🌌</div><h3>WHAT IF ENGINE</h3><p>استكشف سيناريوهات «ماذا لو؟» واحتمالاتها.</p></button>
+   <button class="feature" onclick="go('labs')"><div class="big">⚗️</div><h3>المختبرات المتخصصة</h3><p>مساحات ابتكار حسب المجال والتخصص.</p></button>
+   <button class="feature" onclick="go('archive')"><div class="big">🗂️</div><h3>أرشيف المخترع</h3><p>احفظ أفكارك وارجع لها وطورها لاحقًا.</p></button>
+   <button class="feature" onclick="go('challenges')"><div class="big">🏆</div><h3>ساحة التحديات</h3><p>اختبر إبداعك في تحديات قصيرة ومتجددة.</p></button>
+  </div>
+  <div class="section-head"><h2>أحدث اختراعاتك</h2><button class="secondary" onclick="go('archive')">عرض الأرشيف ←</button></div>
+  <div id="recentProjects" class="cards"><div class="empty">لسه مفيش اختراعات محفوظة. مستنيين أول فكرة منك!</div></div>
+ </section>
+ <section class="page" id="create">
+  <div class="panel"><div class="eyebrow">IDEA GENERATOR</div><h2>من المشكلة للاختراع</h2><p class="muted">اكتب مشكلة أو فكرة، والمحرك الداخلي هيستخدم قوالب وقواعد ابتكار عشان يطلعلك تصور مبدئي. ملحوظة: ده مش متصل بخدمة ذكاء اصطناعي خارجية.</p>
+   <div class="form-grid">
+    <div class="field full"><label>إيه المشكلة أو الفكرة اللي عايز تطورها؟</label><textarea id="ideaInput" placeholder="مثال: أريد طريقة تساعدني على تذكر الأشياء المهمة قبل الخروج من المنزل..."></textarea></div>
+    <div class="field"><label>مجال الفكرة</label><select id="category"><option>الحياة اليومية</option><option>الإلكترونيات</option><option>الروبوتات</option><option>البيئة والطاقة</option><option>الصحة والتقنيات المساعدة</option><option>المواصلات</option><option>التعليم</option><option>الفضاء</option><option>المنزل الذكي</option><option>أفكار مستقبلية</option></select></div>
+    <div class="field"><label>مستوى الصعوبة</label><select id="complexity"><option>بسيط</option><option selected>متوسط</option><option>متقدم</option><option>مستقبلي / تصوري</option></select></div>
+   </div>
+   <div class="actions"><button class="primary" id="generateBtn">✦ اقترحلي حل ✦</button><button class="secondary" id="randomBtn">فاجئني بفكرة!</button></div>
+   <div class="result" id="ideaResult"></div>
+  </div>
+  <div class="panel"><h3>ماذا لو؟ — محرك الاحتمالات</h3><p class="muted">اكتب سيناريو من خيالك وشوف ممكن يفتحلك أنهي فرص ابتكار.</p><div class="field"><input id="whatIfInput" placeholder="ماذا لو لم نحتج إلى شواحن للأجهزة؟"></div><div class="actions"><button class="primary" id="whatIfBtn">يلا نستكشف</button></div><div class="result" id="whatIfResult"></div></div>
+ </section>
+ <section class="page" id="labs"><div class="section-head"><h2>المختبرات المتخصصة</h2><span>اختر مجالًا لتوليد تحدٍ وفكرة</span></div><div class="lab-grid" id="labGrid"></div><div class="result" id="labResult"></div></section>
+ <section class="page" id="mixer"><div class="panel"><div class="eyebrow">INVENTION DNA</div><h2>ادمج فكرتين لصناعة احتمال جديد</h2><p class="muted">اختر عنصرين، وسيقترح المحرك منتجًا يجمع بعض خصائصهما.</p><div class="form-grid"><div class="field"><label>الفكرة الأولى</label><select id="mixA"><option>ساعة ذكية</option><option>نبات منزلي</option><option>حقيبة مدرسية</option><option>دراجة</option><option>مصباح</option><option>روبوت مساعد</option><option>زجاجة ماء</option><option>خريطة رقمية</option></select></div><div class="field"><label>الفكرة الثانية</label><select id="mixB"><option>مستشعر ذكي</option><option>طاقة شمسية</option><option>مساعد صوتي</option><option>فلتر هواء</option><option>مواد قابلة لإعادة التدوير</option><option>نظام تنبيه</option><option>تقنية تعليمية</option><option>مادة متغيرة اللون</option></select></div></div><div class="actions"><button class="primary" id="mixBtn">🧬 اكتشف التركيبة</button></div><div class="result" id="mixResult"></div></div></section>
+ <section class="page" id="archive"><div class="section-head"><h2>أرشيف اختراعاتك</h2><span id="archiveCount">0 مشروع</span></div><div class="knowledge-toolbar"><input id="archiveSearch" placeholder="ابحث في اختراعاتك..." aria-label="البحث في الأرشيف"><select id="archiveSort" style="max-width:190px"><option value="new">الأحدث أولاً</option><option value="old">الأقدم أولاً</option><option value="az">الاسم أبجديًا</option></select></div><div id="archiveList" class="cards"></div></section>
+ <section class="page" id="knowledge">
+  <div class="hero"><div class="eyebrow">INVENTOR KNOWLEDGE HUB</div><h2>المعرفة هي أول أدوات المخترع.</h2><p>مكتبة تعليمية عملية تساعدك على فهم رحلة الاختراع: من ملاحظة المشكلة، إلى البحث، والتصميم، والنموذج الأولي، والاختبار، ثم التطوير.</p><div class="hero-buttons"><button class="primary" onclick="go('create')">حوّل المعرفة إلى فكرة</button></div></div>
+  <div class="section-head"><h2>دليل رحلة الاختراع</h2><span>7 مراحل أساسية</span></div>
+  <div class="cards" id="journeyCards"></div>
+  <div class="section-head"><h2>مكتبة المفاهيم</h2><span>مصطلحات يحتاجها كل مبتكر</span></div>
+  <div class="cards" id="conceptCards"></div>
+  <div class="section-head"><h2>أمثلة لمجالات الابتكار</h2><span>استكشف أين يمكن أن تبدأ</span></div>
+  <div class="cards" id="fieldCards"></div>
+  <div class="section-head"><h2>مركز المعرفة الموسّع</h2><span>ابحث داخل الدليل وصنّف المحتوى</span></div>
+  <div class="knowledge-control-panel">
+   <div class="knowledge-toolbar">
+    <input id="knowledgeSearch" placeholder="ابحث بالاسم أو الشرح أو أي كلمة..." aria-label="البحث في موسوعة الابتكار">
+    <select id="knowledgeCategory" aria-label="تصنيف موسوعة الابتكار"><option value="الكل">كل التصنيفات</option></select>
+    <select id="knowledgeSort" aria-label="ترتيب الموضوعات"><option value="default">الترتيب الأساسي</option><option value="az">الاسم: أ إلى ي</option><option value="za">الاسم: ي إلى أ</option></select>
+    <button class="secondary" id="knowledgeReset">إعادة ضبط</button>
+   </div>
+   <div class="library-status"><span id="knowledgeCount">جاري تجهيز المكتبة...</span><span>تقدر تضيف موضوعاتك وتحفظها على جهازك</span></div>
+  </div>
+  <details class="library-add" id="knowledgeAddBox">
+   <summary>＋ أضف موضوع جديد لموسوعة الابتكار</summary>
+   <div class="library-add-grid">
+    <input id="newKnowledgeCategory" placeholder="التصنيف، مثال: تصميم">
+    <input id="newKnowledgeTitle" placeholder="اسم الموضوع">
+    <textarea id="newKnowledgeBody" rows="3" placeholder="اكتب شرحًا واضحًا ومفيدًا..."></textarea>
+    <button class="primary" id="addKnowledgeBtn">حفظ الموضوع في مكتبتي</button>
+   </div>
+  </details>
+  <div id="knowledgeLibrary" class="info-grid"></div>
+  <button class="secondary library-more" id="knowledgeMore" hidden>عرض موضوعات أكتر</button>
+  <div class="section-head"><h2>أدوات التخطيط والتنظيم</h2><span>حوّل الفكرة إلى خطة عمل</span></div>
+  <div class="tool-row">
+   <div class="tool-tile">🧭<b>خريطة المشكلة</b><small>حدد السبب، المتأثرين، السياق، والنتيجة الحالية.</small></div>
+   <div class="tool-tile">🎯<b>معايير النجاح</b><small>اكتب نتائج قابلة للملاحظة بدل أهداف عامة.</small></div>
+   <div class="tool-tile">🧪<b>خطة الاختبار</b><small>فرضية واحدة، تجربة آمنة، ومقياس واضح.</small></div>
+   <div class="tool-tile">🗒️<b>سجل التغييرات</b><small>وثّق ما تغير ولماذا وماذا تعلمت.</small></div>
+  </div>
+  <div class="section-head"><h2>قوالب جاهزة للمخترع</h2><span>انسخ قالبًا وابدأ تعبئته</span></div>
+  <div class="cards">
+   <article class="project"><h3>📌 قالب تعريف المشكلة</h3><p>يواجه [نوع المستخدم] صعوبة في [المشكلة] عندما [السياق]، مما يؤدي إلى [الأثر]. نحتاج إلى فهم السبب قبل اختيار الحل.</p><button class="secondary" onclick="copyTemplate('يواجه [نوع المستخدم] صعوبة في [المشكلة] عندما [السياق]، مما يؤدي إلى [الأثر].')">نسخ القالب</button></article>
+   <article class="project"><h3>🧪 قالب تجربة أولية</h3><p>نتوقع أن [الفرضية]. سنختبر ذلك عبر [طريقة آمنة] مع [الفئة]، وسنقيس [المؤشر] خلال [المدة].</p><button class="secondary" onclick="copyTemplate('نتوقع أن [الفرضية]. سنختبر ذلك عبر [طريقة آمنة] مع [الفئة]، وسنقيس [المؤشر] خلال [المدة].')">نسخ القالب</button></article>
+   <article class="project"><h3>📊 قالب مقارنة الحلول</h3><p>قارن البدائل حسب سهولة الاستخدام، التكلفة التقديرية، الصيانة، الأثر البيئي، وإمكانية الوصول.</p><button class="secondary" onclick="copyTemplate('الحل | سهولة الاستخدام | التكلفة التقديرية | الصيانة | الأثر البيئي | ملاحظات\\nأ | ...\\nب | ...\\nج | ...')">نسخ القالب</button></article>
+   <article class="project"><h3>🧾 قالب سجل الإصدار</h3><p>رقم الإصدار، التاريخ، التعديل، سبب التعديل، نتيجة الاختبار، والخطوة التالية.</p><button class="secondary" onclick="copyTemplate('الإصدار: ...\\nالتاريخ: ...\\nالتعديل: ...\\nالسبب: ...\\nنتيجة الاختبار: ...\\nالخطوة التالية: ...')">نسخ القالب</button></article>
+  </div>
+  <div class="panel" style="margin-top:16px"><h3>قاعدة ذهبية للمخترع</h3><p class="muted" style="line-height:1.9">الفكرة الجذابة ليست بالضرورة اختراعًا قابلًا للتنفيذ. ابحث عن المشكلة الحقيقية، وتحقق من الحلول الموجودة، واختبر افتراضاتك بأبسط نموذج آمن. لا تعتبر تقديرات التكلفة أو الجِدّة أو السلامة التي ينتجها هذا التطبيق حقائق مؤكدة؛ فهي تحتاج إلى مصادر متخصصة واختبارات مناسبة.</p></div>
+ </section>
+ <section class="page" id="aihub">
+  <div class="ai-hero">
+   <div class="ai-orb">✺</div><div class="eyebrow">THE AI UNIVERSE · LEARN / BUILD / THINK</div>
+   <h2>خش عالم الذكاء الاصطناعي 🚀</h2>
+   <p>من أول سؤال «يعني إيه AI؟» لحد الشبكات العصبية والرؤية الحاسوبية والروبوتات. هنا هتلاقي مكتبة موسعة بالمصري: مفاهيم، خوارزميات، نماذج لغة، رؤية حاسوبية، صوت، تطبيقات، تقييم، وأمان. كل موضوع مع مثال يساعدك تفهمه وتعرف حدوده.</p>
+   <div class="ai-badges"><span class="ai-badge">🧠 أساسيات AI</span><span class="ai-badge">💬 نماذج اللغة</span><span class="ai-badge">👁️ الرؤية الحاسوبية</span><span class="ai-badge">🤖 الروبوتات</span><span class="ai-badge">🛡️ الأمان والأخلاقيات</span></div>
+   <button class="primary" onclick="document.getElementById('aiAsk').focus()">اسأل مساعد المعرفة ↓</button>
+  </div>
+  <div class="ai-badges" style="margin:12px 0 18px"><span class="ai-badge">📚 مكتبة موسعة ومتجددة</span><span class="ai-badge">🧩 أمثلة عملية</span><span class="ai-badge">🛡️ استخدام مسؤول</span></div>
+ <div class="ai-layout">
+   <div class="ai-card">
+    <div class="eyebrow">AI KNOWLEDGE ASSISTANT</div><h3>💬 اسأل، وهو يشرحلك بالمصري</h3>
+    <p>اكتب مصطلح أو سؤال عن الذكاء الاصطناعي. المساعد يقدر يشتغل بالمكتبة الداخلية، أو يتصل بموديل AI حقيقي من خلال Backend آمن تضيف رابطه من الإعدادات.</p>
+    <div class="ai-chat" id="aiChat"><div class="ai-msg bot">أهلاً بيك! 👋 اسألني عن أي حاجة في الذكاء الاصطناعي، زي الفرق بين Machine Learning وDeep Learning، أو إزاي الكمبيوتر بيتعرف على الصور.</div></div>
+    <div class="field"><label for="aiAsk">اكتب سؤالك هنا</label><input id="aiAsk" placeholder="مثلاً: يعني إيه شبكة عصبية؟"></div>
+    <details class="ai-connect" style="margin:12px 0;padding:12px;border:1px solid #4b5870;border-radius:12px;background:#0d1420">
+     <summary style="cursor:pointer;color:#b9d6ff;font-size:13px;font-weight:700">⚙️ إعداد الاتصال بموديل AI حقيقي</summary>
+     <p style="font-size:12px;color:#aab8ca;line-height:1.8">لما يكون عندك Backend آمن متوصل بموديل ذكاء اصطناعي، حط رابط الـ API هنا. مفتاح الخدمة لازم يفضل على السيرفر، وماتحطّوش في ملف HTML.</p>
+     <label for="aiEndpoint" style="display:block;font-size:12px;margin:8px 0">رابط الـ Backend</label>
+     <input id="aiEndpoint" placeholder="https://your-domain.com/api/ai" style="width:100%">
+     <div class="actions" style="margin-top:9px"><button class="secondary" id="saveAIEndpoint">حفظ رابط الاتصال</button><span id="aiConnectionStatus" style="font-size:11px;color:#b7c6d9">الوضع الحالي: المساعد المحلي</span></div>
+    </details>
+    <div class="actions"><button class="primary" id="aiAskBtn">اسأل المساعد ✦</button><button class="secondary" id="aiClearBtn">مسح المحادثة</button></div>
+    <div class="ai-prompts"><button onclick="askAI('يعني إيه ذكاء اصطناعي؟')">يعني إيه AI؟</button><button onclick="askAI('اشرحلي تعلم الآلة')">Machine Learning</button><button onclick="askAI('إيه هو الذكاء الاصطناعي التوليدي؟')">Generative AI</button><button onclick="askAI('إزاي أحمي خصوصيتي مع أدوات AI؟')">الخصوصية</button></div>
+   </div>
+   <div class="ai-card">
+    <div class="ai-icon">🧭</div><h3>خريطة التعلّم المقترحة</h3>
+    <p>امشي بالترتيب ده عشان تبني فهم قوي، وماتقفزش للأدوات قبل ما تفهم الأساس.</p>
+    <div class="ai-roadmap">
+     <div class="ai-step"><small>01</small><b>افهم الأساس</b><span class="tiny">AI والبيانات والخوارزميات</span></div>
+     <div class="ai-step"><small>02</small><b>اتعلم ML</b><span class="tiny">التدريب والتوقع والتقييم</span></div>
+     <div class="ai-step"><small>03</small><b>استكشف Deep Learning</b><span class="tiny">الشبكات العصبية</span></div>
+     <div class="ai-step"><small>04</small><b>ابني مشروع</b><span class="tiny">جرّب نموذج بسيط وآمن</span></div>
+    </div>
+    <div class="ai-callout">⭐ نصيحة: اتعلم تسأل «النموذج عرف الإجابة منين؟» و«إمتى ممكن يغلط؟» مش بس «إزاي أستخدمه؟».</div>
+   </div>
+  </div>
+  <div class="section-head"><h2>مكتبة الذكاء الاصطناعي</h2><span id="aiCount">مفاهيم وشروحات</span></div>
+  <div class="knowledge-control-panel">
+   <div class="ai-toolbar">
+    <input id="aiSearch" placeholder="ابحث عن مصطلح أو خوارزمية أو تطبيق...">
+    <select id="aiCategory" aria-label="تصنيف مكتبة الذكاء الاصطناعي"><option value="الكل">كل التصنيفات</option></select>
+    <select id="aiSort" aria-label="ترتيب موضوعات الذكاء الاصطناعي"><option value="default">الترتيب الأساسي</option><option value="az">الاسم: أ إلى ي</option><option value="za">الاسم: ي إلى أ</option></select>
+    <button class="secondary" id="aiReset">إعادة ضبط</button>
+   </div>
+   <div class="library-status"><span id="aiLibraryStatus">مكتبة الذكاء الاصطناعي</span><span>شرح + مثال لكل موضوع</span></div>
+  </div>
+  <details class="library-add" id="aiAddBox">
+   <summary>＋ أضف موضوع ذكاء اصطناعي جديد</summary>
+   <div class="library-add-grid">
+    <input id="newAICategory" placeholder="التصنيف، مثال: نماذج اللغة">
+    <input id="newAITitle" placeholder="اسم المصطلح أو التقنية">
+    <textarea id="newAIBody" rows="3" placeholder="شرح الموضوع بالمصري أو بالعربية المبسطة..."></textarea>
+    <input id="newAIExample" placeholder="مثال عملي (اختياري)">
+    <button class="primary" id="addAIBtn">حفظ الموضوع في مكتبتي</button>
+   </div>
+  </details>
+  <div class="ai-topic-grid" id="aiTopics"></div>
+  <button class="secondary library-more" id="aiMore" hidden>عرض موضوعات أكتر</button>
+  <div class="section-head"><h2>مصطلحات لازم تبقى عارفها</h2><span>قاموس سريع</span></div>
+  <div class="cards" id="aiGlossary"></div>
+  <div class="section-head"><h2>إزاي تستخدم AI بذكاء؟</h2><span>مهارات عملية</span></div>
+  <div class="cards">
+   <article class="project"><h3>🎯 اكتب طلب واضح</h3><p>قول للمساعد إنت عايز إيه، والسياق، ومستوى التفصيل، وشكل النتيجة. بدل «اشرحلي»، جرّب «اشرح الفكرة لطالب مبتدئ بمثال من الحياة».</p></article>
+   <article class="project"><h3>🔍 راجع الإجابة</h3><p>اطلب مصادر قابلة للتحقق، وقارن المعلومات بمراجع موثوقة. النماذج ممكن تألف تفاصيل أو تخلط بين معلومات شبه بعض.</p></article>
+   <article class="project"><h3>🧩 قسم المهمة</h3><p>المشروع الكبير بيتعمل على مراحل: فهم المشكلة، اقتراح بدائل، مقارنة، نموذج أولي، وبعدها تقييم. راجع كل مرحلة لوحدها.</p></article>
+   <article class="project"><h3>🔐 احمي بياناتك</h3><p>ماتدخلش كلمات مرور أو بيانات شخصية أو ملفات خاصة في أدوات مش فاهم سياسة استخدامها. استخدم بيانات تجريبية لما تقدر.</p></article>
+  </div>
+  <div class="panel" style="margin-top:16px"><h3>⚠️ خليك فاكر</h3><p class="muted" style="line-height:1.9">الذكاء الاصطناعي أداة بتساعدك تفكر وتتعلم، لكنه مش مصدر معصوم من الخطأ، ومش بديل عن الطبيب أو المهندس أو المدرس أو المختص. ماتعتمدش على مخرجاته لوحدها في قرارات مهمة، وخصوصًا أي حاجة فيها سلامة أو صحة أو فلوس.</p></div>
+ </section>
+ <section class="page" id="evaluate">
+  <div class="panel"><div class="eyebrow">IDEA REVIEW WORKBENCH</div><h2>راجع فكرتك قبل ما تطورها</h2><p class="muted">جاوب على الأسئلة عشان نعمل مراجعة مبدئية. النتيجة إرشادية، ومش اعتماد هندسي أو تجاري.</p>
+   <div class="form-grid">
+    <div class="field full"><label>اسم الفكرة</label><input id="evalName" placeholder="مثال: منظم ذكي للأغراض"></div>
+    <div class="field"><label>هل المشكلة واضحة ومحددة؟</label><select id="evalProblem"><option value="1">غير واضحة بعد</option><option value="2">واضحة جزئيًا</option><option value="3">واضحة ومحددة</option></select></div>
+    <div class="field"><label>هل تعرف من سيستخدم الحل؟</label><select id="evalUser"><option value="1">لم أحدد المستخدم</option><option value="2">لدي تصور مبدئي</option><option value="3">حددت المستخدم واحتياجه</option></select></div>
+    <div class="field"><label>هل بحثت عن حلول مشابهة؟</label><select id="evalResearch"><option value="1">لم أبحث</option><option value="2">بحثت بشكل محدود</option><option value="3">قارنت عدة حلول</option></select></div>
+    <div class="field"><label>هل يمكن اختبار الفكرة بنموذج بسيط؟</label><select id="evalPrototype"><option value="1">لا أعرف كيف</option><option value="2">ربما بنموذج أولي</option><option value="3">لدي اختبار آمن وواضح</option></select></div>
+    <div class="field full"><label>ما أكبر تحدٍ تتوقعه؟</label><textarea id="evalRisk" placeholder="مثال: سهولة الاستخدام، التكلفة، المواد، الخصوصية..."></textarea></div>
+   </div>
+   <div class="actions"><button class="primary" id="evaluateBtn">اعمل تقرير المراجعة</button></div><div class="result" id="evalResult"></div>
+  </div>
+  <div class="panel"><h3>قائمة تحقق قبل مشاركة الاختراع</h3><p class="muted">تأكد من توثيق تاريخ الفكرة وإصداراتها، وتجنب نشر تفاصيل حساسة إذا كنت تفكر في حماية قانونية. استشر جهة مختصة بالملكية الفكرية في بلدك قبل الإفصاح العام عن اختراع قد ترغب في تسجيله.</p></div>
+ </section>
+ <section class="page" id="challenges"><div class="hero"><div class="eyebrow">WEEKLY INNOVATION QUEST</div><h2>تحدٍّ جديد، زاوية تفكير جديدة.</h2><p>اختر تحديًا، اكتب حلّك واحفظه في أرشيفك. التحديات هنا للتفكير والتصميم الآمن، وليست تعليمات لبناء أجهزة خطرة.</p></div><div id="challengeList" class="cards"></div></section>
+ <section class="page" id="profile"><div class="panel"><div class="eyebrow">INVENTOR PROFILE</div><h2>رحلتك في الابتكار</h2><div style="display:flex;align-items:center;gap:14px"><div class="avatar" style="width:58px;height:58px;font-size:24px">م</div><div><h3 style="margin:0">المخترع</h3><div class="muted" id="levelName">مبتدئ · المستوى 1</div></div></div><div class="section-head"><h3>التقدم إلى المستوى التالي</h3><span id="xpLabel">0 / 100 XP</span></div><div class="progress"><span id="xpBar" style="width:0%"></span></div><div class="stats"><div class="stat"><div class="stat-icon">💡</div><div><strong id="pProjects">0</strong><small>مشاريع</small></div></div><div class="stat"><div class="stat-icon">🏅</div><div><strong id="pAchievements">0</strong><small>إنجازات</small></div></div></div><h3>الإنجازات</h3><div id="achievements"></div></div></section>
+ <section class="page" id="settings">
+ <div class="panel"><div class="eyebrow">PERSONAL WORKSPACE</div><h2>إعدادات مساحة الابتكار</h2>
+  <div class="field"><label>اسم المخترع</label><input id="userName" value="المخترع" maxlength="24"></div>
+  <div class="actions"><button class="primary" id="saveName">حفظ الاسم</button><button class="secondary" id="exportBtn">⬇ تصدير نسخة احتياطية JSON</button><button class="secondary" id="importBtn">⬆ استيراد نسخة احتياطية</button><input type="file" id="importFile" accept=".json,application/json" hidden><button class="secondary" id="clearBtn">إعادة ضبط البيانات</button></div>
+  <p class="muted" style="line-height:1.8;margin-top:15px">النسخة الاحتياطية تحفظ مشاريعك ونقاطك وبياناتك الشخصية. احتفظ بها في مكان آمن، ولا تشاركها مع أي شخص.</p>
+ </div>
+ <div class="panel"><div class="eyebrow">CLOUD SAVE / SUPABASE</div><h2>☁️ الحفظ السحابي والمزامنة</h2>
+  <p class="muted" style="line-height:1.8">اربط مشروع Supabase خاص بك لمزامنة تقدمك بين الأجهزة. لن تعمل المزامنة قبل إدخال بيانات مشروعك وإنشاء جدول قاعدة البيانات الموضح أدناه.</p>
+  <div class="form-grid">
+   <div class="field full"><label>Project URL</label><input id="sbUrl" placeholder="https://YOUR-PROJECT.supabase.co" dir="ltr"></div>
+   <div class="field full"><label>Publishable / anon key (مفتاح عام فقط)</label><input id="sbKey" placeholder="sb_publishable_... أو anon key" dir="ltr" autocomplete="off"></div>
+   <div class="field"><label>البريد الإلكتروني</label><input id="sbEmail" type="email" placeholder="name@example.com" dir="ltr"></div>
+   <div class="field"><label>كلمة المرور</label><input id="sbPassword" type="password" placeholder="8 أحرف على الأقل" dir="ltr"></div>
+  </div>
+  <div class="actions"><button class="primary" id="sbSave">حفظ إعدادات الاتصال</button><button class="secondary" id="sbSignup">إنشاء حساب</button><button class="secondary" id="sbLogin">تسجيل الدخول</button><button class="secondary" id="sbLogout">تسجيل الخروج</button></div>
+  <div class="actions"><button class="primary" id="sbUpload">☁️ رفع التقدم للسحابة</button><button class="secondary" id="sbDownload">⬇ استعادة التقدم من السحابة</button></div>
+  <p id="sbStatus" class="muted" role="status" style="line-height:1.8">الحالة: غير متصل.</p>
+  <details style="margin-top:12px"><summary style="cursor:pointer;color:var(--cyan)">خطوة مهمة: تجهيز جدول Supabase</summary>
+   <p class="muted">من لوحة Supabase افتح SQL Editor وشغّل هذا الأمر مرة واحدة:</p>
+   <pre style="white-space:pre-wrap;direction:ltr;text-align:left;background:#101318;padding:13px;border-radius:9px;color:#d9f6c5;overflow:auto">create table if not exists public.inventor_saves (
+  user_id uuid primary key references auth.users(id) on delete cascade,
+  payload jsonb not null,
+  updated_at timestamptz not null default now()
+);
+alter table public.inventor_saves enable row level security;
+drop policy if exists "Users manage their own save" on public.inventor_saves;
+create policy "Users manage their own save"
+on public.inventor_saves for all
+using (auth.uid() = user_id)
+with check (auth.uid() = user_id);</pre>
+  </details>
+  <p class="tiny">الأمان: استخدم المفتاح العام anon/publishable فقط. لا تضع service_role أو أي مفتاح سري داخل ملف HTML. المزامنة ترفع نسخة بيانات مساحة العمل المرتبطة بحسابك.</p>
+ </div>
+ <div class="panel"><div class="eyebrow">AI CONNECTION</div><h2>✦ ربط مساعد ذكاء اصطناعي حقيقي</h2>
+  <p class="muted" style="line-height:1.8">المساعد الداخلي يعمل دون إنترنت. للحصول على ردود من نموذج خارجي، اربط عنوان Backend آمنًا يتصل بمزود الذكاء الاصطناعي من جهة السيرفر.</p>
+  <div class="field"><label>Backend Endpoint (HTTPS)</label><input id="aiEndpoint" placeholder="https://your-server.example/api/chat" dir="ltr"></div>
+  <div class="actions"><button class="primary" id="saveAIEndpoint">حفظ رابط المساعد</button></div>
+  <p id="aiConnectionStatus" class="muted">الوضع الحالي: المساعد المحلي.</p>
+  <p class="tiny">لا تضع API Key الخاص بمزود الذكاء الاصطناعي داخل HTML؛ أي شخص يستطيع استخراجه من الملف.</p>
+ </div>
+</section>
+ <footer>THE INVENTOR · نسخة تجريبية محلية · الأفكار الناتجة تصورات أولية وليست إثباتًا لجدوى الاختراع أو سلامته.</footer>
+</main></div><div class="toast" id="toast"></div>
+<script>
+const $=id=>document.getElementById(id);
+const load=()=>{try{return JSON.parse(localStorage.getItem('inventorData'))||{projects:[],xp:0,coins:100,name:'المخترع',theme:'dark'}}catch(e){return {projects:[],xp:0,coins:100,name:'المخترع',theme:'dark'}}};
+let data=load(), currentResult=null;
+const labs=[
+['⚡','الإلكترونيات','أجهزة ذكية وتجارب واجهات آمنة.','كيف نجعل جهازًا يوميًا أسهل استخدامًا؟'],
+['🤖','الروبوتات','مساعدات آلية ومهام متكررة.','ما المهمة المنزلية البسيطة التي يمكن أتمتتها؟'],
+['🌱','البيئة والطاقة','ترشيد الموارد وإعادة الاستخدام.','كيف نقلل هدر الماء أو الطاقة؟'],
+['🩺','الصحة والتقنيات المساعدة','أدوات دعم الراحة وإمكانية الوصول.','كيف نجعل نشاطًا يوميًا أكثر سهولة؟'],
+['🚲','المواصلات','تنقل أكثر تنظيمًا وراحة.','كيف نحسن تجربة التنقل القصير؟'],
+['📚','التعليم','طرق تعلم وتذكر أكثر تفاعلًا.','كيف نحول درسًا صعبًا إلى تجربة ممتعة؟'],
+['🏠','المنزل الذكي','تنظيم المنزل والمهام اليومية.','كيف يتكيف المنزل مع احتياجات ساكنيه؟'],
+['🚀','الفضاء','أفكار استكشاف وتصميم مستقبلية.','كيف نعيد استخدام الموارد في رحلة طويلة؟'],
+['✨','أفكار مستقبلية','تصورات خيالية قابلة للنقاش.','ما الشيء الذي نتمنى أن يصبح أسهل بعد 20 عامًا؟']
+];
+const ideas=[
+['حقيبة التذكير الذكية','حقيبة تنظّم قائمة الأشياء المطلوبة وتعرض تنبيهًا بصريًا عند نسيان عنصر من القائمة.','قائمة عناصر قابلة للتخصيص، مستشعر وزن تصوري، وتنبيه ضوئي بسيط.','تبدأ بنموذج واجهة هاتف وقائمة تحقق قبل التفكير في أي مكونات.'],
+['محطة النباتات المتعاونة','نظام منزلي تصوري يساعد على متابعة احتياجات النباتات في مكان واحد.','بطاقات تعريف للنباتات، سجل ري، ومؤشر يوضح مواعيد العناية.','يمكن اختبار الفكرة أولًا بسجل يدوي أو تطبيق بسيط.'],
+['منظّم الطاقة المنزلي','لوحة تعرض أوقات استخدام الأجهزة وتقترح عادات لتقليل الاستهلاك.','تسجيل يدوي للاستخدام، رسوم مقارنة، وتنبيهات اختيارية.','ابدأ بمحاكاة بيانات افتراضية ولا توصل أي دائرة كهربائية منزلية.'],
+['دفتر التعلم المتحوّل','دفتر يحول أهداف المذاكرة إلى بطاقات قصيرة ومراجعات متباعدة.','تقسيم الموضوع، مؤقت جلسات، وبطاقات تذكير.','اختبره على موضوع دراسي واحد وقارن سهولة المراجعة.'],
+['مرشد المساحات الهادئة','أداة تساعد المستخدم على اختيار مساحة مناسبة للقراءة أو التركيز.','تقييم اختياري للضوضاء والإضاءة والازدحام مع خريطة شخصية.','ابدأ باستبيان يدوي دون جمع موقع المستخدم أو بياناته الحساسة.']
+];
+ideas.push(
+['مظلّة المدن الذكية','مفهوم لمظلّة حضرية توفر ظلًا ومعلومات عن حالة الطقس ومؤشرات الراحة في الأماكن العامة.','هيكل ظل مع لوحة معلومات اختيارية ومؤشرات بيئية منخفضة الطاقة.','ابدأ برسم تخطيطي للموقع وادرس احتياجات المشاة وإتاحة الوصول.'],
+['مساعد فرز النفايات','واجهة تعليمية تساعد المستخدم على معرفة فئة النفاية وطريقة التخلص المناسبة محليًا.','قاعدة إرشادية قابلة للتحديث مع صور توضيحية وتنبيهات حول المواد غير المقبولة.','اختبر دقة المعلومات مع إرشادات البلدية المحلية قبل نشرها.'],
+['رف ذكي للمخزن','نظام جرد بسيط يوضح ما ينقص المنزل ومتى أضيفت المنتجات.','قائمة مخزون مع تواريخ اختيارية وتنبيهات إعادة شراء.','ابدأ بجدول رقمي تجريبي دون ربطه بحسابات أو بيانات خاصة.'],
+['مقعد متعدد الاستخدام','تصور لمقعد عام يتكيف مع احتياجات مختلفة من الراحة والوصول.','وحدات قابلة للتبديل ومساحات مخصصة ومواد سهلة الصيانة.','استشر مستخدمين مختلفين ومختصًا في التصميم قبل أي تصنيع.'],
+['مرشد إعادة الاستخدام','خدمة تقترح استخدامات ثانية للأشياء المنزلية قبل التخلص منها.','تصنيف العنصر وحالته ثم اقتراح إعادة استخدام أو إصلاح آمن.','لا تقترح استخدامات للمواد المجهولة أو التالفة أو الخطرة.'],
+['لوحة متابعة العادات','لوحة شخصية تعرض تقدم عادة يختارها المستخدم بطريقة مشجعة وغير عقابية.','أهداف مرنة، تذكيرات اختيارية، ورسوم تقدم بسيطة.','اختبر وضوح الواجهة وإمكانية إيقاف التنبيهات بسهولة.'],
+['مكتبة تبادل الأدوات','منصة مجتمعية لتنظيم استعارة الأدوات بين أفراد مجتمع موثوق.','كتالوج للأدوات ومواعيد الإعارة وسجل حالة العنصر.','ابدأ بنموذج افتراضي وضع قواعد واضحة للخصوصية والمسؤولية.'],
+['مرشد الإضاءة الطبيعية','أداة تعليمية تساعد على فهم توزيع الضوء في الغرفة خلال اليوم.','مخطط اتجاهات ونوافذ وسجل ملاحظات يدوي.','استخدم محاكاة أو ملاحظات بسيطة ولا تقدم وعودًا صحية أو هندسية.'],
+['منظم وقت الانتظار','خدمة تعرض تقديرًا تقريبيًا للانتظار في أماكن تقدم أدوارًا.','تسجيل أوقات مجهولة الهوية ولوحة توضح مدى حداثة التقدير.','ابدأ ببيانات اصطناعية ووضح أن التقديرات ليست ضمانًا.'],
+['حافظة معرفة للمشاريع','دفتر يجمع الملاحظات والصور والإصدارات ومصادر البحث لكل فكرة.','وسوم وبحث زمني وسجل تعديل وتصدير ملف.','ابدأ بمشروع واحد وتأكد من وجود نسخة احتياطية قابلة للاسترجاع.'],
+['مراقب جودة الهواء التعليمي','واجهة تعرض مفاهيم جودة الهواء وتشرح معنى المؤشرات المنشورة من مصادر موثوقة.','بطاقات تعريف للمؤشرات ومصدر القراءة وتاريخ تحديثها.','لا تصنع مستشعرًا منزليًا باعتباره جهازًا طبيًا أو مرجعًا رسميًا.'],
+['مخطط وجبات يقلل الهدر','أداة تساعد على تنظيم ما هو متوفر واقتراح استخدامه قبل انتهاء صلاحيته.','قائمة مخزون وتواريخ اختيارية وأفكار وجبات عامة.','تحقق من سلامة الطعام وتواريخ التخزين من الإرشادات الرسمية.'],
+['دليل إصلاح المنتجات','مكتبة تعليمية تساعد على معرفة متى يكون الإصلاح ممكنًا ومتى يلزم فني.','تصنيف الأعطال الشائعة وروابط أدلة المصنع المعتمدة.','لا تفتح أجهزة كهربائية أو بطاريات؛ وجّه المستخدم إلى فني مؤهل.'],
+['مساعد الوصول للمباني','خريطة معلوماتية توضح خصائص الوصول المعلنة للمباني والخدمات.','بيانات من مصادر موثوقة مع تاريخ التحقق وإمكانية الإبلاغ عن تحديث.','لا تنشر موقعًا دقيقًا لشخص؛ وراجع البيانات ميدانيًا قبل الاعتماد عليها.'],
+['لوحة كفاءة الفصل الدراسي','تصور يساعد المعلم على تنظيم الإضاءة والتهوية والموارد والمواد التعليمية.','قائمة متابعة وقياسات اختيارية وتقارير مبسطة.','استخدم بيانات مجمعة ولا تتبع الطلاب أو تجمع معلوماتهم الشخصية.'],
+['مخطط رحلة المنتج','أداة ترسم مراحل المنتج من المادة الخام إلى الاستخدام ثم الإصلاح أو التدوير.','مخطط تدفق وملاحظات عن الموارد ونقاط الفاقد.','ابدأ بمنتج واحد واستعمل بيانات معلنة أو افتراضات موسومة بوضوح.'],
+['مساعد تنظيم الرحلات المدرسية','خدمة لترتيب قوائم الأغراض والمهام ومواعيد المجموعة.','قوائم تحقق وتذكيرات ومعلومات طوارئ معتمدة من المنظمين.','لا تخزن بيانات الأطفال الحساسة أو مواقعهم الدقيقة.'],
+['مؤشر وضوح التعليمات','أداة تراجع وضوح خطوات دليل استخدام أو تعليمات منتج.','قائمة فحص للغة وترتيب الخطوات والتحذيرات والرسوم.','اعرض اقتراحات تحريرية ولا تستبدل مراجعة السلامة المتخصصة.'],
+['نظام مشاركة الكتب','فهرس محلي يساعد مجموعة على تبادل الكتب وتوثيق الإعارة.','بحث حسب الموضوع وحالة الكتاب وتاريخ الإعارة.','استخدم بيانات اتصال محدودة واطلب موافقة المشاركين.'],
+['مخطط مساحة صغيرة','أداة لترتيب الأثاث في غرفة صغيرة وفق الأبعاد المدخلة.','شبكة ثنائية الأبعاد وقياسات ومسارات حركة.','تحقق من القياسات ومخارج الطوارئ ولا تعتبره مخططًا هندسيًا معتمدًا.']
+);
+const names=['مبتدئ','مستكشف','مبتكر','مهندس','عالم','عبقري','أسطورة الاختراع'];
+function save(){localStorage.setItem('inventorData',JSON.stringify(data));renderStats()}
+function level(){return Math.min(50,Math.floor(data.xp/100)+1)}
+function toast(t){$('toast').textContent=t;$('toast').classList.add('show');setTimeout(()=>$('toast').classList.remove('show'),2400)}
+function renderStats(){let lv=level(),xp=data.xp%100;$('statProjects').textContent=data.projects.length;$('statXP').textContent=data.xp;$('statCoins').textContent=data.coins;$('statLevel').textContent=lv;$('sideLevel').textContent='المستوى '+lv+' · '+(names[Math.min(names.length-1,Math.floor((lv-1)/7))]);$('levelName').textContent=(names[Math.min(names.length-1,Math.floor((lv-1)/7))]||'مبتدئ')+' · المستوى '+lv;$('xpLabel').textContent=xp+' / 100 XP';$('xpBar').style.width=xp+'%';$('pProjects').textContent=data.projects.length;$('pAchievements').textContent=Math.min(5,Math.floor(data.projects.length/2)+(data.xp>=100?1:0))}
+function go(page,mode){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));$(page).classList.add('active');document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('active',b.dataset.page===page));const titles={home:'أهلاً بيك في معملك',create:'مختبر الابتكار',labs:'المختبرات المتخصصة',mixer:'INVENTION DNA',archive:'أرشيف اختراعاتك',knowledge:'موسوعة الابتكار',aihub:'عالم الذكاء الاصطناعي',evaluate:'تقييم الفكرة',challenges:'ساحة التحديات',profile:'إنجازاتك',settings:'الضبط'};$('pageTitle').textContent=titles[page];window.scrollTo({top:0,behavior:'smooth'});if(page==='archive')renderArchive();if(page==='profile')renderProfile();if(page==='home')renderRecent();if(page==='aihub'){renderAITopics();renderAIGlossary();}if(mode==='whatif')$('whatIfInput').focus()}
+$('nav').addEventListener('click',e=>{let b=e.target.closest('button[data-page]');if(b)go(b.dataset.page)});
+function makeIdea(problem,cat,complexity){let base=ideas[Math.floor(Math.random()*ideas.length)];let clean=problem.trim();let title=base[0];if(clean.length>5){let words=clean.split(/\s+/).slice(0,4).join(' ');title='حل '+words+' الذكي'}let details=`تصور أولي في مجال ${cat}: ${base[1]} الفكرة المقترحة تنطلق من المشكلة التالية: «${clean||'تحسين تجربة يومية'}».`;return {title,description:details,mechanism:base[2],prototype:base[3],complexity,category:cat,created:new Date().toLocaleDateString('ar-SA')}}
+function showIdea(obj,target='ideaResult'){currentResult=obj;let el=$(target);el.innerHTML=`<h3>✦ ${escapeHtml(obj.title)}</h3><p>${escapeHtml(obj.description)}</p><b>كيف يمكن أن يعمل؟</b><p>${escapeHtml(obj.mechanism)}</p><b>خطوة أولى آمنة</b><p>${escapeHtml(obj.prototype)}</p><div><span class="tag">${escapeHtml(obj.category||'فكرة')}</span><span class="tag">${escapeHtml(obj.complexity||'تصور')}</span><span class="tag">تصور يحتاج إلى اختبار</span></div><div class="actions"><button class="primary" onclick="saveProject()">حفظ في الأرشيف +20 XP</button><button class="secondary" onclick="copyIdea()">نسخ الفكرة</button></div>`;el.classList.add('show')}
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+$('generateBtn').onclick=()=>{let v=$('ideaInput').value.trim();if(!v){toast('اكتب مشكلة أو فكرة أولًا');return}showIdea(makeIdea(v,$('category').value,$('complexity').value))};
+$('randomBtn').onclick=()=>{let b=ideas[Math.floor(Math.random()*ideas.length)];showIdea({title:b[0],description:b[1],mechanism:b[2],prototype:b[3],category:'فكرة عشوائية',complexity:'متوسط'})};
+$('whatIfBtn').onclick=()=>{let v=$('whatIfInput').value.trim();if(!v){toast('اكتب سيناريو ماذا لو؟');return}let obj={title:'مسار ابتكار: '+v.slice(0,42),description:'هذا سيناريو افتراضي لاستكشاف فرص جديدة. تخيل كيف سيتغير سلوك الناس والخدمات والموارد إذا تحقق هذا الاحتمال.',mechanism:'1) حدد الاحتياج الجديد. 2) ابحث عن عائق قد يظهر. 3) ابتكر خدمة أو أداة تقلل هذا العائق. 4) اختبر الفكرة على نطاق صغير وببيانات افتراضية.',prototype:'أنشئ رسمًا أو نموذجًا ورقيًا يشرح التجربة، ثم اجمع آراء المستخدمين دون تنفيذ شيء قد يعرّض أحدًا للخطر.',category:'WHAT IF',complexity:'تصوري'};showIdea(obj,'whatIfResult')};
+function saveProject(){if(!currentResult){return}let p={...currentResult,id:Date.now(),saved:new Date().toLocaleString('ar-SA')};data.projects.unshift(p);data.xp+=20;data.coins+=10;save();toast('تم حفظ الاختراع! +20 XP و +10 عملات');renderRecent();renderArchive()}
+window.saveProject=saveProject;window.copyIdea=()=>{let t=currentResult?`${currentResult.title}\n${currentResult.description}\n${currentResult.mechanism}`:'';navigator.clipboard?.writeText(t).then(()=>toast('تم نسخ الفكرة')).catch(()=>toast('تعذر النسخ في هذا المتصفح'))};
+function renderRecent(){let el=$('recentProjects');el.innerHTML=data.projects.length?data.projects.slice(0,2).map(projectCard).join(''):'<div class="empty">لسه مفيش اختراعات محفوظة. مستنيين أول فكرة منك!</div>'}
+function projectCard(p){const projectId=String(p?.id??'');return `<article class="project"><h3>💡 ${escapeHtml(p.title)}</h3><p>${escapeHtml(p.description)}</p><div class="project-foot"><span class="tiny">${escapeHtml(p.category||'اختراع')} · ${escapeHtml(p.created||p.saved||'')}</span><button class="secondary" type="button" data-project-id="${escapeHtml(projectId)}">عرض</button></div></article>`}
+document.addEventListener('click',e=>{const button=e.target.closest('button[data-project-id]');if(!button)return;const id=button.dataset.projectId;const project=data.projects.find(p=>String(p?.id??'')===id);if(project)window.viewProject(project.id);});
+function renderArchive(){$('archiveCount').textContent=data.projects.length+' مشروع';$('archiveList').innerHTML=data.projects.length?data.projects.map(projectCard).join(''):'<div class="empty" style="grid-column:1/-1">الأرشيف فارغ حاليًا. ابدأ بابتكار جديد ليظهر هنا.</div>'}
+window.viewProject=id=>{const p=data.projects.find(x=>String(x?.id??'')===String(id));if(!p)return;currentResult=p;go('create');showIdea(p)}
+function renderLabs(){$('labGrid').innerHTML=labs.map((l,i)=>`<button class="lab" onclick="openLab(${i})"><div style="font-size:27px">${l[0]}</div><b>${l[1]}</b><small>${l[2]}</small></button>`).join('')}
+window.openLab=i=>{let l=labs[i];$('labResult').innerHTML=`<h3>${l[0]} ${l[1]}</h3><p>${l[2]}</p><b>تحدي المختبر:</b><p>${l[3]}</p><button class="primary" onclick="useLab(${i})">حوّل التحدي إلى اختراع</button>`;$('labResult').classList.add('show')};
+window.useLab=i=>{let l=labs[i];$('ideaInput').value=l[3];$('category').value=l[1]==='الإلكترونيات'?'الإلكترونيات':l[1]==='الروبوتات'?'الروبوتات':l[1]==='البيئة والطاقة'?'البيئة والطاقة':l[1]==='التعليم'?'التعليم':'أفكار مستقبلية';go('create');$('ideaInput').focus()};
+$('mixBtn').onclick=()=>{let a=$('mixA').value,b=$('mixB').value;let obj={title:a+' '+b+' — نظام متكامل',description:`تصور يجمع بين ${a} و${b} في تجربة واحدة. يمكن أن يخدم هذا الدمج المستخدم عبر ربط وظيفة العنصر الأول بإمكانية يقدمها العنصر الثاني.`,mechanism:`1) تحديد الوظيفة الأساسية لـ ${a}. 2) اختيار خاصية واحدة مناسبة من ${b}. 3) تصميم واجهة أو نموذج يوضح التفاعل بينهما.`,prototype:'ارسم مخططًا يوضح المدخلات والمخرجات، ثم اختبر الفكرة بنموذج ورقي أو محاكاة رقمية قبل أي تنفيذ مادي.',category:'تركيبة INVENTION DNA',complexity:'متوسط'};showIdea(obj,'mixResult')};
+const challenges=[['♻️','تحدي تقليل الهدر','ابتكر طريقة تجعل استخدام مورد يومي أكثر كفاءة دون تعقيد حياة المستخدم.'],['🎒','تحدي اليوم الدراسي','صمم فكرة تساعد الطالب على تنظيم أدواته ومهامه.'],['🌿','تحدي المساحة الخضراء','كيف تجعل العناية بنبتة منزلية أسهل وأكثر انتظامًا؟'],['🔎','تحدي الأشياء المنسية','ابتكر نظامًا لطيفًا يساعد على تذكر الأغراض المهمة قبل الخروج.']];
+function renderChallenges(){$('challengeList').innerHTML=challenges.map((c,i)=>`<article class="project"><div style="font-size:28px">${c[0]}</div><h3>${c[1]}</h3><p>${c[2]}</p><button class="primary" onclick="startChallenge(${i})">ابدأ التحدي</button></article>`).join('')}
+window.startChallenge=i=>{let c=challenges[i];$('ideaInput').value=c[2];$('category').value='الحياة اليومية';go('create')};
+function renderProfile(){renderStats();$('achievements').innerHTML=[['🌱','أول بذرة','احفظ أول اختراع.',data.projects.length>=1],['💡','صاحب الأفكار','احفظ 5 اختراعات.',data.projects.length>=5],['⚡','خطوات ثابتة','اجمع 100 نقطة خبرة.',data.xp>=100],['🧬','خبير الدمج','جرّب أداة دمج الأفكار.',false],['🏆','صانع المستقبل','احفظ 10 اختراعات.',data.projects.length>=10]].map(a=>`<div style="display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--line);opacity:${a[3]?1:.45}"><span style="font-size:23px">${a[0]}</span><div><b>${a[1]}</b><div class="tiny">${a[2]}</div></div><span style="margin-right:auto">${a[3]?'✓':'🔒'}</span></div>`).join('')}
+$('themeBtn').onclick=()=>{document.body.classList.toggle('light');data.theme=document.body.classList.contains('light')?'light':'dark';save()};
+$('langBtn').onclick=()=>toast('الإصدار الحالي عربي. يمكن إضافة ترجمة كاملة في تحديث لاحق.');
+$('saveName').onclick=()=>{data.name=$('userName').value.trim()||'المخترع';save();toast('تم حفظ الاسم')};
+$('exportBtn').onclick=()=>{let blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});let a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='the-inventor-backup.json';a.click();URL.revokeObjectURL(a.href);toast('تم تجهيز النسخة الاحتياطية')};
+$('clearBtn').onclick=()=>{if(confirm('هل تريد حذف كل مشاريعك ونقاطك من هذا الجهاز؟ لا يمكن التراجع عن ذلك.')){data={projects:[],xp:0,coins:100,name:'المخترع',theme:data.theme};save();renderArchive();renderRecent();renderProfile();toast('تمت إعادة ضبط البيانات')}};
+const journey=[
+['01','🔎','لاحظ المشكلة','راقب موقفًا يتكرر أو مهمة تستهلك وقتًا أو موارد. اكتب المشكلة كما يصفها المستخدم، لا كما تتخيل الحل.','اسأل: من يتأثر؟ ومتى تظهر المشكلة؟ وما أثرها؟'],
+['02','📚','ابحث واستكشف','ابحث عن حلول حالية ومنتجات مشابهة وبراءات منشورة ومقالات موثوقة. الهدف فهم ما هو موجود قبل الادعاء بأن فكرتك جديدة.','اكتب 3 حلول موجودة، وما الذي لا تعالجه بشكل جيد.'],
+['03','💭','ولّد بدائل','اكتب أكثر من حل، حتى لو بدت بعض البدائل بسيطة. جرّب تغيير الحجم أو المادة أو طريقة الاستخدام أو الخدمة المصاحبة.','لا تتعلق بأول فكرة؛ قارن بين 3 تصورات على الأقل.'],
+['04','🧩','حدد المتطلبات','حوّل الفكرة إلى وظائف واضحة: ماذا يجب أن يفعل الحل؟ وما القيود المتعلقة بالوقت والتكلفة والسهولة والخصوصية؟','افصل بين الضروري والإضافي، واكتب معيار نجاح قابلًا للملاحظة.'],
+['05','✏️','صمّم نموذجًا أوليًا','ابدأ برسم أو نموذج ورقي أو واجهة تفاعلية أو محاكاة رقمية. لا يلزم أن يكون النموذج النهائي أو أن يعمل بكل الخصائص.','اعرض النموذج على شخصين من الفئة المستهدفة واجمع ملاحظاتهما.'],
+['06','🧪','اختبر وتعلّم','حدد اختبارًا آمنًا، وسجل ما نجح وما لم ينجح. لا تختبر أجهزة كهربائية أو طبية أو ميكانيكية خطرة دون إشراف مختص.','اكتب فرضية واحدة، وطريقة قياسها، وما الذي ستغيره بناءً على النتيجة.'],
+['07','🚀','طوّر ووثّق','احتفظ بالإصدارات والرسومات والملاحظات والتواريخ. راجع التكلفة والمواد وقابلية الصيانة وإمكانية الوصول قبل التوسع.','أنشئ سجل تغييرات: الإصدار، التعديل، السبب، والنتيجة.']
+];
+const concepts=[
+['النموذج الأولي','نسخة مبسطة من الفكرة تُستخدم للتعلم واختبار افتراض محدد، وقد تكون رسمًا أو مجسمًا ورقيًا أو تجربة رقمية.'],
+['التحقق من المشكلة','جمع أدلة من المستخدمين أو الملاحظة للتأكد من أن المشكلة حقيقية ومهمة، بدل الاعتماد على التخمين.'],
+['الجدوى التقنية','تقدير ما إذا كانت التقنيات والمواد والمهارات المتاحة تستطيع تحقيق الوظائف المطلوبة ضمن قيود معقولة.'],
+['الجدوى الاقتصادية','مقارنة التكاليف المتوقعة بالقيمة التي يقدمها الحل، مع الانتباه إلى الصيانة والتشغيل والتوزيع.'],
+['قابلية الاستخدام','مدى سهولة فهم الحل واستخدامه من قبل الفئة المستهدفة، بما في ذلك ذوو الاحتياجات المختلفة.'],
+['الملكية الفكرية','مجموعة حقوق قانونية قد تحمي جوانب من الابتكار، وتختلف أنواع الحماية وشروطها حسب البلد وطبيعة العمل.'],
+['الاستدامة','النظر إلى أثر الفكرة على الموارد والطاقة والمواد والنفايات طوال دورة حياتها، لا عند الاستخدام فقط.'],
+['التكرار والتحسين','تطوير الفكرة على دفعات صغيرة اعتمادًا على الاختبار والتغذية الراجعة بدل انتظار تصميم مثالي من البداية.']
+];
+const fields=[
+['🌍','البيئة','تقليل النفايات، ترشيد المياه، إعادة الاستخدام، مراقبة جودة الهواء.','ابدأ بمشكلة محلية قابلة للقياس.'],
+['♿','التصميم الشامل','أدوات تجعل الخدمات والمنتجات أسهل لمختلف القدرات والأعمار.','اسأل المستخدمين عن العوائق التي يواجهونها.'],
+['📦','الخدمات اللوجستية','تنظيم التخزين والتوصيل وتتبع الأغراض وتقليل الوقت الضائع.','ارسم رحلة الشيء من البداية للنهاية.'],
+['🧑‍🏫','التعليم','وسائل شرح ومراجعة وتعلم تفاعلي وإدارة وقت الدراسة.','اختبر الفكرة مع درس واحد أولًا.'],
+['🏡','الحياة اليومية','تنظيم المهام والأغراض والطعام والطاقة والمساحات.','راقب عادة يومية متكررة.'],
+['🌾','الزراعة','متابعة الري، تنظيم المحاصيل، تقليل الفاقد، وتبادل المعرفة.','ابدأ بحل منخفض التكلفة وسهل الصيانة.']
+];
+const knowledgeItems=[
+['منهجية','التفكير التصميمي','ابدأ بفهم الناس وسياقهم، ثم عرّف المشكلة، وولّد بدائل، وصمّم نموذجًا، واختبره. ليست خطوات جامدة؛ قد تعود إلى مرحلة سابقة عند ظهور معلومة جديدة.'],
+['منهجية','العصف الذهني المنضبط','حدّد سؤالًا واضحًا، واكتب الأفكار دون تقييم فوري، ثم اجمع المتشابه وقارنها بمعايير محددة. شجّع تنوع البدائل بدل تكرار الحل نفسه.'],
+['منهجية','تحليل السبب الجذري','اسأل لماذا تتكرر المشكلة، وافصل الأعراض عن الأسباب. استخدم سلسلة أسئلة «لماذا؟» مع أدلة، ولا تفترض أن أول سبب ظاهر هو السبب الحقيقي.'],
+['منهجية','خريطة أصحاب المصلحة','اكتب من يستخدم الحل، ومن يتأثر به، ومن يصونه، ومن قد يتضرر منه. قد يكون للمستخدم والمشتري والمشرف احتياجات مختلفة.'],
+['منهجية','مواصفات المنتج','حوّل الرغبات إلى متطلبات قابلة للفحص: الوظيفة، الحجم، الوزن، زمن الاستجابة، سهولة التنظيف، الخصوصية، والاعتمادية.'],
+['منهجية','مصفوفة القرار','اختر معايير مناسبة، أعط كل معيار وزنًا، ثم قيّم البدائل. النتيجة تساعد على النقاش ولا تستبدل الحكم البشري أو الاختبار.'],
+['منهجية','الحد الأدنى من النموذج','اصنع أبسط تمثيل يجيب عن سؤال واحد. قد يكون رسمًا أو قصة استخدام أو واجهة قابلة للنقر؛ ليس مطلوبًا بناء المنتج كاملًا.'],
+['منهجية','اختبار قابلية الاستخدام','اطلب من شخص تجربة النموذج مع مهمة واضحة، وراقب مواضع التردد أو الخطأ. لا تلقّنه الإجابة، واسأله عما فهمه بعد التجربة.'],
+['منهجية','التكرار والتحسين','اجعل كل نسخة تجيب عن سؤال تعلم جديد. سجّل التغيير وسببه ونتيجته، وتجنب تغيير عدة عناصر دفعة واحدة إن أردت معرفة سبب التحسن.'],
+['منهجية','بحث السوق الأولي','حدّد البدائل الحالية، شرائح المستخدمين، طرق الشراء أو الاستخدام، وما الذي لا يلبي احتياجاتهم. لا تعتمد على عدد الإعجابات وحده كدليل طلب.'],
+['تقنية','المستشعرات','تحوّل بعض الظواهر الفيزيائية مثل الضوء أو الحرارة أو الحركة إلى قراءات. اختيار المستشعر يعتمد على الدقة والمدى والبيئة والمعايرة.'],
+['تقنية','المتحكمات الدقيقة','حواسيب صغيرة مدمجة تتحكم بمدخلات ومخرجات محددة. تُستخدم في النماذج التعليمية، لكن توصيلها بالطاقة أو الأجهزة يتطلب معرفة وإشرافًا مناسبين.'],
+['تقنية','إنترنت الأشياء','ربط أجهزة ومجسات بالشبكات لتبادل البيانات. ينبغي التفكير في أمن الاتصال، تحديثات البرامج، تقليل البيانات، وما يحدث عند انقطاع الشبكة.'],
+['تقنية','الطباعة ثلاثية الأبعاد','تصنع أجسامًا طبقة فوق طبقة من نموذج رقمي. تفيد في النماذج الشكلية، لكن اختيار المادة والدقة والمتانة والتهوية والسلامة مهم.'],
+['تقنية','الذكاء الاصطناعي','مجموعة تقنيات تتعلم أنماطًا من البيانات أو تنفذ مهامًا مثل التصنيف والتنبؤ. قد تخطئ أو تتحيز؛ راجع النتائج ولا تعاملها كحقيقة تلقائيًا.'],
+['تقنية','البطاريات والطاقة','تخزين الطاقة يتطلب مراعاة السعة والعمر والحرارة والحماية. لا تفتح البطاريات أو تثقبها أو تعدّل دوائر الشحن؛ استخدم منتجات معتمدة وإشراف مختص.'],
+['تقنية','المواد الذكية','مواد تتغير خصائصها استجابة لعوامل مثل الحرارة أو الضوء أو الرطوبة. خواصها تعتمد على التركيب وظروف الاستخدام، ويجب الرجوع إلى بيانات المورد العلمية.'],
+['تقنية','النمذجة والمحاكاة','تمثيل رقمي لسلوك نظام لتجربة سيناريوهات قبل التنفيذ. جودة النتائج تعتمد على صحة الافتراضات والبيانات، والمحاكاة لا تثبت وحدها سلامة الواقع.'],
+['تقنية','واجهات الإنسان والآلة','تحدد كيف يفهم المستخدم حالة الجهاز ويتحكم به. اجعل التغذية الراجعة واضحة، والأخطاء قابلة للتدارك، واللغة مفهومة.'],
+['تقنية','التصميم المعياري','قسّم المنتج إلى وحدات مستقلة قدر الإمكان لتسهيل الإصلاح والتحديث والاستبدال. انتبه إلى توافق الوصلات والمعايير بين الوحدات.'],
+['تطبيق','تقنيات مساعدة','ابتكارات تدعم الاستقلالية والوصول، مثل النص الواضح والتنبيه متعدد الحواس وأدوات الإمساك. صمّم بمشاركة الأشخاص الذين سيستخدمونها.'],
+['تطبيق','الزراعة الذكية','قد تشمل مراقبة رطوبة التربة والطقس وتسجيل الري. ابدأ بقياسات موثوقة ومحدودة، ولا تجعل التوصيات الآلية بديلًا عن الخبرة الزراعية.'],
+['تطبيق','الاقتصاد الدائري','فكّر في تقليل المواد، وإعادة الاستخدام، والإصلاح، والتجديد، وإعادة التدوير. أفضل حل قد يكون إطالة عمر منتج موجود بدل تصنيع منتج جديد.'],
+['تطبيق','التعليم التفاعلي','قسّم المفهوم إلى أهداف صغيرة، وقدّم تدريبًا واسترجاعًا نشطًا وتغذية راجعة. راعِ اختلاف مستويات المتعلمين وإمكانية الوصول.'],
+['تطبيق','إدارة المياه','قد تركز الأفكار على كشف التسرب أو توضيح الاستهلاك أو إعادة استخدام المياه المناسبة. أي تصميم يلامس مياه الشرب يحتاج معايير صحية ومراجعة مختصة.'],
+['تطبيق','التنقل الحضري','ادرس رحلة المستخدم كاملة: الوصول، الانتظار، السلامة، المعلومات، وإمكانية الوصول. الحل الجيد قد يكون خدمة أو تنظيمًا وليس جهازًا.'],
+['تطبيق','كفاءة الطاقة','ابدأ بقياس الاستهلاك وفهم أوقات الذروة ثم اقترح تغييرات سلوكية أو تشغيلية. لا تعدّل التمديدات الكهربائية؛ استعن بفني مؤهل.'],
+['مسؤولية','السلامة أولًا','حدّد المخاطر المتوقعة قبل الاختبار. تجنب التجارب التي تتضمن كهرباء منزلية أو ضغطًا أو حرارة عالية أو مواد كيميائية أو أجهزة طبية دون مختصين.'],
+['مسؤولية','الخصوصية بالتصميم','اجمع أقل قدر ممكن من البيانات، واشرح الغرض، ووفّر تحكمًا واضحًا، واحمِ البيانات. لا تجمع بيانات حساسة لمجرد أنها متاحة.'],
+['مسؤولية','الأثر البيئي','قيّم المواد والطاقة والنقل والصيانة ونهاية العمر. قد يخفي منتج موفر للطاقة أثرًا بيئيًا كبيرًا في التصنيع أو التخلص منه.'],
+['مسؤولية','التحيز والإنصاف','اسأل من قد لا يستفيد من الحل، وهل تعمل الواجهة مع لغات وقدرات مختلفة. اختبر مع مستخدمين متنوعين ولا تفترض أن تجربة واحدة تمثل الجميع.'],
+['مسؤولية','الملكية الفكرية','دوّن مساهمات الفريق والتواريخ والنسخ. افحص قواعد بلدك قبل النشر أو مشاركة التفاصيل، فشروط البراءة والحقوق تختلف باختلاف الولاية القضائية.'],
+['مسؤولية','الادعاءات العلمية','ميّز بين حقيقة مدعومة ومقترح وافتراض. اذكر حدود النموذج ومصدر القياس، ولا تستخدم كلمات مثل «مضمون» أو «مثبت» دون دليل مناسب.']
+];
+knowledgeItems.push(...[["منهجية", "صياغة المشكلة", "اكتب المشكلة من منظور الشخص المتأثر بها، وحدد السياق والنتيجة غير المرغوبة. تجنب كتابة الحل داخل تعريف المشكلة؛ لأن ده بيقفل باب البدائل بدري."], ["منهجية", "مقابلات المستخدمين", "اسأل عن مواقف حصلت فعلًا بدل سؤال الناس إذا كانوا يحبوا فكرة افتراضية. استخدم أسئلة مفتوحة، وسجّل الأنماط المتكررة من غير جمع بيانات شخصية غير لازمة."], ["منهجية", "خريطة رحلة المستخدم", "قسّم التجربة لمراحل قبل الاستخدام وأثناءه وبعده، واكتب في كل مرحلة الأفعال والمشاعر والعقبات والفرص. الخريطة بتكشف مشاكل خارج المنتج نفسه."], ["منهجية", "تحليل المنافسين والبدائل", "قارن الحلول المباشرة وغير المباشرة، وحتى الطرق اليدوية اللي الناس بتستخدمها. سجّل السعر وسهولة الاستخدام والقيود بدل الاكتفاء بقائمة أسماء."], ["منهجية", "فرضية قابلة للاختبار", "اكتب: نعتقد أن فئة محددة تواجه مشكلة محددة، وأن تغييرًا معينًا قد يحسن نتيجة قابلة للقياس. بعد كده صمّم اختبارًا صغيرًا يقدر يثبت أو ينفي الفرضية."], ["منهجية", "مؤشرات النجاح KPI", "اختار مقياسًا مرتبطًا بالمشكلة، زي الوقت اللازم لإنجاز مهمة أو نسبة إكمالها. لا تختار رقمًا شكله حلو لكنه لا يعبّر عن قيمة حقيقية للمستخدم."], ["منهجية", "تحليل التكلفة الكلية", "احسب المواد والتشغيل والصيانة والتحديث والدعم والتخلص من المنتج، مش سعر التصنيع بس. التقديرات الأولية لازم تتكتب كنطاقات ومعاها افتراضاتها."], ["منهجية", "خطة إدارة المخاطر", "اكتب الخطر واحتماله وتأثيره وطريقة تقليله والمسؤول عن متابعته. أوقف الاختبار لو ظهرت علامة خطر غير متوقعة، واطلب مراجعة مختص عند الحاجة."], ["منهجية", "توثيق التجارب", "سجّل التاريخ والهدف والإعدادات والملاحظات والنتيجة والتغييرات. التوثيق بيساعدك تكرر التجربة وتعرف إذا التحسن حقيقي ولا مجرد انطباع."], ["منهجية", "إدارة النسخ", "سمّي كل نسخة برقم وتاريخ، واحتفظ بسجل تغييرات مختصر. ده بيمنع ضياع شغل الفريق وبيسهّل الرجوع لنسخة مستقرة."], ["منهجية", "التصميم من أجل الصيانة", "اسأل من هيصلح المنتج، وهل القطع متاحة، وهل التنظيف أو التحديث سهل. المنتج اللي يتصلح ويتحدّث غالبًا عمره العملي أطول."], ["منهجية", "اختبار الفكرة بأقل تكلفة", "قبل بناء جهاز أو تطبيق كامل، اختبر الفرضية برسم أو نموذج ورقي أو عرض توضيحي غير متصل. الهدف تعلّم شيء محدد بأقل وقت ومخاطرة."], ["تقنية", "المعالج CPU", "وحدة بتنّفذ التعليمات العامة للكمبيوتر. أداؤها بيتأثر بعدد الأنوية والتردد والذاكرة ونوع المهمة، ومش رقم واحد كفاية للحكم عليها."], ["تقنية", "معالج الرسوميات GPU", "معالج مصمم لتنفيذ عمليات كتير بالتوازي، وده مفيد للرسوميات وبعض أعباء تعلم الآلة. مش كل مهمة بتستفيد منه بنفس الدرجة."], ["تقنية", "الذاكرة RAM", "مساحة عمل مؤقتة للبرامج والبيانات المستخدمة حاليًا. زيادتها ممكن تساعد في تعدد المهام، لكنها لا تعوّض معالجًا أو تخزينًا بطيئًا."], ["تقنية", "الحوسبة السحابية", "استخدام موارد حوسبة وتخزين عبر الإنترنت بدل الاعتماد على جهاز محلي فقط. راجع التكلفة والخصوصية والاعتمادية وإمكانية نقل البيانات قبل الاختيار."], ["تقنية", "الحوسبة الطرفية Edge Computing", "معالجة البيانات بالقرب من مصدرها بدل إرسال كل شيء لسحابة بعيدة. ممكن تقلل التأخير وحركة البيانات، لكنها تحتاج إدارة وتحديث وأمان للأجهزة."], ["تقنية", "قواعد البيانات", "أنظمة منظمة لتخزين البيانات واسترجاعها وتحديثها. اختيار النوع يعتمد على شكل البيانات وحجمها وعدد المستخدمين ومتطلبات الاتساق والسرعة."], ["تقنية", "واجهات API", "عقد منظم بين برنامجين يحدد شكل الطلب والرد والصلاحيات والأخطاء. لازم توثّق الواجهة وتحمي مفاتيح الوصول وتحدد حدود الاستخدام."], ["تقنية", "الأمن السيبراني الأساسي", "ابدأ بتحديث البرامج، وكلمات مرور قوية وفريدة، ومصادقة متعددة العوامل، ونسخ احتياطي. صمّم أقل صلاحيات ممكنة ولا تخزّن أسرارًا داخل تطبيق عام."], ["تقنية", "التشفير", "تحويل البيانات لصيغة لا يفهمها إلا من يملك المفتاح المناسب. التشفير أثناء النقل والتخزين مهم، لكن إدارة المفاتيح واختيار تطبيق موثوق مهمان بنفس القدر."], ["تقنية", "إنترنت الأشياء الصناعي", "استخدام المستشعرات والاتصال لمراقبة المعدات والعمليات. اعزل الشبكات المهمة، وحدّث الأجهزة، وضع خطة للتشغيل عند انقطاع الاتصال."], ["تقنية", "التوأم الرقمي Digital Twin", "تمثيل رقمي لنظام حقيقي يتحدث ببيانات تشغيلية لمتابعة حالته أو اختبار سيناريوهات. دقته مرتبطة بجودة البيانات وصحة النموذج."], ["تقنية", "الواقع المعزز AR", "إضافة عناصر رقمية فوق المشهد الحقيقي عبر شاشة أو نظارة. الاستخدام الجيد يوضح المعلومة من غير ما يحجب البيئة أو يشتت المستخدم."], ["تقنية", "الواقع الافتراضي VR", "بيئة رقمية غامرة تسمح بالتدريب أو الاستكشاف والمحاكاة. لازم تراعي الراحة وإمكانية الوصول والخصوصية، وتوفر بديلًا لمن لا يناسبه الاستخدام."], ["تقنية", "الروبوتات", "أنظمة تجمع بين الاستشعار والتحكم والحركة والبرمجيات. ابدأ بمحاكاة أو منصة تعليمية آمنة، وحدد حدود الحركة ومناطق التوقف قبل أي تجربة واقعية."], ["تقنية", "أنظمة التحكم", "تراقب متغيرًا وتقارنه بهدف محدد ثم تعدل المدخلات. جودة التحكم تعتمد على القياس والتأخير والاستقرار وحدود النظام."], ["تقنية", "المحركات Servo وStepper", "أنواع مختلفة من المحركات للتحكم في الحركة. الاختيار يعتمد على العزم والدقة والسرعة والحمل وطريقة التحكم، ويجب اتباع مواصفات الشركة المصنعة."], ["تقنية", "الطاقة الشمسية الكهروضوئية", "تحوّل الخلايا الشمسية الضوء إلى كهرباء. الإنتاج يتغير حسب الإشعاع والظل والحرارة والاتجاه، ويحتاج أي تركيب كهربائي إلى مختص مؤهل."], ["تقنية", "كفاءة البطاريات", "تتأثر البطاريات بدرجة الحرارة ومعدل الشحن والتفريغ والعمر وطريقة التخزين. استخدم الشواحن المعتمدة ولا تفتح البطارية أو تعدّلها."], ["تقنية", "المواد القابلة للتحلل", "مواد تتحلل في ظروف محددة بفعل كائنات دقيقة أو عوامل بيئية. كلمة «قابل للتحلل» وحدها مش كفاية؛ لازم تعرف الزمن والظروف والبنية التحتية المطلوبة."], ["تطبيق", "الصحة الرقمية", "أدوات لتنظيم المواعيد أو عرض معلومات صحية أو دعم التواصل. لا تصمم نظامًا يشخّص أو يوصي بعلاج من غير إشراف طبي واعتماد مناسب."], ["تطبيق", "المدن الذكية", "استخدام البيانات لتحسين النقل والطاقة والمياه والخدمات. النجاح مش في كثرة المستشعرات؛ النجاح في خدمة مفيدة وشفافة وتحترم خصوصية السكان."], ["تطبيق", "إعادة تصميم التغليف", "قلل حجم العبوة والمواد غير الضرورية، وفكر في إعادة الاستخدام وسهولة الفرز. اختبر حماية المنتج أثناء النقل قبل تقليل المواد بشكل مبالغ فيه."], ["تطبيق", "إدارة النفايات", "ابدأ بقياس نوع النفايات ومصدرها، ثم قلل إنتاجها وفرزها وأعد استخدام الممكن. الحلول لازم تناسب نظام الجمع والمعالجة المحلي."], ["تطبيق", "إتاحة المحتوى الرقمي", "استخدم تباينًا واضحًا، وعناوين منظمة، ونصوصًا بديلة للصور، وتحكمًا بلوحة المفاتيح، ولغة بسيطة. اختبر مع أشخاص يستخدمون تقنيات مساعدة."], ["تطبيق", "التعلم التكيفي", "يغيّر ترتيب أو صعوبة المحتوى حسب تقدم المتعلم. لازم يشرح سبب التوصية، ويسمح بالتحكم، ويتجنب تصنيف الطالب بشكل ثابت من بيانات قليلة."], ["تطبيق", "التقنيات الزراعية الدقيقة", "تجمع بيانات عن التربة والطقس والمحصول لتوجيه القرارات. ابدأ بحقل تجريبي صغير وقارن النتائج بقياسات مرجعية قبل التوسع."], ["تطبيق", "سلاسل الإمداد", "تتابع حركة المواد من المورد إلى المستخدم. تحسينها يحتاج شفافية في البيانات وخططًا للتأخير ونقص المخزون، مش مجرد لوحة متابعة."], ["مسؤولية", "التحقق من المصادر", "دوّن مصدر كل معلومة وتاريخها وطريقة قياسها. فضّل المصادر الأولية والمعايير والجهات العلمية، وقارن أكثر من مصدر عند وجود خلاف."], ["مسؤولية", "الموافقة المستنيرة", "اشرح للمشارك هدف الاختبار وما البيانات التي ستجمعها وكيف ستستخدمها، واسمح له بالانسحاب. مع القاصرين، التزم بموافقة ولي الأمر والقواعد المحلية عند اللزوم."], ["مسؤولية", "تقليل البيانات", "لا تجمع إلا ما تحتاجه فعلًا، وحدد مدة الاحتفاظ وطريقة الحذف ومن يستطيع الوصول. البيانات الأقل تعني مخاطر أقل وتكلفة إدارة أقل."], ["مسؤولية", "الشفافية في الذكاء الاصطناعي", "وضّح متى تكون النتيجة مولدة آليًا، وما حدود النظام، وهل تمت مراجعتها. لا توحِ أن النموذج متأكد أو واعٍ أو معصوم من الخطأ."], ["مسؤولية", "أمن النماذج والأنظمة", "اختبر إساءة الاستخدام وتسرب البيانات والصلاحيات الزائدة، وراقب التحديثات. افصل الأسرار عن الواجهة العامة واستخدم خادمًا آمنًا لإدارة المفاتيح."], ["مسؤولية", "الأثر الاجتماعي", "اسأل كيف سيؤثر الحل على الوظائف والوقت والوصول والعدالة والعلاقات. استمع للفئات المتأثرة قبل اعتماد قرار تصميمي كبير."], ["مسؤولية", "حدود النموذج الأولي", "النموذج الأولي وسيلة للتعلم وليس دليلًا على أن المنتج النهائي آمن أو متين أو مطابق للمواصفات. اكتب بوضوح ما الذي لم يتم اختباره."], ["مسؤولية", "الاستدامة الرقمية", "قلل البيانات والعمليات غير الضرورية، وأطِل عمر الأجهزة، وفكر في استهلاك الطاقة والتخزين. الأداء التقني الجيد لازم يتوازن مع أثره البيئي."]]);
+knowledgeItems.push(...[["تصميم", "التصميم المتمحور حول الإنسان", "ابدأ بفهم احتياجات الناس وسياقهم وقدراتهم، وبعدها صمّم الحل واختبره معهم. التصميم مش شكل جميل بس؛ هو تجربة كاملة قابلة للاستخدام."], ["تصميم", "التصميم الشامل", "فكّر من البداية في اختلاف القدرات واللغات والبيئات والأجهزة. الحل الشامل يقلل الحواجز بدل ما يطلب من المستخدم يتأقلم مع تصميم واحد."], ["تصميم", "النموذج الورقي", "ارسم الشاشات أو أجزاء المنتج على ورق لتجربة تسلسل الاستخدام بسرعة. النموذج الورقي ممتاز لاكتشاف مشاكل الفكرة قبل البرمجة أو التصنيع."], ["تصميم", "اختبار قابلية الاستخدام", "اطلب من شخص تنفيذ مهمة محددة من غير ما تشرحله كل خطوة، وراقب أين يتوقف أو يحتار. ركّز على تحسين النظام بدل لوم المستخدم."], ["تصميم", "التصميم المعياري", "قسّم المنتج لوحدات واضحة يمكن اختبارها أو استبدالها. التصميم المعياري يسهل الصيانة والتطوير، لكنه يحتاج اتفاقًا واضحًا بين الوحدات."], ["تصميم", "اختيار المواد", "قارن القوة والوزن والتكلفة والتوفر وقابلية الإصلاح وإعادة التدوير. لا تختار مادة بناءً على خاصية واحدة وتتجاهل ظروف الاستخدام."], ["تصميم", "تحليل دورة الحياة", "قيّم الأثر من استخراج المواد والتصنيع والنقل والاستخدام حتى نهاية العمر. أحيانًا منتج أغلى في البداية يكون أقل أثرًا على المدى الطويل."], ["تصميم", "التصميم للتفكيك", "خطط لطريقة فك المنتج واستبدال القطع وفصل المواد. قلل المواد اللاصقة الدائمة والخلطات التي يصعب فرزها متى كان ذلك عمليًا."], ["تصميم", "النمذجة ثلاثية الأبعاد", "أنشئ تمثيلًا رقميًا للأجزاء والأبعاد قبل التصنيع. راجع الوحدات والسماكات والتفاوتات، واعتبر النموذج تصورًا يحتاج تحققًا ماديًا."], ["تصميم", "التصنيع بالإضافة 3D Printing", "بناء جسم من طبقات متتابعة اعتمادًا على ملف رقمي. مناسب لبعض النماذج والأشكال المعقدة، لكن الخامة والاتجاه والإعدادات تؤثر في المتانة."], ["هندسة", "تحليل المتطلبات", "اكتب ما الذي يجب أن يفعله النظام وما القيود التي يعمل تحتها، ثم حوّلها لمتطلبات قابلة للاختبار. تجنب كلمات عامة مثل سريع وسهل دون مقياس."], ["هندسة", "مخطط الكتل Block Diagram", "اعرض المكونات الرئيسية وتدفق الطاقة أو البيانات بينها. المخطط يساعد الفريق يفهم حدود النظام قبل الدخول في تفاصيل التنفيذ."], ["هندسة", "تحليل السبب الجذري", "اسأل لماذا تكررت المشكلة، واستخدم أدوات مثل 5 Whys أو مخطط عظمة السمكة. لا تتوقف عند العرض الظاهر إذا كان السبب أعمق."], ["هندسة", "تحليل أنماط الفشل FMEA", "رتّب طرق الفشل المحتملة وأسبابها وتأثيراتها وطرق اكتشافها وتقليلها. الأداة وسيلة لتنظيم التفكير وليست ضمانًا أن كل المخاطر اتغطت."], ["هندسة", "تحليل الحساسية", "غيّر افتراضًا واحدًا كل مرة وشوف تأثيره على النتيجة. ده يكشف المتغيرات اللي تستحق قياسًا أدق بدل الاعتماد على رقم تقديري واحد."], ["هندسة", "هوامش الأمان", "صمّم مع مراعاة اختلاف الأحمال والظروف وعدم اليقين وفق المعايير الهندسية المناسبة. لا تستخدم معاملًا عشوائيًا بدل حسابات ومراجعة مختصة."], ["هندسة", "اختبار الإجهاد", "اختبر الأداء ضمن الحدود المعتمدة وتحت ظروف ممثلة للاستخدام. الاختبار لازم يكون مخططًا وآمنًا، ولا يتضمن تعريض أشخاص أو معدات للخطر."], ["هندسة", "المعايرة", "قارن أداة القياس بمرجع معروف لتحديد الانحراف. سجّل تاريخ المعايرة وظروفها، لأن القياس غير الموثوق يفسد قرارات التصميم."], ["هندسة", "تحليل الإشارات", "ادرس كيف تتغير الإشارة مع الزمن أو التردد لفهم الضوضاء والأنماط. استخدم أدوات مناسبة وميّز بين الإشارة الحقيقية والتشويش."], ["هندسة", "التحكم بالتغذية الراجعة", "يقيس النظام النتيجة ويقارنها بالقيمة المطلوبة ثم يصحح الفرق. لازم تدرس الاستقرار والتأخير وحدود الاستجابة قبل تطبيقه على نظام حقيقي."], ["برمجة", "الخوارزمية", "مجموعة خطوات واضحة لحل مشكلة. الخوارزمية الجيدة تراعي صحة النتيجة والوقت والذاكرة وسهولة الفهم، مش مجرد أنها تشتغل على مثال واحد."], ["برمجة", "هياكل البيانات", "طرق لتنظيم المعلومات مثل القوائم والطوابير والأشجار والجداول التجزئية. اختيار الهيكل يؤثر في سرعة البحث والإضافة والحذف."], ["برمجة", "اختبار الوحدات Unit Testing", "اختبر أصغر أجزاء البرنامج بشكل مستقل مع مدخلات متوقعة وحالات طرفية. الاختبارات تسهّل تعديل الكود بثقة وتكشف الانحدارات."], ["برمجة", "تصميم واجهات API", "حدد المسارات والبيانات المتوقعة وأكواد الأخطاء والمصادقة وحدود الطلبات. وثّق التغييرات حتى لا تتعطل التطبيقات التي تعتمد على الواجهة."], ["برمجة", "إدارة الأخطاء", "اعرض رسالة مفهومة للمستخدم، وسجّل تفاصيل تقنية آمنة للمطور. لا تكشف كلمات مرور أو رموز وصول أو بيانات خاصة داخل رسائل الخطأ."], ["برمجة", "إمكانية العمل دون اتصال", "حدد الوظائف التي يجب أن تستمر دون إنترنت، وخزّن أقل قدر ضروري محليًا مع آلية مزامنة واضحة عند عودة الاتصال."], ["برمجة", "النسخ الاحتياطي والاستعادة", "النسخة الاحتياطية المفيدة هي التي جربت استعادتها. حدد ما الذي يُنسخ ومتى وأين، واحمِ النسخ من الوصول غير المصرح به."], ["برمجة", "مراقبة الأداء", "تابع زمن الاستجابة والأخطاء واستهلاك الموارد ومؤشرات تجربة المستخدم. اجمع بيانات تشغيلية ضرورية فقط مع احترام الخصوصية."], ["علوم", "المنهج العلمي", "ابدأ بسؤال قابل للبحث، وابنِ فرضية، وصمّم تجربة مضبوطة، وحلّل النتائج، ثم انشر الطريقة والقيود. النتيجة المخالفة للتوقع مفيدة أيضًا."], ["علوم", "الارتباط والسببية", "وجود متغيرين معًا لا يثبت أن أحدهما سبب الآخر. قد توجد عوامل ثالثة أو اتجاه عكسي، لذلك يلزم تصميم دراسة مناسب قبل ادعاء السببية."], ["علوم", "عدم اليقين في القياس", "كل قياس له حدود دقة وتفاوت. اذكر الوحدة وأداة القياس وطريقة التقدير، ولا تعرض أرقامًا كثيرة المنازل كأنها مؤكدة."], ["علوم", "التكرارية وإعادة الإنتاج", "التكرارية تعني الحصول على نتائج متقاربة عند تكرار القياس، وإعادة الإنتاج تعني أن فريقًا آخر يقدر يعيد العمل من وصف واضح."], ["علوم", "المحاكاة الحاسوبية", "استخدم نموذجًا رقميًا لاستكشاف سيناريوهات قبل التجربة الواقعية. المحاكاة تعتمد على افتراضات، فلا تعتبرها بديلًا كاملًا عن القياس."], ["علوم", "تحليل البيانات الاستكشافي", "ابدأ بالرسوم والتوزيعات والقيم المفقودة والشاذة قبل بناء نموذج. الفحص الأولي يساعد على اكتشاف أخطاء جمع البيانات."], ["علوم", "الاحتمالات", "لغة رياضية لوصف عدم اليقين. الاحتمال لا يعني ضمان النتيجة، ويجب تفسيره في ضوء جودة البيانات والافتراضات."], ["علوم", "التحسين Optimization", "البحث عن أفضل حل وفق هدف وقيود محددة. اختيار دالة الهدف مهم، لأن تحسين رقم واحد قد يضر جوانب أخرى."], ["إدارة", "إدارة نطاق المشروع", "حدد ما يدخل في الإصدار الحالي وما سيؤجل. النطاق الواضح يقلل التشتت ويساعد الفريق ينهي نسخة قابلة للاختبار."], ["إدارة", "تقسيم العمل", "حوّل الهدف لمهام صغيرة لها ناتج واضح ومسؤول وموعد تقريبي. خلي المهام مترابطة بشكل مفهوم وراجع الاعتماديات بينها."], ["إدارة", "مراجعة ما بعد التنفيذ", "بعد كل تجربة، اكتب ما الذي كان متوقعًا وما الذي حدث وما الذي تعلمته وما الذي ستغيره. ركّز على العملية بدل البحث عن شخص تلومه."], ["إدارة", "عرض الفكرة Pitch", "ابدأ بالمشكلة، ثم المستخدم، والحل، والدليل، والبدائل، والخطوة التالية. العرض الجيد واضح وصادق ولا يبالغ في الوعود."], ["إدارة", "الملكية الفكرية", "قد تشمل براءات الاختراع والعلامات التجارية وحقوق النشر والأسرار التجارية. القواعد تختلف حسب البلد، فاستعن بمختص قبل اتخاذ قرار قانوني."], ["إدارة", "البحث عن براءات سابقة", "ابحث عن حلول منشورة ومصطلحات قريبة ورسومات ووصف تقني. وجود فكرة مشابهة لا يحسم وحده الجِدّة أو حرية الاستخدام؛ يلزم تحليل متخصص."], ["استدامة", "كفاءة استهلاك الطاقة", "قِس استهلاك النظام في الاستخدام الفعلي، وحدد أكثر المكونات استهلاكًا. التحسين قد يكون في البرمجيات أو العزل أو التشغيل وليس في مصدر الطاقة فقط."], ["استدامة", "إعادة الاستخدام", "صمم المنتج أو العبوة بحيث يمكن استخدامها أكثر من مرة بوضوح ونظافة وسهولة. احسب النقل والتنظيف وعدد مرات الاستخدام الفعلية."], ["استدامة", "اقتصاد التدوير", "حاول إبقاء المواد والمنتجات في الاستخدام لأطول وقت عبر الصيانة والإصلاح وإعادة الاستخدام والتدوير عند الإمكان."], ["استدامة", "قياس الأثر", "حدد خط أساس ومؤشرًا واضحًا وفترة قياس. لا تنسب كل تحسن للمشروع إذا كانت هناك تغييرات أخرى أثرت في النتيجة."]]);
+let activeKnowledgeFilter='الكل';
+const LIBRARY_KEY='inventor_user_library_v8';
+const PAGE_SIZE=18;
+let knowledgeVisible=PAGE_SIZE, aiVisible=PAGE_SIZE;
+function readUserLibrary(){
+ try{return JSON.parse(localStorage.getItem(LIBRARY_KEY)||'{"knowledge":[],"ai":[]}')}catch(e){return {knowledge:[],ai:[]}}
+}
+const userLibrary=readUserLibrary();
+knowledgeItems.push(...(Array.isArray(userLibrary.knowledge)?userLibrary.knowledge:[]));
+function saveUserLibrary(){localStorage.setItem(LIBRARY_KEY,JSON.stringify(userLibrary))}
+function fillCategorySelect(selectId,items){
+ const select=$(selectId);if(!select)return;
+ const current=select.value||'الكل';
+ const cats=[...new Set(items.map(x=>x[0]).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'ar'));
+ select.innerHTML='<option value="الكل">كل التصنيفات</option>'+cats.map(c=>`<option value="${escapeHtml(c)}">${escapeHtml(c)}</option>`).join('');
+ select.value=cats.includes(current)?current:'الكل';
+}
+function renderKnowledgeLibrary(){
+ const q=($('knowledgeSearch')?.value||'').trim().toLowerCase();
+ const cat=$('knowledgeCategory')?.value||'الكل';
+ let rows=knowledgeItems.filter(x=>(cat==='الكل'||x[0]===cat)&&(!q||x.join(' ').toLowerCase().includes(q)));
+ const sort=$('knowledgeSort')?.value||'default';
+ if(sort==='az')rows.sort((a,b)=>a[1].localeCompare(b[1],'ar'));
+ if(sort==='za')rows.sort((a,b)=>b[1].localeCompare(a[1],'ar'));
+ $('knowledgeCount').textContent=`${rows.length} موضوع ظاهر من أصل ${knowledgeItems.length} موضوع`;
+ const shown=rows.slice(0,knowledgeVisible);
+ $('knowledgeLibrary').innerHTML=shown.length?shown.map(x=>`<article class="info-card"><div class="kind">${escapeHtml(x[0])}</div><h3>${escapeHtml(x[1])}</h3><p>${escapeHtml(x[2])}</p></article>`).join(''):'<div class="library-empty">مش لاقيين نتيجة مطابقة. جرّب كلمة أبسط أو تصنيف تاني.</div>';
+ $('knowledgeMore').hidden=rows.length<=knowledgeVisible;
+}
+function renderAITopics(){
+ fillCategorySelect('aiCategory',aiKnowledge);
+ const q=($('aiSearch')?.value||'').trim().toLowerCase(),cat=$('aiCategory')?.value||'الكل';
+ let rows=aiKnowledge.filter(x=>(cat==='الكل'||x[0]===cat)&&(!q||x.join(' ').toLowerCase().includes(q)));
+ const sort=$('aiSort')?.value||'default';
+ if(sort==='az')rows.sort((a,b)=>a[1].localeCompare(b[1],'ar'));
+ if(sort==='za')rows.sort((a,b)=>b[1].localeCompare(a[1],'ar'));
+ $('aiCount').textContent=`${rows.length} من ${aiKnowledge.length} موضوع`;
+ $('aiLibraryStatus').textContent=`${rows.length} نتيجة مطابقة · ${aiKnowledge.length} موضوع في المكتبة`;
+ const shown=rows.slice(0,aiVisible);
+ $('aiTopics').innerHTML=shown.length?shown.map(x=>`<article class="ai-topic"><small>${escapeHtml(x[0])}</small><h4>${escapeHtml(x[1])}</h4><p>${escapeHtml(x[2])}</p>${x[3]?`<p style="margin-top:9px;color:#c5ff79">مثال: ${escapeHtml(x[3])}</p>`:''}</article>`).join(''):'<div class="library-empty">ملقيناش نتيجة. جرّب كلمة تانية أو اختار كل التصنيفات.</div>';
+ $('aiMore').hidden=rows.length<=aiVisible;
+}
+function addKnowledgeItem(){
+ const category=$('newKnowledgeCategory').value.trim(),title=$('newKnowledgeTitle').value.trim(),body=$('newKnowledgeBody').value.trim();
+ if(!category||!title||!body){toast('اكتب التصنيف واسم الموضوع والشرح الأول');return}
+ const item=[category,title,body];
+ knowledgeItems.push(item);userLibrary.knowledge.push(item);saveUserLibrary();
+ $('newKnowledgeCategory').value='';$('newKnowledgeTitle').value='';$('newKnowledgeBody').value='';
+ $('knowledgeAddBox').open=false;knowledgeVisible+=1;fillCategorySelect('knowledgeCategory',knowledgeItems);renderKnowledgeLibrary();toast('اتحفظ موضوعك في موسوعة الابتكار على الجهاز');
+}
+function addAIItem(){
+ const category=$('newAICategory').value.trim(),title=$('newAITitle').value.trim(),body=$('newAIBody').value.trim(),example=$('newAIExample').value.trim();
+ if(!category||!title||!body){toast('اكتب التصنيف واسم الموضوع والشرح الأول');return}
+ const item=[category,title,body,example];
+ aiKnowledge.push(item);userLibrary.ai.push(item);saveUserLibrary();
+ $('newAICategory').value='';$('newAITitle').value='';$('newAIBody').value='';$('newAIExample').value='';
+ $('aiAddBox').open=false;aiVisible+=1;fillCategorySelect('aiCategory',aiKnowledge);renderAITopics();toast('اتحفظ موضوع الذكاء الاصطناعي على الجهاز');
+}
+document.addEventListener('click',e=>{
+ const b=e.target.closest('[data-kfilter]');
+ if(b){activeKnowledgeFilter=b.dataset.kfilter;document.querySelectorAll('[data-kfilter]').forEach(x=>x.classList.toggle('active',x===b));renderKnowledgeLibrary()}
+});
+function copyTemplate(t){if(navigator.clipboard?.writeText){navigator.clipboard.writeText(t).then(()=>toast('تم نسخ القالب')).catch(()=>toast('تعذر النسخ في هذا المتصفح'))}else toast('النسخ غير مدعوم في هذا المتصفح')}
+window.copyTemplate=copyTemplate;
+function renderKnowledge(){
+ $('journeyCards').innerHTML=journey.map(x=>`<article class="project"><div class="tiny">المرحلة ${x[0]}</div><div style="font-size:27px;margin:7px 0">${x[1]}</div><h3>${x[2]}</h3><p>${x[3]}</p><div class="tag">${x[4]}</div></article>`).join('');
+ $('conceptCards').innerHTML=concepts.map(x=>`<article class="project"><h3>📘 ${x[0]}</h3><p>${x[1]}</p></article>`).join('');
+ $('fieldCards').innerHTML=fields.map(x=>`<article class="project"><h3>${x[0]} ${x[1]}</h3><p>${x[2]}</p><div class="tiny">${x[3]}</div></article>`).join('');
+ fillCategorySelect('knowledgeCategory',knowledgeItems); renderKnowledgeLibrary();
+}
+$('evaluateBtn').onclick=()=>{
+ const name=$('evalName').value.trim()||'فكرتي الجديدة';
+ const vals=['evalProblem','evalUser','evalResearch','evalPrototype'].map(id=>Number($(id).value));
+ const score=vals.reduce((a,b)=>a+b,0),pct=Math.round(score/12*100);
+ const risk=$('evalRisk').value.trim();
+ const tips=[];
+ if(vals[0]<3)tips.push('صِف المشكلة في جملة واحدة وحدد متى ولمن تحدث.');
+ if(vals[1]<3)tips.push('تحدث مع مستخدمين محتملين لفهم احتياجاتهم الفعلية.');
+ if(vals[2]<3)tips.push('ابحث عن منتجات وحلول مشابهة قبل اعتبار الفكرة جديدة.');
+ if(vals[3]<3)tips.push('ابدأ برسم أو نموذج ورقي أو محاكاة رقمية منخفضة المخاطر.');
+ if(risk)tips.push('التحدي الذي ذكرته يحتاج إلى خطة اختبار أو استشارة مناسبة: '+risk);
+ if(!tips.length)tips.push('انتقل إلى تجربة صغيرة، وسجّل النتائج والملاحظات قبل توسيع المشروع.');
+ $('evalResult').innerHTML=`<h3>تقرير مراجعة: ${escapeHtml(name)}</h3><div style="font-size:34px;font-weight:800">${pct}<small style="font-size:14px"> / 100</small></div><div class="progress"><span style="width:${pct}%"></span></div><p>${pct<45?'الفكرة في مرحلة الاستكشاف. ركّز على فهم المشكلة.':pct<75?'هناك أساس جيد، لكن ما زالت بعض الافتراضات تحتاج إلى تحقق.':'مراجعة أولية قوية. الخطوة التالية اختبار منظم وآمن.'}</p><b>خطوات مقترحة</b><ul>${tips.map(t=>'<li>'+escapeHtml(t)+'</li>').join('')}</ul><p class="tiny">هذا المؤشر يقيس اكتمال إجاباتك فقط، ولا يقيس أصالة الاختراع أو سلامته أو نجاحه التجاري.</p>`;
+ $('evalResult').classList.add('show');
+};
+const aiKnowledge = [
+['أساسيات','يعني إيه ذكاء اصطناعي؟','الذكاء الاصطناعي أو AI هو مجال بيطوّر أنظمة تقدر تنفّذ مهام بنعتبرها محتاجة ذكاء، زي فهم اللغة أو التعرّف على الصور أو اقتراح حلول. مش معناه إن الكمبيوتر بقى إنسان أو عنده وعي.','مثال: تطبيق يفرز الصور حسب اللي ظاهر فيها.'],
+['أساسيات','الفرق بين AI وMachine Learning','AI هو المظلة الكبيرة. تعلم الآلة Machine Learning فرع جواها، بيعتمد على إن النظام يتعلم أنماط من أمثلة وبيانات بدل ما نكتبله كل قاعدة بإيدينا.','مثال: فلتر بريد بيتعلم يميّز الرسائل المزعجة من أمثلة سابقة.'],
+['أساسيات','الخوارزمية Algorithm','الخوارزمية مجموعة خطوات مرتبة لحل مشكلة أو تنفيذ مهمة. ممكن تكون بسيطة زي ترتيب أرقام، أو معقدة زي اقتراح فيديو مناسب.','الخوارزمية مش لازم تكون AI؛ وصفة ترتيب الكتب خوارزمية برضه.'],
+['أساسيات','البيانات Data','البيانات هي الأمثلة أو القياسات اللي النظام بيتعامل معاها: نصوص، صور، أصوات، أرقام أو سجلات. جودة البيانات وتنوعها بيأثروا جدًا على النتيجة.','لو بيانات التدريب ناقصة، النموذج ممكن يفهم العالم بشكل ناقص.'],
+['أساسيات','النموذج Model','النموذج هو النظام اللي اتعلم أنماط من بيانات أو اتبنى بقواعد، وبعدها بيستخدم اللي اتعلمه عشان يتوقع أو يصنّف أو يولّد نتيجة.','اعتبره متعلم اتدرب على أمثلة، وبعدها بيحل أسئلة جديدة.'],
+['أساسيات','التدريب Training','التدريب هو المرحلة اللي النموذج بيعدّل فيها إعداداته الداخلية عشان يقلل الفرق بين توقعاته والإجابات الصحيحة في بيانات التدريب.','زي التدريب على مسائل كتير مع معرفة الإجابة وتصحيح الأخطاء.'],
+['أساسيات','الاستدلال Inference','الاستدلال هو استخدام النموذج بعد التدريب عشان يطلع نتيجة لمدخل جديد. التدريب ممكن يكون مكلف، أما الاستدلال بيحصل كل مرة تستخدم النموذج.','لما ترفع صورة والموديل يقول فيها قطة، ده استدلال.'],
+['أساسيات','البيانات المنظمة وغير المنظمة','البيانات المنظمة بتبقى في جداول وحقول واضحة، زي جدول درجات. غير المنظمة زي الصور والصوت والنص الحر، وبتحتاج طرق مختلفة للتحليل.','اختيار طريقة التخزين والتحليل بيتحدد حسب نوع البيانات.'],
+['تعلم الآلة','التعلم الخاضع للإشراف','في النوع ده بندرب النموذج على أمثلة ومعاها الإجابة أو التصنيف الصحيح، عشان يتعلم يربط المدخل بالنتيجة.','مثال تعليمي: صور متعلّمة عليها «قطة» أو «كلب».'],
+['تعلم الآلة','التعلم غير الخاضع للإشراف','النموذج بيحاول يكتشف مجموعات أو أنماط في بيانات من غير ما تكون الإجابة الصح مكتوبة لكل مثال.','مثال: تجميع منتجات متشابهة حسب صفاتها.'],
+['تعلم الآلة','التعلم بالتعزيز','النظام بيتعلم يختار أفعال من خلال التفاعل مع بيئة، وياخد مكافأة أو نتيجة بتوضح إذا قراره كان مفيد.','مثال مبسط: برنامج يتعلم لعبة من المحاولات والنقاط.'],
+['تعلم الآلة','التصنيف Classification','التصنيف معناه اختيار فئة من فئات محددة بناءً على المدخلات.','زي تصنيف رسالة: مهمة أو غير مهمة، مع ضرورة مراجعة الأخطاء.'],
+['تعلم الآلة','الانحدار Regression','الانحدار بيحاول يتوقع قيمة رقمية مستمرة، مش مجرد اسم فئة.','مثال تدريبي: توقع استهلاك طاقة تقريبي بناءً على بيانات سابقة.'],
+['تعلم الآلة','التجميع Clustering','التجميع بيحط العناصر المتشابهة في مجموعات بناءً على صفاتها، من غير ما نحدد أسماء المجموعات مسبقًا.','ممكن يساعد في استكشاف أنماط استخدام تطبيق.'],
+['تعلم الآلة','التدريب والاختبار والتحقق','بنقسم البيانات لمجموعات: تدريب عشان النموذج يتعلم، تحقق لضبط الاختيارات، واختبار لقياس الأداء على أمثلة ماشفهاش أثناء التدريب.','لو اختبرنا على نفس أمثلة التدريب، التقييم ممكن يبقى مضلل.'],
+['تعلم الآلة','فرط التعلّم Overfitting','بيحصل لما النموذج يحفظ تفاصيل وأمثلة التدريب زيادة عن اللزوم، فيبقى ممتاز عليها وضعيف مع بيانات جديدة.','زي طالب حفظ إجابات امتحان واحد ومش فاهم الفكرة.'],
+['تعلم الآلة','نقص التعلّم Underfitting','بيحصل لما النموذج بسيط زيادة أو تدريبه مش كفاية، فيفشل حتى في التقاط الأنماط الأساسية.','الحل مش دايمًا نموذج أكبر؛ لازم نفهم البيانات والمهمة.'],
+['تعلم الآلة','التحيز Bias في البيانات','لو البيانات مش بتمثل كل الفئات أو فيها أخطاء متكررة، النموذج ممكن يطلع نتائج غير عادلة لبعض الناس أو الحالات.','راجع مين موجود في البيانات ومين غايب عنها.'],
+['تعلم الآلة','مقاييس الأداء','الدقة Accuracy نسبة التوقعات الصح، لكن مش كفاية لو الفئات غير متوازنة. Precision وRecall وF1 بتدي صورة أوسع حسب نوع المشكلة.','اختيار المقياس لازم يناسب تكلفة كل نوع من الأخطاء.'],
+['تعلم الآلة','جودة البيانات وتنظيفها','ممكن نحتاج نراجع القيم الناقصة، التكرار، الأخطاء، الوحدات المختلفة، والتسميات. التنظيف لازم يتوثق عشان ما يغيّرش المعنى.','بيانات أنضف غالبًا بتساعد، بس مش معناها حذف أي قيمة غريبة وخلاص.'],
+['تعلم عميق','يعني إيه Deep Learning؟','التعلم العميق فرع من تعلم الآلة بيستخدم شبكات عصبية فيها طبقات كتير عشان تتعلم تمثيلات معقدة من البيانات.','بيستخدم في الصور والصوت واللغة ومجالات تانية.'],
+['تعلم عميق','الشبكة العصبية Neural Network','نظام حسابي مكوّن من وحدات مترابطة وطبقات، بيحوّل المدخلات لنتائج من خلال أوزان ودوال رياضية. الاسم مستوحى بشكل مبسط من الأعصاب، لكنه مش نسخة من المخ البشري.','كل طبقة ممكن تتعلم نمط مختلف حسب تصميم الشبكة والتدريب.'],
+['تعلم عميق','الأوزان والانحيازات','الأوزان بتحدد قوة تأثير الإشارات بين الوحدات، والانحيازات بتضيف مرونة للحساب. التدريب بيعدّل القيم دي عشان يحسن أداء النموذج.','دي قيم رياضية داخل النموذج، مش آراء أو معتقدات.'],
+['تعلم عميق','دالة التنشيط Activation','دالة رياضية بتضيف لاخطية للشبكة، وده بيسمح لها تتعلم علاقات أعقد من مجرد جمع وضرب بسيط.','من أمثلتها ReLU وSigmoid وTanh.'],
+['تعلم عميق','الانتشار العكسي Backpropagation','طريقة لحساب تأثير أخطاء النموذج على أوزانه، عشان نعرف نعدّلها أثناء التدريب.','بتشتغل مع خوارزميات تحسين زي Gradient Descent.'],
+['تعلم عميق','المحوّلات Transformers','معمارية شبكات عصبية بتستخدم آلية Attention عشان تتعامل مع العلاقات بين عناصر التسلسل، وحققت نجاح كبير في اللغة ومجالات تانية.','كتير من نماذج اللغة الحديثة مبنية على المحوّلات.'],
+['تعلم عميق','آلية الانتباه Attention','بتساعد النموذج يحدد أجزاء من المدخلات ليها أهمية أكبر بالنسبة للمهمة الحالية. مش معناها انتباه أو وعي بشري.','في جملة طويلة، ممكن تساعد النموذج يربط كلمة بمرجعها.'],
+['تطبيقات','معالجة اللغة الطبيعية NLP','مجال بيخلّي الكمبيوتر يتعامل مع اللغة البشرية: تحليل النصوص، الترجمة، التلخيص، واستخراج المعلومات.','اللهجات واللغة العامية بتحتاج بيانات وفهم للسياق.'],
+['تطبيقات','النماذج اللغوية الكبيرة LLMs','نماذج اتدربت على كميات كبيرة من النصوص عشان تتوقع وتولّد تسلسلات لغوية. تقدر تساعد في الشرح والكتابة، لكنها ممكن تنتج معلومات غير صحيحة.','راجع الأسماء والأرقام والمراجع بدل الاعتماد الأعمى.'],
+['تطبيقات','الذكاء الاصطناعي التوليدي','نوع من الأنظمة بيولّد محتوى جديد زي نص أو صورة أو صوت أو كود بناءً على طلب أو مدخل. النتيجة محتاجة مراجعة وحقوق الاستخدام بتختلف.','ممكن تستخدمه لاقتراح أفكار أولية، مش لإثبات صحة معلومة.'],
+['تطبيقات','هندسة الأوامر Prompt Engineering','طريقة صياغة الطلب عشان توضح الهدف والسياق والقيود وشكل النتيجة المطلوبة. الطلب الواضح بيساعد، لكنه مش ضمان للدقة.','حدد الدور والمهمة والجمهور وشكل الإجابة ومعايير التحقق.'],
+['تطبيقات','التضمينات Embeddings','تمثيلات رقمية للنصوص أو الصور بتلتقط جوانب من معناها، وبتستخدم في البحث عن محتوى متشابه أو تنظيم المعلومات.','البحث الدلالي ممكن يلاقي معنى قريب حتى لو الكلمات مختلفة.'],
+['تطبيقات','RAG: الاسترجاع مع التوليد','أسلوب بيجيب معلومات من مصادر أو ملفات محددة، وبعدها يديها للنموذج عشان يجاوب في ضوئها. جودة النتيجة مرتبطة بجودة المصادر والاسترجاع.','مفيد في مساعد يجاوب من دليل شركة أو مكتبة تعليمية.'],
+['تطبيقات','الوكلاء Agents','أنظمة بتستخدم نموذج وأدوات وخطوات لتحقيق هدف، زي البحث أو تنظيم مهمة. لازم تتحدد صلاحياتها ويتراجع أي إجراء مهم قبل تنفيذه.','خلي المهام الحساسة محتاجة موافقة بشرية واضحة.'],
+['تطبيقات','الرؤية الحاسوبية Computer Vision','مجال بيخلّي الكمبيوتر يحلل الصور والفيديو، زي اكتشاف الأجسام أو تقسيم الصورة أو قراءة النصوص.','الإضاءة وزاوية التصوير وجودة الصورة ممكن تغير النتيجة.'],
+['تطبيقات','التعرف على الكلام Speech Recognition','تحويل الكلام المنطوق لنص. الأداء بيتأثر باللهجة والضوضاء وسرعة الكلام وجودة التسجيل.','اختبر على لهجات ومواقف مختلفة، مش تسجيل واحد بس.'],
+['تطبيقات','توليد الصور','نماذج بتنتج صور من وصف نصي أو تعدّل صورة موجودة. لازم تراعي حقوق الصور والخصوصية وعدم تضليل الناس.','استخدمها للتصور الإبداعي، ووضح لما الصورة تكون مولّدة.'],
+['تطبيقات','الذكاء الاصطناعي في التعليم','ممكن يساعد في شرح المفاهيم والتدريب وتكييف مستوى الأسئلة، لكن لازم يحافظ على دور المدرس وتفكير الطالب وخصوصية بياناته.','اطلب تلميح أو شرح خطوة بدل نسخ إجابة من غير فهم.'],
+['تطبيقات','الذكاء الاصطناعي في الزراعة','ممكن يحلل صور المحاصيل أو بيانات الطقس والتربة لدعم المتابعة. لازم تتراجع النتائج ميدانيًا لأنها مش بديل عن الخبرة الزراعية.','القياسات المحلية المنتظمة أهم من توقع عام بعيد عن المكان.'],
+['تطبيقات','الذكاء الاصطناعي والروبوتات','AI ممكن يساعد الروبوت يفهم مستشعرات ويخطط لحركة أو يتعرف على أشياء. الحركة في العالم الحقيقي محتاجة اختبارات سلامة قوية.','ابدأ بمحاكاة أو روبوت تعليمي منخفض المخاطر وتحت إشراف.'],
+['تطبيقات','أنظمة التوصية Recommendation','بتقترح محتوى أو منتجات حسب تفضيلات أو أنماط استخدام. ممكن تعمل فقاعات محتوى أو تكرر نفس النوع من الاقتراحات.','وفّر تحكم للمستخدم وشرح مبسط لسبب التوصية.'],
+['مسؤولية','هل الذكاء الاصطناعي دايمًا صح؟','لأ. ممكن يغلط، يختلق مصادر، يفهم السؤال غلط أو يعرض إجابة واثقة لكنها مش دقيقة. لازم تتحقق من المعلومات المهمة من مصادر مستقلة.','اعتبر الإجابة نقطة بداية للبحث، مش نهاية البحث.'],
+['مسؤولية','الهلوسة AI Hallucination','مصطلح لوصف لما النموذج يطلع معلومة شكلها مقنع لكنها غير صحيحة أو غير مدعومة. ده ممكن يحصل حتى لو أسلوب الإجابة واثق.','اطلب مصادر وافتحها بنفسك وتأكد إنها بتقول نفس الكلام.'],
+['مسؤولية','خصوصية البيانات','قبل ما تستخدم أي أداة، افهم إيه البيانات اللي بتجمعها وبتحتفظ بيها. تجنب إدخال معلومات شخصية أو أسرار أو بيانات ناس تانية من غير إذن.','استخدم أمثلة وهمية بدل بيانات حقيقية حساسة.'],
+['مسؤولية','الأمان والاختبار','النموذج لازم يتجرب في ظروف متنوعة، ونفهم حدود استخدامه ونراقب الأخطاء. الأنظمة اللي بتأثر على سلامة الناس محتاجة مراجعة مختصين.','ما تستخدمش نموذج تجريبي لاتخاذ قرار طبي أو أمني.'],
+['مسؤولية','حقوق النشر ومحتوى AI','قواعد الملكية والاستخدام بتختلف حسب البلد والأداة ونوع المحتوى. راجع شروط الخدمة وحقوق المواد اللي بتدخلها أو تنشرها.','ما تفترضش إن أي صورة أو نص مولّد متاح للاستخدام بلا قيود.'],
+['مسؤولية','الإنصاف وإمكانية الوصول','فكّر هل النظام بيشتغل كويس مع لهجات ولغات وأعمار وقدرات مختلفة. اختبر مع ناس متنوعين، وصمم بدائل لو الأداة ما فهمتش المستخدم.','التصميم الشامل بيبدأ من أول المشروع مش في آخره.'],
+['مسؤولية','الإنسان داخل الحلقة Human-in-the-loop','وجود شخص يراجع النتائج أو يوافق على قرارات مهمة، خصوصًا لما الغلط يكون له تأثير كبير.','خلي للمستخدم حق الاعتراض والتصحيح وطلب مراجعة بشرية.'],
+['أساسيات','الفرق بين الذكاء الضيق والعام','معظم الأنظمة الحالية متخصصة في مهام أو نطاقات معينة. الذكاء العام الاصطناعي مفهوم بحثي واسع، ومفيش اتفاق إنه تحقق بالشكل المتداول في الخيال العلمي.','نظام ممتاز في لعبة مش بالضرورة يعرف يطبخ أو يصلّح جهاز.'],
+['أساسيات','الحوسبة السحابية وAI','السحابة بتوفر خوادم وتخزين وقدرة حسابية عبر الإنترنت، وكتير من خدمات AI بتشتغل عليها. ده بيخلّي الاتصال وسياسات البيانات مهمين.','فيه كمان نماذج ممكن تشتغل محليًا على جهاز مناسب.'],
+['أساسيات','وحدات GPU وTPU','معالجات متخصصة بتسرّع عمليات حسابية متوازية كتير، وده مفيد لتدريب وتشغيل نماذج تعلم عميق.','مش كل مشروع محتاج أقوى معالج؛ اختار حسب حجم المهمة.'],
+['تعلم الآلة','اختيار الخصائص Features','الخصائص هي المعلومات اللي النموذج بيستخدمها في التوقع. اختيارها لازم يكون مرتبط بالمشكلة ومش يكشف بيانات غير لازمة.','لو بتتوقع وقت رحلة، المسافة والوقت وحالة الطريق ممكن تكون خصائص مفيدة.'],
+['تعلم الآلة','تسرّب البيانات Data Leakage','بيحصل لما معلومات من الاختبار أو المستقبل تدخل بالغلط في التدريب، فتدي تقييم متفائل مش بيعكس الأداء الحقيقي.','افصل البيانات حسب الزمن أو الشخص لما طبيعة المهمة تتطلب ده.'],
+['تعلم الآلة','عدم توازن الفئات','لو فئة موجودة أكتر بكتير من غيرها، النموذج ممكن يتعلم يتوقع الفئة الشائعة طول الوقت ويبان أداؤه كويس بشكل مضلل.','افحص أداء كل فئة لوحدها، مش الرقم الإجمالي بس.'],
+['تعلم عميق','النماذج متعددة الوسائط','بتتعامل مع أكتر من نوع بيانات، زي نص وصورة وصوت، في نظام واحد. لازم نعرف حدود كل مدخل وطريقة ربطه.','ممكن تسأل نموذج عن صورة، لكن وصفه للصورة مش دليل قطعي.'],
+['تطبيقات','الضبط الدقيق Fine-tuning','إعادة تدريب نموذج جاهز على بيانات أو أمثلة لمهمة محددة عشان يتخصص أكتر. محتاج بيانات مناسبة وتقييم ومراعاة الترخيص.','مش دايمًا أفضل حل؛ أحيانًا أمثلة واضحة أو RAG تكفي.'],
+['تطبيقات','الذكاء الاصطناعي على الجهاز Edge AI','تشغيل النموذج على موبايل أو جهاز قريب من مصدر البيانات بدل إرسال كل حاجة للسحابة. ممكن يقلل التأخير ويحسن الخصوصية، لكن الموارد محدودة.','زي ميزة تعرف على الكلام محليًا على الجهاز.'],
+['مسؤولية','استهلاك الطاقة في AI','تدريب وتشغيل النماذج الكبيرة ممكن يستهلك موارد حوسبة وطاقة. اختار حجم النموذج المناسب، وقلل الطلبات غير الضرورية.','النموذج الأصغر الكفء ممكن يكون أنسب لمهمة بسيطة.']
+];
+const aiGlossary = [
+['AI','اختصار Artificial Intelligence، يعني الذكاء الاصطناعي.'],
+['ML','اختصار Machine Learning، يعني تعلم الآلة.'],
+['DL','اختصار Deep Learning، يعني التعلم العميق.'],
+['LLM','نموذج لغوي كبير اتدرب على نصوص كتير عشان يفهم أنماط اللغة ويولّد نص.'],
+['Dataset','مجموعة البيانات اللي بنستخدمها في التدريب أو الاختبار أو التحليل.'],
+['Label','التصنيف أو الإجابة المرتبطة بمثال في بيانات التدريب الخاضعة للإشراف.'],
+['Epoch','مرور كامل على بيانات التدريب مرة واحدة أثناء تدريب النموذج.'],
+['Token','وحدة نصية النموذج بيقسم الكلام ليها؛ ممكن تكون كلمة أو جزء من كلمة.'],
+['Embedding','تمثيل رقمي بيساعد الكمبيوتر يقارن التشابه في المعنى أو المحتوى.'],
+['Prompt','الطلب أو التعليمات اللي بتدخلها للنموذج.'],
+['Inference','تشغيل النموذج عشان يطلع نتيجة لمدخل جديد.'],
+['Latency','الوقت اللي النظام بياخده عشان يرد أو ينفذ المهمة.'],
+['API','وسيلة منظمة تخلي برنامج يتواصل مع خدمة أو برنامج تاني.'],
+['Open Source','مشروع مصدره متاح وفق ترخيص محدد؛ لازم تقرأ شروط الترخيص.'],
+['Benchmark','اختبار أو مجموعة اختبارات بنقارن بيها أداء النماذج.'],
+['Fine-tuning','تخصيص نموذج مدرّب مسبقًا لمهمة أو مجال معين.']
+];
+aiKnowledge.push(...[["أساسيات", "الذكاء الاصطناعي الضيق ANI", "ده النوع المنتشر حاليًا: نظام متخصص في مهمة أو نطاق محدود، زي الترجمة أو تصنيف الصور. نجاحه في مهمة مش معناه إنه يفهم كل المجالات.", "مساعد يفرز رسائل البريد، لكنه مش بالضرورة يقدر يدير مصنع أو يشرح طب بشري بدقة."], ["أساسيات", "الذكاء الاصطناعي العام AGI", "مصطلح بحثي بيشير لقدرة عامة واسعة على التعلم وحل أنواع مختلفة من المهام. مفيش اتفاق علمي بسيط على تعريف واحد أو اختبار حاسم يثبت تحققه.", "ماينفعش نعتبر أي روبوت محادثة حالي دليلًا تلقائيًا على وجود AGI."], ["أساسيات", "الذكاء الاصطناعي التوليدي", "نماذج بتنتج محتوى جديد زي النصوص والصور والصوت أو الأكواد بناءً على الأنماط اللي اتعلمتها. الناتج ممكن يكون مفيد لكنه قد يحتوي أخطاء أو تشابهات غير مقصودة.", "تقدر تطلب مسودة شرح أو تصور بصري، وبعدها تراجع المعلومات والحقوق."], ["أساسيات", "النموذج متعدد الوسائط", "نموذج يقدر يتعامل مع أكتر من نوع بيانات، زي النص والصورة والصوت، وأحيانًا الفيديو. قدراته بتختلف حسب طريقة تدريبه والمهام المدعومة.", "تسأله عن رسم بياني مرفق، مع ضرورة التأكد من قراءته للأرقام."], ["أساسيات", "البيانات المتحيزة", "بيانات التدريب ممكن تمثل فئات أو ظروف بشكل غير متوازن، فيتعلم النموذج نمطًا غير عادل أو غير دقيق لبعض الناس.", "لو بيانات الصور من بيئة واحدة، الأداء قد يضعف في إضاءة أو بيئة مختلفة."], ["أساسيات", "جودة البيانات", "تشمل الدقة والاكتمال والاتساق والحداثة والتمثيل المناسب للمهمة. بيانات كتير مش معناها بيانات جيدة.", "إزالة التكرارات وتصحيح الأخطاء قد يفيد أكثر من مضاعفة حجم البيانات."], ["تعلم الآلة", "التعلم شبه الخاضع للإشراف", "بيستخدم عددًا صغيرًا من الأمثلة المصنفة مع كمية أكبر غير مصنفة. الفكرة تقليل تكلفة وضع التصنيفات مع اختبار جودة النتائج.", "مجموعة صور قليلة عليها أسماء، ومعاها صور كتير من غير تسميات."], ["تعلم الآلة", "التعلم الذاتي الإشراف", "النموذج بيكوّن مهمة تدريب من البيانات نفسها، زي توقع جزء مخفي من نص أو صورة. الأسلوب ده شائع في بناء تمثيلات عامة.", "نموذج لغة يتعلم توقع الكلمة التالية من سياق الجملة."], ["تعلم الآلة", "التحقق المتقاطع Cross-validation", "بنكرر التدريب والتقييم على تقسيمات مختلفة من البيانات عشان نقدّر ثبات الأداء. لازم التقسيم يناسب طبيعة البيانات وما يسرّبش معلومات بين المجموعات.", "في بيانات زمنية، التقسيم العشوائي ممكن يدي تقييمًا مضللًا."], ["تعلم الآلة", "مصفوفة الالتباس", "جدول بيقارن الفئات الحقيقية بتوقعات النموذج، وبيوضح أنواع الأخطاء بدل ما نكتفي بنسبة الدقة الكلية.", "مهم تعرف هل النموذج بيفوّت الحالات المهمة ولا بيطلق إنذارات كتير."], ["تعلم الآلة", "Precision وRecall", "Precision بيقيس قد إيه التوقعات الإيجابية صحيحة، وRecall بيقيس قد إيه من الحالات الإيجابية اتلقطت. اختيار التوازن يعتمد على تكلفة كل نوع خطأ.", "فلتر إنذار قد يفضّل التقاط أكبر عدد من الحالات حتى لو زادت التنبيهات الكاذبة."], ["تعلم الآلة", "F1 Score", "مقياس بيجمع Precision وRecall في متوسط توافقي. مفيد في بعض حالات عدم توازن الفئات، لكنه لا يغني عن فهم كل نوع خطأ.", "قارن F1 مع المقاييس الأخرى بدل ما تعتبره حكمًا نهائيًا."], ["تعلم الآلة", "تسرب البيانات Data Leakage", "بيحصل لما معلومات من الاختبار أو من المستقبل تدخل التدريب بشكل غير مقصود، فيظهر الأداء أعلى من الواقع.", "استخدام نتيجة حدث لاحق لتوقع الحدث نفسه يجعل الاختبار غير عادل."], ["تعلم الآلة", "هندسة الخصائص Feature Engineering", "تحويل البيانات الخام لخصائص مفيدة للنموذج، مع فهم المجال وتجنب تسريب معلومات غير متاحة وقت التنبؤ.", "استخراج يوم الأسبوع من تاريخ الطلب قد يساعد نموذج توقع الازدحام."], ["تعلم الآلة", "تنظيم النموذج Regularization", "طرق تقلل تعقيد النموذج أو تعاقب الأوزان الكبيرة لتقليل فرط التعلّم. اختيارها يحتاج تقييمًا على بيانات منفصلة.", "L1 وL2 أمثلة شائعة، ولكل واحدة تأثير مختلف على الأوزان."], ["تعلم الآلة", "أشجار القرار", "نماذج بتقسم البيانات عبر أسئلة متتابعة عن الخصائص، وغالبًا يسهل شرح منطقها مقارنة بنماذج أعقد.", "قرار بسيط قد يسأل: هل الطلب مكتمل؟ ثم هل الموعد متاح؟"], ["تعلم الآلة", "الغابات العشوائية", "تجمع تنبؤات عدد من أشجار القرار لتقليل التذبذب وتحسين التعميم في مهام كثيرة.", "مفيدة كنقطة بداية لبعض بيانات الجداول، لكنها ليست الأفضل لكل مشكلة."], ["تعلم الآلة", "التدرج المعزز Boosting", "يبني نماذج متتابعة تحاول تصحيح أخطاء النماذج السابقة. قوي في بيانات الجداول لكنه يحتاج ضبطًا وتقييمًا جيدًا.", "XGBoost وLightGBM أمثلة لأدوات معروفة في المجال."], ["تعلم عميق", "الشبكة العصبية", "طبقات من وحدات حسابية تتعلم تحويل المدخلات لتمثيل يساعد على المهمة. الاسم مستوحى بصورة عامة من الأعصاب، لكنها ليست نسخة من الدماغ.", "طبقات تتعلم تدريجيًا أنماطًا من صورة بدل كتابة كل قاعدة يدويًا."], ["تعلم عميق", "دالة التنشيط Activation", "تحول خرج الوحدة العصبية وتضيف لاخطية، وده بيسمح للشبكة بتعلم علاقات أعقد من التحويلات الخطية البسيطة.", "ReLU وSigmoid وTanh أمثلة شائعة."], ["تعلم عميق", "الانتشار العكسي Backpropagation", "طريقة لحساب تأثير أوزان الشبكة على الخطأ باستخدام المشتقات، عشان نعرف اتجاه تعديل الأوزان أثناء التدريب.", "هي جزء أساسي من تدريب شبكات عصبية كثيرة."], ["تعلم عميق", "المحوّلات Transformers", "معمارية بتستخدم آلية الانتباه لمعالجة العلاقات بين عناصر التسلسل، وحققت نجاحًا كبيرًا في اللغة ومجالات أخرى.", "نماذج لغوية حديثة كتير مبنية على المحوّلات."], ["تعلم عميق", "آلية الانتباه Attention", "بتساعد النموذج يحدد أي أجزاء من المدخل مهمة نسبيًا عند معالجة جزء معين. مش معناها انتباه أو وعي بشري.", "في جملة طويلة، النموذج يقدر يربط ضميرًا باسم ظهر قبل كده."], ["تعلم عميق", "Embedding", "تمثيل رقمي لمحتوى زي كلمة أو جملة أو صورة بحيث العناصر المتشابهة غالبًا تبقى قريبة في فضاء رياضي.", "تقدر تستخدمه للبحث عن مستندات قريبة في المعنى."], ["تعلم عميق", "نماذج الانتشار Diffusion", "فئة من النماذج التوليدية تتعلم إزالة تشويش تدريجي من بيانات، وتُستخدم في توليد الصور ومهام أخرى.", "تبدأ عملية التوليد من ضوضاء ثم تتشكل صورة تدريجيًا."], ["تعلم عميق", "الشبكات الالتفافية CNN", "معمارية تستخرج أنماطًا مكانية من الصور باستخدام مرشحات مشتركة، وكانت أساسية في تطبيقات الرؤية الحاسوبية.", "قد تتعلم مرشحات مبكرة حوافًا وأنماطًا بسيطة."], ["تعلم عميق", "الشبكات المتكررة RNN", "معمارية صممت للتعامل مع تسلسلات عبر حالة تتنقل بين الخطوات. لها استخدامات تاريخية ومحددة، مع انتشار المحوّلات في مهام كثيرة.", "معالجة سلسلة قياسات زمنية كمثال مبسط."], ["نماذج اللغة", "Token وTokenization", "النموذج غالبًا بيقسّم النص لوحدات اسمها Tokens، ومش شرط كل وحدة تكون كلمة كاملة. عدد الرموز يؤثر على طول السياق والتكلفة.", "كلمة طويلة ممكن تتقسم لأكثر من Token حسب أداة التقسيم."], ["نماذج اللغة", "نافذة السياق Context Window", "كمية الرموز اللي النموذج يقدر يراعيها في طلب واحد أو محادثة. النافذة الأكبر لا تضمن وحدها فهمًا أفضل لكل التفاصيل.", "المستند الطويل ممكن يحتاج تلخيصًا منظمًا أو تقسيمًا لمقاطع."], ["نماذج اللغة", "Prompt Engineering", "صياغة الطلب بوضوح مع الهدف والسياق والقيود وشكل الناتج المطلوب. جرّب تحسين الطلب بناءً على جودة النتيجة بدل الاعتماد على كلمات سحرية.", "اطلب مقارنة في جدول مع ذكر الافتراضات ومصادر التحقق."], ["نماذج اللغة", "System Prompt", "تعليمات عامة بتحدد دور المساعد وأسلوبه وحدود المهمة. لازم تظل متوافقة مع سياسات النظام وألا تتضمن أسرارًا.", "تعليمات تقول: اشرح للمبتدئ وباختصار واذكر حدود الإجابة."], ["نماذج اللغة", "RAG: الاسترجاع المعزز", "أسلوب بيبحث في مصادر أو مستندات ذات صلة ثم يمرر المقاطع للنموذج عشان يبني إجابة مرتبطة بالمحتوى. جودة النتيجة تعتمد على الاسترجاع والمصادر.", "مساعد شركة يبحث في دليلها الداخلي قبل الرد عن سياسة معينة."], ["نماذج اللغة", "Fine-tuning مقابل RAG", "Fine-tuning يغير سلوك النموذج عبر تدريب إضافي، بينما RAG يضيف معلومات مسترجعة وقت الإجابة. الاختيار حسب الهدف وتحديث المعلومات والتكلفة.", "معلومات تتغير باستمرار قد تناسب RAG أكثر من إعادة التدريب كل مرة."], ["نماذج اللغة", "هلوسة النماذج", "ممكن النموذج ينتج معلومة تبدو مقنعة لكنها غير صحيحة أو مختلقة. راجع الأسماء والأرقام والمراجع والادعاءات المهمة من مصادر مستقلة.", "اطلب من المساعد يوضح ما لا يعرفه، ثم تحقق بنفسك."], ["نماذج اللغة", "وكلاء الذكاء الاصطناعي AI Agents", "أنظمة تستخدم نموذجًا مع أدوات وخطوات لتحقيق هدف، وقد تخطط وتنفذ وتراجع النتائج. لازم تحدد الصلاحيات وتطلب تأكيدًا قبل الإجراءات الحساسة.", "وكيل يرتب مهامًا في تقويم تجريبي بعد موافقتك."], ["نماذج اللغة", "استخدام الأدوات Tool Calling", "النموذج يحدد متى يستدعي أداة محددة وفق مخطط معروف، ثم يستخدم النتيجة في الرد. الأداة لازم تتحقق من المدخلات والصلاحيات.", "استدعاء حاسبة بدل تخمين نتيجة عملية حسابية."], ["نماذج اللغة", "تقييم إجابات النماذج", "قيّم الدقة والاكتمال والوضوح والالتزام بالتعليمات والسلامة، باستخدام أمثلة متنوعة ومراجعة بشرية. لا تعتمد على انطباع تجربة واحدة.", "جهز مجموعة أسئلة تمثل الاستخدام الحقيقي وقارن النتائج بمرجع."], ["رؤية حاسوبية", "تصنيف الصور Image Classification", "النموذج يتوقع فئة أو أكثر للصورة كلها. قد لا يحدد مكان العنصر، وده يفرق عن الكشف أو التقسيم.", "توقع أن الصورة تحتوي على دراجة."], ["رؤية حاسوبية", "كشف الأجسام Object Detection", "يحدد أنواع الأجسام ومواقعها التقريبية داخل الصورة غالبًا بمربعات إحاطة. الأداء يتأثر بالحجم والإضاءة والازدحام.", "تحديد أماكن السيارات في صورة شارع."], ["رؤية حاسوبية", "تقسيم الصور Segmentation", "يعطي تصنيفًا على مستوى البكسل أو المنطقة، وده يسمح بفصل أجزاء الصورة بدقة أكبر من مجرد مربع.", "فصل الطريق عن الرصيف في صورة."], ["رؤية حاسوبية", "OCR والتعرف على النص", "تقنيات تستخرج النص من الصور أو المستندات. راجع الأرقام والأسماء خصوصًا في الصور منخفضة الجودة أو اللغات المختلطة.", "تحويل صورة فاتورة إلى نص قابل للبحث بعد المراجعة."], ["رؤية حاسوبية", "تقدير الوضعية Pose Estimation", "يحدد نقاطًا أو مفاصل تقريبية في صورة أو فيديو لتحليل وضع الجسم أو الحركة. لا ينبغي استخدامه لإصدار أحكام صحية أو حساسة من دون تحقق متخصص.", "تحليل حركة شخصية افتراضية في تطبيق رياضي تعليمي."], ["صوت", "تحويل الكلام لنص ASR", "نظام يتعرف على الكلام ويحوّله لنص. الدقة تتأثر باللهجة والضوضاء وجودة الميكروفون وتداخل المتحدثين.", "تفريغ محاضرة بعد الحصول على الموافقات المناسبة."], ["صوت", "تحويل النص لكلام TTS", "توليد صوت منطوق من نص مكتوب. راعِ وضوح النطق واللغة وحقوق استخدام الأصوات الاصطناعية.", "قارئ نصوص يساعد على الوصول للمحتوى."], ["صوت", "تمييز المتحدثين", "محاولة تقدير إذا كان مقطعان صوتيان لنفس المتحدث أو لمتحدثين مختلفين. ده مجال حساس للخصوصية ولا يثبت هوية الشخص وحده.", "تنظيم مقاطع اجتماع بموافقة المشاركين، دون اعتبار النتيجة إثبات هوية."], ["تطبيقات", "AI في التعليم", "ممكن يساعد في تبسيط الشرح وتوليد تدريبات وتقديم تغذية راجعة. لازم يوضح الأخطاء ويشجع الفهم بدل نسخ الإجابات دون تعلم.", "اطلب شرح خطوة صعبة ثم حاول تحل مثالًا بنفسك."], ["تطبيقات", "AI في الزراعة", "تحليل صور المحاصيل والطقس وبيانات التربة قد يدعم القرار الزراعي. أي توصية عملية لازم تتراجع مع خبير محلي وقياسات موثوقة.", "نظام يرصد تغيرًا في صورة ورقة نبات للتنبيه والفحص، لا للتشخيص النهائي."], ["تطبيقات", "AI في الصناعة", "قد يساعد في توقع أعطال المعدات وفحص الجودة وتخطيط الإنتاج. لازم تقارن نتائجه بخط أساس وتضع خطة للتدخل البشري.", "تحليل قراءات اهتزاز جهاز لرصد تغير غير معتاد."], ["تطبيقات", "أنظمة التوصية", "تقترح محتوى أو منتجات بناءً على تفضيلات أو أنماط استخدام. قد تحصر المستخدم في فقاعة محتوى؛ لذلك التنوع والتحكم مهمان.", "إتاحة خيار «اعرض لي شيئًا مختلفًا» بجانب الاقتراحات."], ["تطبيقات", "الصيانة التنبؤية", "تحلل بيانات المعدات لتقدير احتمال تدهور الأداء أو الحاجة للفحص. التنبؤ لا يغني عن إجراءات السلامة والصيانة المعتمدة.", "تنبيه فريق الصيانة لمراجعة معدة عند تغير قراءاتها."], ["مسؤولية", "الخصوصية في أدوات AI", "تجنب إدخال كلمات مرور أو معلومات شخصية أو مستندات سرية في أدوات غير معتمدة. راجع إعدادات الاحتفاظ بالبيانات وسياسة الخدمة.", "استخدم بيانات تجريبية مجهولة عند اختبار فكرة."], ["مسؤولية", "الإنصاف في النماذج", "اختبر الأداء عبر مجموعات وظروف مختلفة، وحدد من قد يتضرر من الأخطاء. لا تستخدم النموذج لاتخاذ قرار حساس دون مراجعة وحوكمة مناسبة.", "قارن معدلات الخطأ بين ظروف تصوير وإضاءة مختلفة."], ["مسؤولية", "حقوق المحتوى المولد", "قواعد حقوق النشر والترخيص تختلف حسب البلد والخدمة ونوع المحتوى. راجع شروط الأداة ولا تفترض أن كل ناتج متاح للاستخدام التجاري.", "احتفظ بسجل للأدوات والمصادر والتعديلات البشرية."], ["مسؤولية", "الإشراف البشري Human Oversight", "خلي الإنسان يراجع القرارات المهمة، ويقدر يرفض أو يصحح النتيجة. مستوى المراجعة لازم يزيد كلما زاد أثر الخطأ.", "اقتراح آلي لترتيب مهام، مع اعتماد الشخص المسؤول للقرار النهائي."], ["مسؤولية", "اختبارات المتانة Robustness", "اختبر النظام مع مدخلات مختلفة وأخطاء شائعة وظروف غير مثالية. النموذج اللي ينجح في مثال واحد قد يفشل في الواقع.", "جرّب صورًا بإضاءات وخلفيات مختلفة ضمن بيانات اختبار مناسبة."]]);
+aiKnowledge.push(...[["تعلم الآلة", "الانحدار الخطي", "نموذج يتعلم علاقة خطية تقريبية بين مدخلات رقمية وقيمة مستهدفة. مفيد كنقطة بداية، لكنه قد لا يلتقط العلاقات المعقدة.", "تقدير زمن توصيل من مسافة ووقت ازدحام، مع فحص جودة البيانات."], ["تعلم الآلة", "الانحدار اللوجستي", "رغم اسمه، يُستخدم غالبًا لتقدير احتمال الانتماء لفئة. يمكن تفسير أوزانه نسبيًا، لكنه يحتاج تقييمًا ومعايرة مناسبة.", "تقدير احتمال أن رسالة تنتمي لفئة معينة."], ["تعلم الآلة", "التجميع Clustering", "يجمع عناصر متشابهة دون تسميات جاهزة. المجموعات الناتجة تعتمد على مقياس التشابه والخوارزمية، ولا تعني بالضرورة وجود فئات طبيعية.", "تقسيم مقالات حسب تشابه موضوعاتها."], ["تعلم الآلة", "K-means", "خوارزمية تجميع تقسم البيانات إلى K مجموعات حول مراكز. لازم تختار K وتراجع حساسية النتيجة للبدايات والقيم الشاذة.", "تجميع نقاط بيانات تعليمية إلى مجموعات تقريبية."], ["تعلم الآلة", "تقليل الأبعاد PCA", "طريقة تحول الخصائص لمكونات أقل عددًا تحتفظ بجزء كبير من التباين. مفيدة للاستكشاف، لكن تفسير المكونات يحتاج حذرًا.", "عرض بيانات كثيرة الخصائص في بعدين لتكوين تصور."], ["تعلم الآلة", "كشف الشذوذ", "يحاول تحديد نقاط تختلف عن النمط المعتاد. النقطة الشاذة ليست بالضرورة خطأ أو خطرًا؛ تحتاج تفسيرًا في سياق المجال.", "تنبيه عند تغير غير معتاد في قياسات جهاز."], ["تعلم الآلة", "معايرة الاحتمالات", "تخلي الاحتمالات المتوقعة أقرب للتكرارات الفعلية على بيانات مناسبة. نموذج دقته جيدة قد يعطي احتمالات غير معايرة.", "من الحالات التي توقع لها النموذج 0.8، هل يقارب 80% منها تحقق؟"], ["تعلم الآلة", "انحراف البيانات Data Drift", "تغير توزيع البيانات بمرور الوقت، وقد يجعل أداء النموذج يتراجع. راقب التغير وأعد التقييم قبل تحديث النموذج.", "تغير أنماط الطلب بين المواسم."], ["تعلم الآلة", "انحراف المفهوم Concept Drift", "تغير العلاقة بين المدخلات والنتيجة المستهدفة، حتى لو شكل البيانات العام قريب من السابق.", "سلوك المستخدمين قد يتغير بعد تعديل خدمة."], ["تعلم الآلة", "التعلم بالنقل Transfer Learning", "البدء بنموذج مدرب مسبقًا ثم تكييفه لمهمة قريبة، ما قد يقلل البيانات والوقت المطلوبين.", "تخصيص نموذج صور عام لتمييز أنواع نباتات ضمن مجموعة مناسبة."], ["تعلم عميق", "التطبيع Batch Normalization", "طريقة تساعد على استقرار وتسريع تدريب بعض الشبكات عبر تطبيع القيم داخل الدفعات. تأثيرها يعتمد على المعمارية والإعدادات.", "تستخدم في بعض شبكات الرؤية الحاسوبية."], ["تعلم عميق", "Dropout", "أسلوب تنظيم يعطل وحدات عشوائيًا أثناء التدريب لتقليل اعتماد النموذج على مسارات محددة. لا يعمل بنفس الطريقة وقت التنبؤ عادة.", "يساعد في تقليل فرط التعلّم في بعض الشبكات."], ["تعلم عميق", "المُحسّن Optimizer", "خوارزمية تحدث أوزان النموذج اعتمادًا على التدرجات. معدل التعلم واختيار المحسن يؤثران على استقرار وسرعة التدريب.", "SGD وAdam من المحسنات المعروفة."], ["تعلم عميق", "معدل التعلم Learning Rate", "يحدد حجم خطوات تحديث الأوزان. لو كبير جدًا قد يتذبذب التدريب، ولو صغير جدًا قد يكون بطيئًا.", "اختبر قيمًا مختلفة على مجموعة تحقق."], ["تعلم عميق", "GPU مقابل TPU", "كلاهما مسرعات حسابية، لكن تصميمهما ودعم البرمجيات وأنواع العمليات يختلف. الاختيار يعتمد على الإطار والميزانية والحمل.", "قارن زمن وتكلفة تجربة تدريب فعلية بدل الاعتماد على الاسم."], ["نماذج اللغة", "التوليد المعزز بالاسترجاع الهجين", "يجمع البحث بالكلمات المفتاحية والبحث الدلالي، وقد يحسن العثور على مستندات تستخدم مصطلحات مختلفة عن السؤال.", "بحث عن سياسة باسمها الرسمي حتى لو المستخدم وصفها بعبارة أخرى."], ["نماذج اللغة", "إعادة ترتيب نتائج البحث Reranking", "بعد استرجاع مجموعة مستندات، يرتبها نموذج أكثر تخصصًا حسب صلتها بالسؤال. الجودة تعتمد على المرشحين الأصليين ومعايير الترتيب.", "اختيار المقاطع الأكثر صلة من بين نتائج بحث أولية."], ["نماذج اللغة", "تقسيم المستندات Chunking", "تقسيم المستند لمقاطع مناسبة للاسترجاع. المقاطع القصيرة قد تفقد السياق والطويلة قد تحمل معلومات مشتتة.", "حافظ على العناوين والفقرات المرتبطة مع كل مقطع."], ["نماذج اللغة", "الاستدعاء الدقيق للمصادر", "اربط كل إجابة بمقاطع مصدر واضحة، وميّز بين ما ورد بالمصدر وما استنتجه النموذج. وجود رابط لا يثبت وحده صحة التفسير.", "اعرض اسم المستند والفقرة التي تدعم الإجابة."], ["نماذج اللغة", "الحقن في الأوامر Prompt Injection", "محاولة لإقناع النظام بتجاهل تعليماته أو كشف معلومات عبر نص غير موثوق. افصل تعليمات النظام عن محتوى المستخدم ولا تمنح الأدوات صلاحيات زائدة.", "تعامل مع النص الموجود داخل مستند مسترجع كبيانات لا كأوامر موثوقة."], ["نماذج اللغة", "تسريب البيانات في النماذج", "قد تظهر معلومات حساسة إذا أُدخلت في التدريب أو السياق أو السجلات بطريقة غير مناسبة. قلل البيانات وراجع ضوابط الخدمة.", "استخدم بيانات تجريبية غير شخصية أثناء التطوير."], ["نماذج اللغة", "التكميم Quantization", "تقليل دقة تمثيل أوزان النموذج لتقليل الذاكرة وتسريع التشغيل أحيانًا، مع احتمال تغير الجودة حسب الطريقة والمهمة.", "مقارنة نموذج كامل وآخر مكمم على مجموعة اختبار واحدة."], ["نماذج اللغة", "التقطير Knowledge Distillation", "تدريب نموذج أصغر للاستفادة من سلوك أو مخرجات نموذج أكبر. النتيجة تعتمد على جودة بيانات التقطير والهدف.", "نموذج صغير يتعلم تقليد مخرجات معلم على مهام محددة."], ["نماذج اللغة", "النماذج المفتوحة الأوزان", "نماذج تُتاح أوزانها وفق شروط ترخيص محددة. إتاحة الأوزان لا تعني بالضرورة أن بيانات التدريب أو كل مكونات النظام مفتوحة.", "راجع الترخيص ومتطلبات التشغيل والاستخدام قبل الدمج."], ["نماذج اللغة", "قياس تكلفة الاستدلال", "احسب زمن الاستجابة واستهلاك الذاكرة والرموز أو وحدات الحوسبة والتكلفة لكل مهمة. التكلفة الفعلية تتغير حسب طول المدخلات والتحميل.", "اختبر متوسطًا ومئينات زمن الاستجابة على استخدام ممثل."], ["رؤية حاسوبية", "تحسين الصور قبل التحليل", "قد يشمل تغيير الحجم أو ضبط الإضاءة أو إزالة الضوضاء. أي معالجة لازم تكون متوافقة مع بيانات التدريب حتى لا تخلق تشوهات.", "قارن الأداء قبل وبعد المعالجة على مجموعة تحقق."], ["رؤية حاسوبية", "التعلم من صور قليلة Few-shot", "استخدام عدد قليل من الأمثلة لكل فئة، وقد يعتمد على نموذج مسبق التدريب أو تمثيلات عامة. النتائج حساسة لجودة الأمثلة.", "أمثلة مرجعية قليلة لتصنيف صور ضمن تجربة محدودة."], ["صوت", "تقسيم الصوت إلى مقاطع", "تحديد حدود الكلام أو الصمت لتسهيل التفريغ والتحليل. الضوضاء والتداخل واللهجات قد تؤثر على التقسيم.", "تجزئة تسجيل طويل إلى مقاطع قابلة للمراجعة."], ["صوت", "إزالة الضوضاء", "تقنيات تقلل الأصوات الخلفية لتحسين وضوح التسجيل. المعالجة القوية قد تشوه الكلام؛ احتفظ بالأصل وقارن النتيجة.", "تحسين تسجيل تعليمي في بيئة بها ضجيج معتدل."], ["تطبيقات", "التوأم الرقمي المدعوم بالذكاء الاصطناعي", "يجمع تمثيلًا رقميًا للنظام مع نماذج تتوقع أو تكشف أنماطًا. لازم تظل بيانات المستشعرات موثوقة وحدود النموذج معروفة.", "لوحة تتابع حالة نموذج تعليمي لمعدة افتراضية."], ["تطبيقات", "المساعدات الذكية الداخلية", "تساعد الموظفين في البحث عن إجراءات ومستندات، بشرط إدارة الصلاحيات وإظهار مصادر الإجابات وتحديث المحتوى.", "مساعد يجيب من دليل استخدام داخلي مصرح به."], ["تطبيقات", "الذكاء الاصطناعي على الجهاز", "تشغيل النموذج محليًا على الهاتف أو الكمبيوتر قد يقلل إرسال البيانات ويحسن العمل دون اتصال، لكنه مقيد بموارد الجهاز.", "تصنيف صور تجريبية على جهاز محلي دون رفعها للسحابة."], ["تطبيقات", "الذكاء الاصطناعي في الطاقة", "قد يتوقع الطلب أو يساعد في إدارة الأحمال والصيانة. القرارات التشغيلية تحتاج اختبارات ومراجعة هندسية ومعايير سلامة.", "توقع استهلاك مبنى من بيانات سابقة والطقس."], ["مسؤولية", "بطاقة النموذج Model Card", "وثيقة تلخص غرض النموذج وبيانات تقييمه وحدوده والفئات التي اختُبر عليها. تساعد المستخدم يعرف أين يصلح وأين لا يصلح.", "صفحة توضح أن نموذجًا تجريبيًا اختُبر على صور وظروف محددة."], ["مسؤولية", "حوكمة البيانات", "حدد مصدر البيانات ومالكها والغرض من استخدامها وصلاحيات الوصول وفترة الاحتفاظ. الحوكمة جزء من بناء النظام وليست خطوة أخيرة.", "سجل بيانات يوضح المصدر والترخيص وتاريخ التحديث."], ["مسؤولية", "اختبار الخصومة Adversarial Testing", "اختبر كيف يتصرف النظام أمام مدخلات غير معتادة أو مصممة لإرباكه، ضمن بيئة مصرح بها وآمنة.", "صور معدلة بشكل بسيط لاختبار متانة مصنف تجريبي."], ["مسؤولية", "إمكانية تفسير النموذج", "استخدم طرقًا تساعد على فهم العوامل المرتبطة بالتوقع، مع توضيح أن التفسير قد يكون تقريبيًا ولا يثبت السببية.", "عرض الخصائص التي أثرت في توقع نموذج جدولي."], ["مسؤولية", "سجل قرارات النظام", "احتفظ بسجل مناسب يوضح نسخة النموذج والمدخلات المسموح تسجيلها والنتيجة والمراجعة البشرية، مع حماية الخصوصية.", "تتبع سبب تغيير توصية داخل نظام تجريبي."]]);
+// Restore the user's saved AI topics only after the built-in aiKnowledge array exists.
+aiKnowledge.push(...(Array.isArray(userLibrary.ai)?userLibrary.ai:[]));
+function renderAIGlossary(){
+ $('aiGlossary').innerHTML=aiGlossary.map(x=>`<article class="project"><h3>${escapeHtml(x[0])}</h3><p>${escapeHtml(x[1])}</p></article>`).join('');
+}
+function aiAnswer(question){
+ const q=question.toLowerCase();
+ let found=aiKnowledge.filter(x=>(x[1]+' '+x[2]+' '+x[3]).toLowerCase().split(/[\s،؟.!]+/).some(w=>w.length>3&&q.includes(w)));
+ if(/خصوص|بيانات|أمان|حماية/.test(q)) found=aiKnowledge.filter(x=>x[0]==='مسؤولية'&&/خصوصية|الأمان|الإنصاف/.test(x[1]));
+ if(/تعلم الآلة|machine learning| ml/.test(q)) found=aiKnowledge.filter(x=>x[0]==='تعلم الآلة').slice(0,3);
+ if(/شبك|neural|عميق|deep learning/.test(q)) found=aiKnowledge.filter(x=>x[0]==='تعلم عميق').slice(0,4);
+ if(/توليد|generative|صورة/.test(q)) found=aiKnowledge.filter(x=>/توليدي|توليد الصور|النماذج اللغوية/.test(x[1]));
+ if(/يعني إيه|ما هو|اشرح|ذكاء اصطناعي|\bai\b/.test(q)&&!found.length) found=[aiKnowledge[0],aiKnowledge[1],aiKnowledge[4]];
+ if(!found.length) found=aiKnowledge.filter(x=>x.join(' ').toLowerCase().includes(q)).slice(0,3);
+ if(!found.length) return 'مش لاقي شرح مطابق في مكتبتي الحالية. جرّب تسأل عن مصطلح محدد زي: تعلم الآلة، الشبكات العصبية، النماذج اللغوية، الرؤية الحاسوبية، أو الخصوصية. وخلي بالك إن المساعد ده بيبحث في محتوى داخلي محدود، مش بيعمل بحث على الإنترنت.';
+ return 'خليني أبسطهالك 👇\n'+found.slice(0,3).map(x=>'• '+x[1]+': '+x[2]+'\nمثال: '+x[3]).join('\n\n')+'\n\nلو الموضوع مهم، راجع مصدر تعليمي موثوق؛ الشرح ده بداية للفهم مش مرجع متخصص.';
+}
+function addAIMessage(text,kind){
+ const el=document.createElement('div');el.className='ai-msg '+kind;el.textContent=text;$('aiChat').appendChild(el);$('aiChat').scrollTop=$('aiChat').scrollHeight;
+}
+function askAI(q){
+ q=(q||$('aiAsk').value).trim();if(!q)return;
+ addAIMessage(q,'user');$('aiAsk').value='';
+ setTimeout(()=>addAIMessage(aiAnswer(q),'bot'),120);
+}
+window.askAI=askAI;
+$('aiAskBtn').onclick=()=>window.askAI();
+$('aiAsk').addEventListener('keydown',e=>{if(e.key==='Enter')window.askAI()});
+$('aiClearBtn').onclick=()=>{$('aiChat').innerHTML='<div class="ai-msg bot">المحادثة اتمسحت. اسألني عن أي مفهوم في الذكاء الاصطناعي! 👋</div>'};
+$('aiSearch').addEventListener('input',renderAITopics);
+$('aiCategory').addEventListener('change',renderAITopics);
+$('knowledgeSearch').addEventListener('input',()=>{knowledgeVisible=PAGE_SIZE;renderKnowledgeLibrary()});
+$('knowledgeCategory').addEventListener('change',()=>{knowledgeVisible=PAGE_SIZE;renderKnowledgeLibrary()});
+$('knowledgeSort').addEventListener('change',()=>{knowledgeVisible=PAGE_SIZE;renderKnowledgeLibrary()});
+$('knowledgeReset').onclick=()=>{$('knowledgeSearch').value='';$('knowledgeCategory').value='الكل';$('knowledgeSort').value='default';knowledgeVisible=PAGE_SIZE;renderKnowledgeLibrary()};
+$('knowledgeMore').onclick=()=>{knowledgeVisible+=PAGE_SIZE;renderKnowledgeLibrary()};
+$('addKnowledgeBtn').onclick=addKnowledgeItem;
+$('aiSort').addEventListener('change',()=>{aiVisible=PAGE_SIZE;renderAITopics()});
+$('aiReset').onclick=()=>{$('aiSearch').value='';$('aiCategory').value='الكل';$('aiSort').value='default';aiVisible=PAGE_SIZE;renderAITopics()};
+$('aiMore').onclick=()=>{aiVisible+=PAGE_SIZE;renderAITopics()};
+$('addAIBtn').onclick=addAIItem;
+// Cinematic opening controls
+function closeCinematic(){
+ if(window.introTimer){clearTimeout(window.introTimer);window.introTimer=null;}
+ const intro=document.getElementById('cinematicIntro');
+ if(intro){intro.classList.add('hide');setTimeout(()=>intro.remove(),1100);}
+}
+document.getElementById('enterInventor')?.addEventListener('click',closeCinematic);
+document.getElementById('skipIntro')?.addEventListener('click',closeCinematic);
+window.introTimer=setTimeout(closeCinematic,14000);
+// Real AI via a secure server-side proxy. Never place provider secrets in this HTML.
+const AI_ENDPOINT_KEY='inventor_ai_backend_endpoint';
+function loadAIEndpoint(){
+ const field=document.getElementById('aiEndpoint');
+ const status=document.getElementById('aiConnectionStatus');
+ const saved=localStorage.getItem(AI_ENDPOINT_KEY)||'';
+ if(field)field.value=saved;
+ if(status)status.textContent=saved?'تم حفظ رابط Backend — جاهز للتجربة':'الوضع الحالي: المساعد المحلي';
+}
+document.getElementById('saveAIEndpoint')?.addEventListener('click',()=>{
+ const value=(document.getElementById('aiEndpoint')?.value||'').trim();
+ const status=document.getElementById('aiConnectionStatus');
+ if(value){let parsed;try{parsed=new URL(value)}catch{if(status)status.textContent='أدخل رابط HTTPS صحيحًا.';return;}if(parsed.protocol!=='https:'||parsed.username||parsed.password){if(status)status.textContent='لأمان الاتصال، استخدم رابط HTTPS فقط دون بيانات دخول داخل الرابط.';return;}}
+ if(value)localStorage.setItem(AI_ENDPOINT_KEY,value);else localStorage.removeItem(AI_ENDPOINT_KEY);
+ if(status)status.textContent=value?'تم حفظ الرابط. الاتصال هيتم اختباره مع أول سؤال.':'تم الرجوع للمساعد المحلي.';
+});
+async function askRealAI(question){
+ const endpoint=localStorage.getItem(AI_ENDPOINT_KEY);
+ if(!endpoint)return null;
+ let parsedEndpoint;try{parsedEndpoint=new URL(endpoint)}catch{throw new Error('رابط Backend غير صالح.')}
+ if(parsedEndpoint.protocol!=='https:'||parsedEndpoint.username||parsedEndpoint.password)throw new Error('تم رفض الاتصال: يجب استخدام HTTPS فقط ودون بيانات دخول داخل الرابط.');
+ const response=await fetch(parsedEndpoint.href,{
+  method:'POST',
+  headers:{'Content-Type':'application/json'},
+  body:JSON.stringify({message:question,history:[]})
+ });
+ if(!response.ok)throw new Error('السيرفر رجّع حالة '+response.status);
+ const data=await response.json();
+ const answer=data.reply||data.answer||data.output_text;
+ if(typeof answer!=='string'||!answer.trim())throw new Error('استجابة السيرفر مش فيها reply أو answer نصّي');
+ return answer.trim();
+}
+const localAskAI=window.askAI;
+window.askAI=async function(q){
+ q=(q||document.getElementById('aiAsk')?.value||'').trim();if(!q)return;
+ addAIMessage(q,'user');
+ const input=document.getElementById('aiAsk');if(input)input.value='';
+ const endpoint=localStorage.getItem(AI_ENDPOINT_KEY);
+ if(endpoint){
+  addAIMessage('ثواني، بتواصل مع موديل الذكاء الاصطناعي...','bot');
+  const chat=document.getElementById('aiChat');
+  try{
+   const answer=await askRealAI(q);
+   const last=chat?.lastElementChild;if(last)last.remove();
+   addAIMessage(answer,'bot');
+  }catch(err){
+   const last=chat?.lastElementChild;if(last)last.remove();
+   addAIMessage('الاتصال بالموديل الحقيقي ماكملش: '+err.message+'\nهعرضلك شرح من المكتبة الداخلية بدل ما أسيبك من غير إجابة.','bot');
+   addAIMessage(aiAnswer(q),'bot');
+  }
+ }else{
+  addAIMessage(aiAnswer(q),'bot');
+ }
+};
+document.getElementById('aiAskBtn')?.addEventListener('click',()=>window.askAI());
+document.getElementById('aiAsk')?.addEventListener('keydown',e=>{if(e.key==='Enter')window.askAI();});
+loadAIEndpoint();
+function init(){if(data.theme==='light')document.body.classList.add('light');$('userName').value=data.name||'المخترع';renderStats();renderLabs();renderChallenges();renderKnowledge();renderAITopics();renderAIGlossary();renderRecent();renderArchive()}
+init();
+</script>
+<script id="inventor-v10-upgrades">
+(()=>{
+'use strict';
+const $=id=>document.getElementById(id);
+const DATA_KEY='inventorData';
+const SB_URL_KEY='inventor_supabase_url';
+const SB_KEY_KEY='inventor_supabase_anon';
+let sbClient=null;
+const status=(m)=>{const e=$('sbStatus');if(e)e.textContent='الحالة: '+m};
+function isPublicSupabaseKey(key){
+ const k=String(key||'').trim();
+ if(/^sb_secret_/i.test(k))return false;
+ if(/^sb_publishable_[A-Za-z0-9_-]{10,}$/i.test(k))return true;
+ const parts=k.split('.');
+ if(parts.length!==3||!parts[1])return false;
+ try{
+  let payload=parts[1].replace(/-/g,'+').replace(/_/g,'/');
+  payload+='='.repeat((4-payload.length%4)%4);
+  const claims=JSON.parse(atob(payload));
+  return claims?.role==='anon';
+ }catch{return false;}
+}
+
+const readData=()=>{try{return JSON.parse(localStorage.getItem(DATA_KEY)||'{}')}catch{return {}}};
+const writeData=d=>localStorage.setItem(DATA_KEY,JSON.stringify(d));
+function archiveRender(){
+ const box=$('archiveList'); if(!box)return;
+ const d=readData(); let list=Array.isArray(d.projects)?d.projects.slice():[];
+ const q=($('archiveSearch')?.value||'').trim().toLowerCase();
+ list=list.filter(p=>[p.title,p.description,p.category].join(' ').toLowerCase().includes(q));
+ const sort=$('archiveSort')?.value||'new';
+ if(sort==='old')list.reverse();
+ if(sort==='az')list.sort((a,b)=>(a.title||'').localeCompare(b.title||'','ar'));
+ $('archiveCount').textContent=list.length+' مشروع';
+ if(!list.length){box.innerHTML='<div class="empty" style="grid-column:1/-1">لا توجد نتائج مطابقة. جرّب كلمة بحث أخرى.</div>';return;}
+ box.innerHTML=list.map(p=>`<article class="project"><h3>💡 ${esc(p.title||'اختراع')}</h3><p>${esc(p.description||'')}</p><div class="project-foot"><span class="tiny">${esc(p.category||'اختراع')} · ${esc(p.created||p.saved||'')}</span><button class="secondary" data-id="${Number(p.id)||0}">عرض</button></div></article>`).join('');
+ box.querySelectorAll('button[data-id]').forEach(b=>b.addEventListener('click',()=>{const p=list.find(x=>String(x.id)===b.dataset.id);if(p){alert((p.title||'اختراع')+'\\n\\n'+(p.description||'')+'\\n\\nآلية العمل: '+(p.mechanism||'غير محددة')+'\\n\\nالنموذج الأولي: '+(p.prototype||'غير محدد'));}}));
+}
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+$('archiveSearch')?.addEventListener('input',archiveRender);
+$('archiveSort')?.addEventListener('change',archiveRender);
+const oldGo=window.go;
+if(typeof oldGo==='function')window.go=function(page,...rest){oldGo(page,...rest);if(page==='archive')archiveRender();if(page==='settings')loadCloudConfig()};
+$('importBtn')?.addEventListener('click',()=>$('importFile')?.click());
+$('importFile')?.addEventListener('change',async e=>{
+ const f=e.target.files?.[0];if(!f)return;
+ try{
+  const parsed=JSON.parse(await f.text());
+  const payload=parsed.inventorData||parsed;
+  if(!payload||typeof payload!=='object'||!Array.isArray(payload.projects))throw new Error('ملف النسخة الاحتياطية غير صالح.');
+  if(!confirm('استيراد النسخة سيستبدل بياناتك الحالية على هذا الجهاز. هل تريد المتابعة؟'))return;
+  writeData(payload);alert('تم استيراد النسخة الاحتياطية. أعد تحميل الصفحة لعرض كل التغييرات.');
+ }catch(err){alert('تعذر استيراد الملف: '+err.message)}
+ e.target.value='';
+});
+function loadCloudConfig(){
+ if($('sbUrl'))$('sbUrl').value=localStorage.getItem(SB_URL_KEY)||'';
+ if($('sbKey'))$('sbKey').value=localStorage.getItem(SB_KEY_KEY)||'';
+ if($('aiEndpoint') && typeof loadAIEndpoint==='function')loadAIEndpoint();
+}
+async function getClient(){
+ const url=($('sbUrl')?.value||localStorage.getItem(SB_URL_KEY)||'').trim();
+ const key=($('sbKey')?.value||localStorage.getItem(SB_KEY_KEY)||'').trim();
+ if(!url||!key)throw new Error('أدخل Project URL والمفتاح العام أولاً.');
+ if(!/^https:\/\/[a-z0-9-]+\.supabase\.co\/?$/i.test(url))throw new Error('رابط Supabase غير صحيح. استخدم رابط مشروع HTTPS.');
+ if(!isPublicSupabaseKey(key))throw new Error('المفتاح غير مقبول. استخدم مفتاح sb_publishable_ أو anon JWT بدور anon فقط؛ لا تستخدم service_role أو sb_secret.');
+ if(!window.supabase?.createClient){
+  await new Promise((resolve,reject)=>{
+   const s=document.createElement('script');s.src='https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.57.4';
+   s.onload=resolve;s.onerror=()=>reject(new Error('تعذر تحميل مكتبة Supabase. تحقق من الإنترنت.'));document.head.appendChild(s);
+  });
+ }
+ sbClient=window.supabase.createClient(url,key);
+ return sbClient;
+}
+$('sbSave')?.addEventListener('click',()=>{
+ const u=$('sbUrl').value.trim(),k=$('sbKey').value.trim();
+ if(!/^https:\/\/[a-z0-9-]+\.supabase\.co\/?$/i.test(u)||!k){status('راجع رابط المشروع والمفتاح العام.');return}
+ if(!isPublicSupabaseKey(k)){status('مرفوض: استخدم sb_publishable_ أو anon JWT بدور anon فقط. لا تستخدم service_role أو sb_secret.');return}
+ localStorage.setItem(SB_URL_KEY,u);localStorage.setItem(SB_KEY_KEY,k);sbClient=null;status('تم حفظ إعدادات المشروع على هذا الجهاز.');
+});
+$('sbSignup')?.addEventListener('click',async()=>{
+ try{const c=await getClient();const {data,error}=await c.auth.signUp({email:$('sbEmail').value.trim(),password:$('sbPassword').value});if(error)throw error;status(data.session?'تم إنشاء الحساب وتسجيل الدخول.':'تم إرسال رسالة تأكيد إلى بريدك الإلكتروني.');}catch(e){status(e.message)}
+});
+$('sbLogin')?.addEventListener('click',async()=>{
+ try{const c=await getClient();const {error}=await c.auth.signInWithPassword({email:$('sbEmail').value.trim(),password:$('sbPassword').value});if(error)throw error;status('تم تسجيل الدخول بنجاح.');}catch(e){status(e.message)}
+});
+$('sbLogout')?.addEventListener('click',async()=>{
+ try{const c=await getClient();const {error}=await c.auth.signOut();if(error)throw error;status('تم تسجيل الخروج.');}catch(e){status(e.message)}
+});
+$('sbUpload')?.addEventListener('click',async()=>{
+ try{
+  const c=await getClient();const {data:{user},error:authError}=await c.auth.getUser();if(authError)throw authError;if(!user)throw new Error('سجّل الدخول أولاً.');
+  const payload=readData();
+  const {error}=await c.from('inventor_saves').upsert({user_id:user.id,payload,updated_at:new Date().toISOString()},{onConflict:'user_id'});
+  if(error)throw error;status('تم رفع نسخة التقدم بنجاح إلى حسابك.');
+ }catch(e){status('فشل الرفع: '+e.message)}
+});
+$('sbDownload')?.addEventListener('click',async()=>{
+ try{
+  const c=await getClient();const {data:{user},error:authError}=await c.auth.getUser();if(authError)throw authError;if(!user)throw new Error('سجّل الدخول أولاً.');
+  const {data,error}=await c.from('inventor_saves').select('payload').eq('user_id',user.id).maybeSingle();if(error)throw error;if(!data?.payload)throw new Error('لا توجد نسخة سحابية لهذا الحساب.');
+  if(!confirm('استعادة النسخة السحابية ستستبدل التقدم الحالي على هذا الجهاز. هل تريد المتابعة؟'))return;
+  writeData(data.payload);status('تم تنزيل النسخة. أعد تحميل الصفحة لعرض التقدم المستعاد.');
+ }catch(e){status('فشل الاستعادة: '+e.message)}
+});
+loadCloudConfig();
+})();
+</script>
+</body></html>
